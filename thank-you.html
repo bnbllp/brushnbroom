@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Brush &amp; Broom LLP</title>
+  <meta name="description" content="Thank you for requesting a quote from Brush & Broom LLP. We'll get back to you shortly." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://www.brushandbroomllp.com/thank-you.html" />
+  <meta property="og:title" content="Thank You | Brush &amp; Broom LLP" />
+  <meta property="og:description" content="Thank you for requesting a quote from Brush & Broom LLP. We'll get back to you shortly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/thank-you.html" />
+  <meta name="theme-color" content="#1a3c2a" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/areas-we-serve.html">Areas</a>
+        <a href="/#process">How It Works</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#quote" class="btn btn-amber">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ THANK YOU SECTION ═══ -->
+    <section class="thank-you-container">
+      <div class="thank-you-content">
+        <div class="thank-you-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+
+        <span class="eyebrow eyebrow-green">Request Received</span>
+        <h1>Thank you for reaching out!</h1>
+
+        <p>
+          We've received your quote request and will review the details. We typically respond within 24 hours during business days.
+        </p>
+
+        <p>
+          If you need immediate assistance, feel free to call us at <a href="tel:2065711092" style="color: var(--forest); font-weight: 600;">(206) 571-1092</a>.
+        </p>
+
+        <div class="thank-you-actions">
+          <a href="/" class="btn btn-amber">
+            Back to Home
+            <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/#services" class="btn btn-outline" style="color: var(--forest); border-color: var(--forest);">
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <p>Seattle cleaning and painting with clear quotes, solid work, and good communication.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:2065711092">(206) 571-1092</a></p>
+        <p><a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a></p>
+      </div>
+
+      <div>
+        <div class="footer-title">Links</div>
+        <div class="footer-links">
+          <a href="/#services">Services</a>
+          <a href="/about.html">About Us</a>
+          <a href="/areas-we-serve.html">Areas We Serve</a>
+          <a href="/#process">How It Works</a>
+          <a href="/#quote">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
+    });
+
+    // Close mobile nav on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      });
+    });
+
+    // Sticky header background on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
