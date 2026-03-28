@@ -9,7 +9,7 @@ This is a static website built with HTML, CSS, and JavaScript. The site features
 ## Project Structure
 
 ```
-animated-doodle/
+brushnbroom/
 ├── index.html                                          # Homepage
 ├── about.html                                          # About us page
 ├── areas-we-serve.html                                # Service areas page
@@ -64,8 +64,8 @@ animated-doodle/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Bnbllp/animated-doodle.git
-   cd animated-doodle
+   git clone https://github.com/Bnbllp/brushnbroom.git
+   cd brushnbroom
    ```
 
 2. Open `index.html` in your web browser or use a local server:
