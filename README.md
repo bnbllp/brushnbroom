@@ -9,7 +9,7 @@ This is a static website built with HTML, CSS, and JavaScript. The site features
 ## Project Structure
 
 ```
-brushnbroom/
+brushbroom/
 ├── index.html                                          # Homepage
 ├── about.html                                          # About us page
 ├── areas-we-serve.html                                # Service areas page
@@ -18,7 +18,6 @@ brushnbroom/
 ├── routine-deep-maintenance-cleaning-bellevue-seattle.html # Routine cleaning services page
 ├── thank-you.html                                      # Form submission confirmation page
 ├── styles.css                                          # Global stylesheet
-├── script.js                                           # JavaScript for interactive features
 ├── sitemap.xml                                         # XML sitemap for search engines
 ├── robots.txt                                          # Search engine crawler instructions
 └── README.md                                           # This file
@@ -96,7 +95,7 @@ Ensure the `CNAME` file is configured correctly for custom domain deployment.
 - **styles.css**: Centralized stylesheet containing all design system styles, responsive breakpoints, and animations
 
 ### JavaScript
-- **script.js**: Mobile navigation toggle, sticky header behavior, scroll animations, and FAQ accordion functionality
+JavaScript functionality is embedded directly in HTML files for mobile navigation toggle, sticky header behavior, scroll animations, and form interactions.
 
 ### SEO & Configuration
 - **sitemap.xml**: XML sitemap listing all pages for search engine crawling

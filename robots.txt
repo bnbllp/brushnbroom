@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.brushnbroom.com/sitemap.xml
+Sitemap: https://brushnbroom.com/sitemap.xml
