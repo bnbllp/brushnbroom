@@ -1,0 +1,29 @@
+# GitHub Pages configuration for brushnbroom.com
+# This ensures proper static site serving and search engine optimization
+
+# Site settings
+title: Brush & Broom LLP
+description: Professional house cleaning and painting services in Seattle and the Eastside
+url: https://brushnbroom.com
+domain: brushnbroom.com
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude unnecessary files from processing
+exclude:
+  - .gitignore
+  - README.md
+  - node_modules
+
+# Ensure static files are served correctly
+include:
+  - .htaccess
+
+# Permalink structure
+permalink: /:title/
+
+# Disable Jekyll processing for static HTML
+future: true
