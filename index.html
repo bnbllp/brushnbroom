@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJPV8T9HN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-LJJPV8T9HN");
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush &amp; Broom LLP | Seattle &amp; Eastside Cleaning &amp; Painting</title>
-  <meta name="description" content="Hi, we're Dustin and Brittany, the husband-and-wife team behind Brush & Broom LLP. We offer professional house cleaning and painting services in Seattle and the Eastside, built on honest, reliable service, clear communication, and quality work. Get a free quote today." />
-  <meta name="robots" content="index,follow" />
+  <title>Brush & Broom LLP | Seattle & Eastside Cleaning & Painting</title>
+  
+  <meta name="description" content="Dustin and Brittany provide professional house cleaning and painting services in Seattle and the Eastside. Honest, reliable, and high-quality work." />
   <link rel="canonical" href="https://brushnbroom.com/" />
-  <meta property="og:title" content="Brush &amp; Broom LLP | Seattle &amp; Eastside Cleaning &amp; Painting" />
-  <meta property="og:description" content="Dustin and Brittany, a husband-and-wife team, provide honest, reliable house cleaning and painting services in Seattle and the Eastside. Clear communication and quality work are our promises to you." />
+  <meta property="og:title" content="Brush & Broom LLP | Seattle Cleaning & Painting" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brushnbroom.com/" />
   <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" />
   <meta name="theme-color" content="#1a3c2a" />
 
-  <!-- Security -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --forest: #1a3c2a;
+      --amber: #d97706;
+      --cream: #fefcf8;
+      --text: #334155;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; line-height: 1.6; color: var(--text); background: var(--cream); overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'DM Serif Display', serif; color: var(--forest); line-height: 1.2; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .btn { display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: 0.3s; border: none; cursor: pointer; }
+    .btn-amber { background: var(--amber); color: white; }
+    .btn-amber:hover { background: #b45309; }
+    .btn-outline { border: 2px solid var(--forest); color: var(--forest); }
+    
+    /* Navigation */
+    header { position: fixed; width: 100%; top: 0; z-index: 1000; transition: 0.3s; padding: 1.5rem 0; }
+    header.scrolled { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 0.8rem 0; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-family: 'DM Serif Display', serif; font-size: 1.5rem; text-decoration: none; color: var(--forest); }
+    .brand span { color: var(--amber); }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--forest); font-size: 0.95rem; }
+
+    /* Hero */
+    .hero { padding: 10rem 0 6rem; background: #f3f4f6; position: relative; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1.5rem; }
+    .hero-text { font-size: 1.1rem; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 1rem; }
+    .hero-card { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+    .hero-card ul { list-style: none; margin-top: 1rem; }
+    .hero-card li { margin-bottom: 0.8rem; display: flex; align-items: start; gap: 0.5rem; font-size: 0.9rem; }
+
+    /* Services */
+    .section { padding: 6rem 0; }
+    .section-alt { background: #f8fafc; }
+    .text-center { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .service-card img { width: 100%; height: 200px; object-fit: cover; }
+    .service-card-body { padding: 2rem; }
+
+    /* Forms */
+    .quote-form { max-width: 600px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-actions { justify-content: center; flex-direction: column; }
+      nav { display: none; } /* Simplified for example; usually requires a hamburger toggle */
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -41,34 +86,18 @@
     "url":"https://brushnbroom.com/",
     "telephone":"+1-206-571-1092",
     "email":"seabnbllp@brushnbroom.com",
-    "areaServed":["Seattle, Washington","Bellevue, Washington","Kirkland, Washington","Redmond, Washington"],
-    "description":"Dustin and Brittany, a husband-and-wife cleaning and painting company serving Seattle and the Eastside. House cleaning, move-out cleaning, interior and exterior painting.",
-    "serviceType":[
-      "House cleaning",
-      "Apartment cleaning",
-      "Move-out cleaning",
-      "Interior painting",
-      "Exterior painting",
-      "Residential painting"
-    ]
+    "areaServed":["Seattle","Bellevue","Kirkland","Redmond"],
+    "serviceType":["House cleaning", "Interior painting"]
   }
   </script>
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══ -->
-  <header class="header" id="site-header">
+  <header id="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="brand">Brush <span>&amp;</span> Broom LLP</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        Menu
-      </button>
-
-      <nav id="site-nav" class="nav" aria-label="Primary">
+      <a href="/" class="brand">Brush <span>&</span> Broom</a>
+      <nav id="site-nav">
         <a href="#services">Services</a>
-        <a href="/about.html">About</a>
-        <a href="/areas-we-serve.html">Areas</a>
         <a href="#process">How It Works</a>
         <a href="#faq">FAQ</a>
         <a href="#quote" class="btn btn-amber">Get a Quote</a>
@@ -76,285 +105,125 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <article>
-      <!-- ═══ HERO ═══ -->
-      <section class="hero">
-        <div class="hero-bg" aria-hidden="true">
-          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Beautiful Seattle Craftsman home" />
-        </div>
-        <div class="container">
-          <div class="hero-grid">
-            <div>
-              <div class="fade-up">
-                <span class="eyebrow eyebrow-amber">Seattle &amp; Eastside Cleaning &amp; Painting</span>
-              </div>
-              <div class="fade-up delay-1">
-                <h1>Good work, clear communication, and no runaround. That's our promise to you.</h1>
-              </div>
-              <div class="fade-up delay-2">
-                <p class="hero-text">
-                  Hi, we're Dustin and Brittany, the husband-and-wife team behind Brush &amp; Broom LLP. Our journey has taken us from Michigan to Alabama, and eventually, to building a new life here in Seattle. We understand the importance of a clean, well-maintained home, and we're here to make that process easier for you. Whether you need a serious clean, fresh paint, or both, our goal is simple: leave your place better than we found it.
-                </p>
-              </div>
-              <div class="fade-up delay-3">
-                <div class="hero-actions">
-                  <a href="#quote" class="btn btn-amber">
-                    Get a Free Quote
-                    <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  </a>
-                  <a href="tel:2065711092" class="btn btn-outline">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Call (206) 571-1092
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="fade-up delay-4">
-              <aside class="hero-card">
-                <h3>What people usually need help with</h3>
-                <ul>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    House and apartment cleaning that feels thorough, not rushed.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    Move-out cleaning when you need the place looking ready to hand off.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    Interior painting that makes tired rooms feel fresh again.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    One team handling both cleaning and painting so you are not juggling multiple companies.
-                  </li>
-                </ul>
-              </aside>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="fade-up">
+          <h1>Reliable Cleaning & Painting for the Pacific Northwest.</h1>
+          <p class="hero-text">Hi, we’re Dustin and Brittany. We built Brush & Broom LLP on a simple idea: do good work, keep communication clear, and treat every home like our own.</p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-amber">Request Free Quote</a>
+            <a href="tel:2065711092" class="btn btn-outline">Call (206) 571-1092</a>
           </div>
         </div>
-      </section>
-
-      <!-- ═══ SERVICES ═══ -->
-      <section id="services" class="services">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-green">Services</span>
-            <h2>What we do</h2>
-            <p class="section-intro">
-              We keep our service list straightforward because most people aren't looking for ten packages and a bunch of upsells. They just want the job done right, and that's what we deliver.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <section class="service-card fade-up">
-              <div class="service-card-img">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" loading="lazy" />
-              </div>
-              <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg>
-                </div>
-                <h3>House Cleaning</h3>
-                <p>
-                  Regular cleaning, deep cleaning, and reset cleaning for homes that need more than a quick wipe-down. We focus on kitchens, bathrooms, floors, baseboards, and all the details you actually notice.
-                </p>
-                <a href="/routine-deep-maintenance-cleaning-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
-              </div>
-            </section>
-
-            <section class="service-card fade-up delay-1">
-              <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                </div>
-                <h3>Move-Out Cleaning</h3>
-                <p>
-                  Perfect for renters, landlords, and turnovers when the place needs to look clean, cared for, and ready for the next person walking through the door. We handle the deep clean so you don't have to.
-                </p>
-                <a href="/move-in-move-out-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
-              </div>
-            </section>
-
-            <section class="service-card fade-up delay-2">
-              <div class="service-card-img">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" loading="lazy" />
-              </div>
-              <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
-                </div>
-                <h3>Interior Painting</h3>
-                <p>
-                  Walls, trim, doors, touch-ups, and full-room repaints. We handle the details to make tired rooms feel fresh and new again, with clean lines and a smooth finish.
-                </p>
-                <a href="/interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
-              </div>
-            </section>
-          </div>
+        <div class="fade-up" style="transition-delay: 0.2s">
+          <aside class="hero-card">
+            <h3>We specialize in:</h3>
+            <ul>
+              <li>✅ Detailed House & Apartment Cleaning</li>
+              <li>✅ Stress-free Move-out Services</li>
+              <li>✅ Quality Interior Painting & Touch-ups</li>
+              <li>✅ Combined Service Discounts</li>
+            </ul>
+          </aside>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ═══ PROCESS ═══ -->
-      <section id="process" class="section section-alt">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-amber">Our Approach</span>
-            <h2>How we make it easy for you</h2>
-            <p class="section-intro">
-              We believe in a straightforward process that prioritizes your peace of mind. From your first call to the final walkthrough, we're here to ensure a smooth, stress-free experience.
-            </p>
-          </div>
-
-          <div class="process-grid">
-            <div class="process-card fade-up">
-              <h3>1. Your Free Quote</h3>
-              <p>Reach out to us, and we'll discuss your needs and provide a clear, detailed quote. No hidden fees, no surprises – just honest pricing from the start.</p>
-            </div>
-            <div class="process-card fade-up delay-1">
-              <h3>2. Scheduling &amp; Prep</h3>
-              <p>Once you're ready, we'll schedule a time that works for you. We take care of all the necessary preparations, ensuring your home is protected and ready for our work.</p>
-            </div>
-            <div class="process-card fade-up delay-2">
-              <h3>3. Quality Work</h3>
-              <p>Dustin and Brittany personally oversee every project, ensuring meticulous attention to detail and a high-quality finish. We treat your home as if it were our own.</p>
-            </div>
-            <div class="process-card fade-up delay-3">
-              <h3>4. Final Walkthrough</h3>
-              <p>We'll walk through the completed project with you to ensure everything meets your expectations. Your satisfaction is our top priority.</p>
-            </div>
-          </div>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2>Our Services</h2>
+          <p>No complex packages or hidden upsells. Just straightforward, high-quality service.</p>
         </div>
-      </section>
-
-      <!-- ═══ FAQ ═══ -->
-      <section id="faq" class="section">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-green">Questions?</span>
-            <h2>Frequently Asked Questions</h2>
-          </div>
-
-          <div class="faq-grid">
-            <div class="faq-item fade-up">
-              <h3>What areas do you serve?</h3>
-              <p>We proudly serve Seattle and the Eastside, including Bellevue, Kirkland, Redmond, and surrounding communities. Check our <a href="/areas-we-serve.html">Areas We Serve</a> page for more details.</p>
+        <div class="services-grid">
+          <article class="service-card fade-up">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Cleaning service">
+            <div class="service-card-body">
+              <h3>Residential Cleaning</h3>
+              <p>Deep cleans and maintenance for busy households. We focus on the details—baseboards, kitchen grime, and bathroom resets.</p>
             </div>
-            <div class="faq-item fade-up delay-1">
-              <h3>Are you licensed and insured?</h3>
-              <p>Yes, Brush &amp; Broom LLP is fully licensed, bonded, and insured for your peace of mind. We believe in operating with complete transparency and professionalism.</p>
+          </article>
+          <article class="service-card fade-up" style="transition-delay: 0.1s">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Painting service">
+            <div class="service-card-body">
+              <h3>Interior Painting</h3>
+              <p>Refresh your space with clean lines and professional finishes. From single rooms to full interior repaints.</p>
             </div>
-            <div class="faq-item fade-up delay-2">
-              <h3>How do I get a quote?</h3>
-              <p>It's easy! Simply fill out our <a href="#quote">online quote form</a>, or give us a call at <a href="tel:2065711092">(206) 571-1092</a>. We'll get back to you promptly with a detailed estimate.</p>
+          </article>
+          <article class="service-card fade-up" style="transition-delay: 0.2s">
+            <div class="service-card-body">
+              <h3>Move-In/Out</h3>
+              <p>Perfect for renters looking to secure their deposit or landlords prepping for a new tenant. We handle the heavy lifting.</p>
             </div>
-            <div class="faq-item fade-up delay-3">
-              <h3>What makes Brush &amp; Broom LLP different?</h3>
-              <p>As a husband-and-wife team, we bring a personal touch to every project. We're not a large franchise; we're your neighbors, committed to honest communication, exceptional quality, and a genuine care for your home.</p>
-            </div>
-          </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ═══ QUOTE ═══ -->
-      <section id="quote" class="section section-alt">
-        <div class="container">
-          <div class="fade-up" style="text-align: center;">
-            <span class="eyebrow eyebrow-amber">Ready for a refresh?</span>
-            <h2>Get Your Free Quote Today</h2>
-            <p class="section-intro">
-              We'd love to hear about your project! Fill out the form below, and we'll get back to you with a personalized estimate.
-            </p>
-          </div>
-
-          <form class="quote-form fade-up delay-1">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Your Phone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="house-cleaning">House Cleaning</option>
-                <option value="move-out-cleaning">Move-Out Cleaning</option>
-                <option value="interior-painting">Interior Painting</option>
-                <option value="exterior-painting">Exterior Painting</option>
-                <option value="both">Both Cleaning &amp; Painting</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell us about your project</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-amber">Submit Request</button>
-          </form>
+    <section id="quote" class="section section-alt">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2>Ready for a Refresh?</h2>
+          <p>Tell us about your project and we'll get back to you with a personalized estimate.</p>
         </div>
-      </section>
-    </article>
+        
+        <form class="quote-form fade-up">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service">
+              <option>Cleaning</option>
+              <option>Painting</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%">Send Request</button>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
-        <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside cleaning and painting. We offer clear quotes, solid work, and honest communication.</p>
-      </div>
-      <div>
-        <div class="footer-title">Contact</div>
-        <p><a href="tel:2065711092">(206) 571-1092</a></p>
-        <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
-      </div>
-      <div>
-        <div class="footer-title">Links</div>
-        <div class="footer-links">
-          <a href="/#services">Services</a>
-          <a href="/about.html">About Us</a>
-          <a href="/areas-we-serve.html">Areas We Serve</a>
-          <a href="/#quote">Get a Quote</a>
+  <footer class="section" style="background: var(--forest); color: white; padding: 4rem 0 2rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+        <div>
+          <h3 style="color: white; margin-bottom: 1rem;">Brush & Broom LLP</h3>
+          <p style="opacity: 0.8">A husband-and-wife team serving Seattle and the Eastside.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem;">Contact</h4>
+          <p><a href="tel:2065711092" style="color: white;">(206) 571-1092</a></p>
+          <p>seabnbllp@brushnbroom.com</p>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; opacity: 0.6;">
+        &copy; 2026 Brush & Broom LLP. All rights reserved.
+      </div>
     </div>
   </footer>
 
   <script>
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav");
-
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Menu";
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "Menu";
+    // Reveal animations on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    });
+    }, { threshold: 0.1 });
 
-    const header = document.getElementById("site-header");
-    window.addEventListener("scroll", () => {
-      header.classList.toggle("scrolled", window.scrollY > 20);
-    }, { passive: true });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
