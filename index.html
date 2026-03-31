@@ -3,78 +3,1094 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | Seattle & Eastside Cleaning & Painting</title>
-  
-  <meta name="description" content="Dustin and Brittany provide professional house cleaning and painting services in Seattle and the Eastside. Honest, reliable, and high-quality work." />
-  <link rel="canonical" href="https://brushnbroom.com/" />
-  <meta property="og:title" content="Brush & Broom LLP | Seattle Cleaning & Painting" />
+  <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting</title>
+  <meta
+    name="description"
+    content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting with clear quotes and real communication."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.brushandbroomllp.com/" />
+  <meta property="og:title" content="Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting" />
+  <meta
+    property="og:description"
+    content="Seattle house cleaning and painting with clear quotes, good communication, and work done right."
+  />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/" />
   <meta name="theme-color" content="#1a3c2a" />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 
   <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN: Pacific Northwest Craftsman
+       Colors: Forest green, warm cream, charcoal, amber
+       Typography: DM Serif Display + DM Sans
+       ═══════════════════════════════════════════════ */
+
     :root {
       --forest: #1a3c2a;
-      --amber: #d97706;
-      --cream: #fefcf8;
-      --text: #334155;
+      --forest-light: #2a5c3f;
+      --forest-dark: #122a1e;
+      --cream: #f5f0e8;
+      --cream-dark: #e8dfd2;
+      --amber: #d4943a;
+      --amber-dark: #b87a2a;
+      --charcoal: #2c2a26;
+      --charcoal-light: #6b6860;
+      --warm-white: #faf8f5;
       --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(26, 60, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(26, 60, 42, 0.08);
+      --shadow-lg: 0 16px 40px rgba(26, 60, 42, 0.10);
+      --shadow-xl: 0 24px 56px rgba(26, 60, 42, 0.14);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --max: 1200px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', sans-serif; line-height: 1.6; color: var(--text); background: var(--cream); overflow-x: hidden; }
-    h1, h2, h3 { font-family: 'DM Serif Display', serif; color: var(--forest); line-height: 1.2; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .btn { display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: 0.3s; border: none; cursor: pointer; }
-    .btn-amber { background: var(--amber); color: white; }
-    .btn-amber:hover { background: #b45309; }
-    .btn-outline { border: 2px solid var(--forest); color: var(--forest); }
-    
-    /* Navigation */
-    header { position: fixed; width: 100%; top: 0; z-index: 1000; transition: 0.3s; padding: 1.5rem 0; }
-    header.scrolled { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 0.8rem 0; }
-    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-family: 'DM Serif Display', serif; font-size: 1.5rem; text-decoration: none; color: var(--forest); }
-    .brand span { color: var(--amber); }
-    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--forest); font-size: 0.95rem; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    /* Hero */
-    .hero { padding: 10rem 0 6rem; background: #f3f4f6; position: relative; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1.5rem; }
-    .hero-text { font-size: 1.1rem; margin-bottom: 2rem; }
-    .hero-actions { display: flex; gap: 1rem; }
-    .hero-card { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-    .hero-card ul { list-style: none; margin-top: 1rem; }
-    .hero-card li { margin-bottom: 0.8rem; display: flex; align-items: start; gap: 0.5rem; font-size: 0.9rem; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    /* Services */
-    .section { padding: 6rem 0; }
-    .section-alt { background: #f8fafc; }
-    .text-center { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .service-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    .service-card img { width: 100%; height: 200px; object-fit: cover; }
-    .service-card-body { padding: 2rem; }
+    ::selection {
+      background-color: rgba(26, 60, 42, 0.2);
+    }
 
-    /* Forms */
-    .quote-form { max-width: 600px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
-    .form-group { margin-bottom: 1.5rem; }
-    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-    /* Animations */
-    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
 
-    @media (max-width: 768px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-actions { justify-content: center; flex-direction: column; }
-      nav { display: none; } /* Simplified for example; usually requires a hamburger toggle */
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    .eyebrow-green {
+      color: var(--forest);
+      background: rgba(26, 60, 42, 0.1);
+    }
+
+    .eyebrow-amber {
+      color: var(--amber);
+      background: rgba(212, 148, 58, 0.15);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-amber {
+      background: var(--amber);
+      color: var(--charcoal);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-amber:hover {
+      background: var(--amber-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .btn-forest {
+      background: var(--forest);
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-forest:hover {
+      background: var(--forest-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Arrow SVG for buttons */
+    .arrow-icon {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ─── Scroll Animations ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.35s; }
+
+    /* ─── Header ─── */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .header.scrolled {
+      background: rgba(26, 60, 42, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 80px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--amber);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: var(--white);
+    }
+
+    .nav .btn-amber {
+      margin-left: 8px;
+      padding: 10px 22px;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(18, 42, 30, 0.92),
+        rgba(18, 42, 30, 0.80),
+        rgba(18, 42, 30, 0.50)
+      );
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      padding: 140px 0 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 24px;
+    }
+
+    .hero-text {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.08rem;
+      max-width: 58ch;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-xl);
+      padding: 28px;
+      border: 1px solid rgba(232, 223, 210, 0.5);
+    }
+
+    .hero-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hero-card li {
+      display: flex;
+      gap: 12px;
+      color: var(--charcoal-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .hero-card li + li {
+      margin-top: 14px;
+    }
+
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--forest);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ─── Services ─── */
+    .services {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .services h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .services .section-intro {
+      color: var(--charcoal-light);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin-bottom: 56px;
+      line-height: 1.75;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(232, 223, 210, 0.4);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .service-card-img {
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-card-img img {
+      transform: scale(1.05);
+    }
+
+    .service-card-body {
+      padding: 28px;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(26, 60, 42, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--forest);
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    .serving-note {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--charcoal-light);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .serving-note svg {
+      width: 16px;
+      height: 16px;
+      color: var(--forest);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ─── Why Us ─── */
+    .why-us {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .why-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .why-us h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .why-intro {
+      color: var(--charcoal-light);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .why-card {
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+    }
+
+    .why-card + .why-card {
+      margin-top: 20px;
+    }
+
+    .why-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    /* ─── Process ─── */
+    .process {
+      padding: 100px 0;
+      background: var(--forest);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .process .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .process h2 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .process .section-intro {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin-bottom: 56px;
+      line-height: 1.75;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(4px);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .step-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .step-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--amber);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .step-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* ─── Good Fit / Values ─── */
+    .good-fit {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .fit-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 36px 40px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+    }
+
+    .fit-card h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      margin-bottom: 20px;
+    }
+
+    .fit-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fit-list li {
+      display: flex;
+      gap: 12px;
+      color: var(--charcoal-light);
+      line-height: 1.65;
+    }
+
+    .fit-list li + li {
+      margin-top: 14px;
+    }
+
+    .fit-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--forest);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .fit-card p {
+      color: var(--charcoal-light);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .fit-card p + p {
+      margin-top: 16px;
+    }
+
+    /* ─── Quote Section ─── */
+    .quote-section {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+    }
+
+    .quote-box {
+      background: var(--cream);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 36px 40px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+    }
+
+    .quote-box h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      margin-bottom: 8px;
+    }
+
+    .quote-box > p {
+      color: var(--charcoal-light);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .quote-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      font: inherit;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--warm-white);
+      transition: all 0.2s ease;
+    }
+
+    .quote-form input:focus,
+    .quote-form select:focus,
+    .quote-form textarea:focus {
+      outline: none;
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(26, 60, 42, 0.12);
+    }
+
+    .quote-form input::placeholder,
+    .quote-form textarea::placeholder {
+      color: rgba(107, 104, 96, 0.6);
+    }
+
+    .quote-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-links {
+      margin-bottom: 28px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--forest);
+    }
+
+    .contact-link + .contact-link {
+      margin-top: 14px;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(26, 60, 42, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--forest);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-divider {
+      border: none;
+      border-top: 1px solid var(--cream-dark);
+      margin: 0 0 24px;
+    }
+
+    .contact-detail h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-detail p {
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    .contact-detail + .contact-detail {
+      margin-top: 20px;
+    }
+
+    /* ─── FAQ ─── */
+    .faq {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--warm-white);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(232, 223, 210, 0.4);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      background: none;
+      border: none;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--charcoal);
+    }
+
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      color: var(--charcoal-light);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .faq-answer p {
+      padding: 0 24px 22px;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    /* ─── CTA Band ─── */
+    .cta-band {
+      padding: 88px 0;
+      background: var(--forest);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .cta-band .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-band h2 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      margin-bottom: 12px;
+    }
+
+    .cta-band p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.08rem;
+      max-width: 56ch;
+      margin: 0 auto 28px;
+      line-height: 1.75;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      background: var(--forest-dark);
+      padding: 56px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.12rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand span {
+      color: var(--amber);
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.65;
+    }
+
+    .footer a:hover {
+      color: var(--amber);
+    }
+
+    .footer-title {
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      display: block;
+    }
+
+    .footer-links a + a {
+      margin-top: 8px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.88rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .services-grid,
+      .steps-grid,
+      .fit-grid,
+      .quote-grid,
+      .why-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0 0 18px;
+        background: rgba(18, 42, 30, 0.98);
+        backdrop-filter: blur(12px);
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav a {
+        display: block;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+      }
+
+      .nav .btn-amber {
+        margin: 14px 0 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-wrap {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 16px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero .container {
+        padding: 120px 0 80px;
+      }
+
+      .why-grid {
+        gap: 32px;
+      }
+
+      .quote-box,
+      .fit-card {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -83,21 +1099,36 @@
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"Brush & Broom LLP",
-    "url":"https://brushnbroom.com/",
+    "url":"https://www.brushandbroomllp.com/",
     "telephone":"+1-206-571-1092",
-    "email":"seabnbllp@brushnbroom.com",
-    "areaServed":["Seattle","Bellevue","Kirkland","Redmond"],
-    "serviceType":["House cleaning", "Interior painting"]
+    "email":"seabnbllp@icloud.com",
+    "areaServed":"Seattle, Washington",
+    "description":"Family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting.",
+    "serviceType":[
+      "House cleaning",
+      "Apartment cleaning",
+      "Move-out cleaning",
+      "Interior painting",
+      "Exterior painting",
+      "Residential painting"
+    ]
   }
   </script>
 </head>
 <body>
 
-  <header id="site-header">
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="brand">Brush <span>&</span> Broom</a>
-      <nav id="site-nav">
+      <a href="#" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
         <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
         <a href="#process">How It Works</a>
         <a href="#faq">FAQ</a>
         <a href="#quote" class="btn btn-amber">Get a Quote</a>
@@ -106,124 +1137,525 @@
   </header>
 
   <main>
+
+    <!-- ═══ HERO ═══ -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="fade-up">
-          <h1>Reliable Cleaning & Painting for the Pacific Northwest.</h1>
-          <p class="hero-text">Hi, we’re Dustin and Brittany. We built Brush & Broom LLP on a simple idea: do good work, keep communication clear, and treat every home like our own.</p>
-          <div class="hero-actions">
-            <a href="#quote" class="btn btn-amber">Request Free Quote</a>
-            <a href="tel:2065711092" class="btn btn-outline">Call (206) 571-1092</a>
+      <div class="hero-bg">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Beautiful Seattle Craftsman home" />
+      </div>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="fade-up">
+              <span class="eyebrow eyebrow-amber">Seattle Cleaning &amp; Painting</span>
+            </div>
+            <div class="fade-up delay-1">
+              <h1>Good work, clear communication, and no runaround.</h1>
+            </div>
+            <div class="fade-up delay-2">
+              <p class="hero-text">
+                We help Seattle homeowners, renters, and landlords with the kind of work
+                that actually changes how a place feels. Whether you need a serious clean,
+                fresh paint, or both, the goal is simple: make the process easier and leave
+                the place better than we found it.
+              </p>
+            </div>
+            <div class="fade-up delay-3">
+              <div class="hero-actions">
+                <a href="#quote" class="btn btn-amber">
+                  Get a Free Quote
+                  <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:2065711092" class="btn btn-outline">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Call (206) 571-1092
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="fade-up" style="transition-delay: 0.2s">
-          <aside class="hero-card">
-            <h3>We specialize in:</h3>
-            <ul>
-              <li>✅ Detailed House & Apartment Cleaning</li>
-              <li>✅ Stress-free Move-out Services</li>
-              <li>✅ Quality Interior Painting & Touch-ups</li>
-              <li>✅ Combined Service Discounts</li>
-            </ul>
-          </aside>
+
+          <div class="fade-up delay-4">
+            <aside class="hero-card">
+              <h3>What people usually need help with</h3>
+              <ul>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  House and apartment cleaning that feels thorough, not rushed.
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Move-out cleaning when you need the place looking ready to hand off.
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Interior painting that makes tired rooms feel fresh again.
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  One team handling both cleaning and painting so you are not juggling multiple companies.
+                </li>
+              </ul>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <!-- ═══ SERVICES ═══ -->
+    <section id="services" class="services">
       <div class="container">
-        <div class="text-center fade-up">
-          <h2>Our Services</h2>
-          <p>No complex packages or hidden upsells. Just straightforward, high-quality service.</p>
+        <div class="fade-up">
+          <span class="eyebrow eyebrow-green">Services</span>
+          <h2>What we do</h2>
+          <p class="section-intro">
+            We keep our service list straightforward because most people are not looking
+            for ten packages and a bunch of upsells. They just want the job done right.
+          </p>
         </div>
+
         <div class="services-grid">
           <article class="service-card fade-up">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Cleaning service">
+            <div class="service-card-img">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" />
+            </div>
             <div class="service-card-body">
-              <h3>Residential Cleaning</h3>
-              <p>Deep cleans and maintenance for busy households. We focus on the details—baseboards, kitchen grime, and bathroom resets.</p>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg>
+              </div>
+              <h3>House Cleaning</h3>
+              <p>
+                Regular cleaning, deep cleaning, and reset cleaning for homes that need
+                more than a quick wipe-down. Kitchens, bathrooms, floors, baseboards, and
+                the details people actually notice.
+              </p>
             </div>
           </article>
-          <article class="service-card fade-up" style="transition-delay: 0.1s">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Painting service">
+
+          <article class="service-card fade-up delay-1">
             <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <h3>Move-Out Cleaning</h3>
+              <p>
+                Helpful for renters, landlords, and turnovers when the place needs to look
+                clean, cared for, and ready for the next person walking through the door.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card fade-up delay-2">
+            <div class="service-card-img">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" />
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
+              </div>
               <h3>Interior Painting</h3>
-              <p>Refresh your space with clean lines and professional finishes. From single rooms to full interior repaints.</p>
+              <p>
+                Walls, trim, doors, touch-ups, and full-room repaints with proper prep,
+                clean lines, and cleanup handled the way it should be.
+              </p>
             </div>
           </article>
-          <article class="service-card fade-up" style="transition-delay: 0.2s">
-            <div class="service-card-body">
-              <h3>Move-In/Out</h3>
-              <p>Perfect for renters looking to secure their deposit or landlords prepping for a new tenant. We handle the heavy lifting.</p>
+
+          <article class="service-card fade-up delay-3">
+            <div class="service-card-img">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/exterior-painting-Ebx8rDGRhy3v4i7iMdxZCT.webp" alt="Exterior painting" />
             </div>
+            <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3>Exterior Painting</h3>
+              <p>
+                Protect your home and boost curb appeal with clean prep, sharp lines, and durable finishes built for Seattle homes.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="serving-note fade-up">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Serving homeowners in Seattle.
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHY US ═══ -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+        <div class="why-grid">
+          <div class="fade-up">
+            <div class="why-img">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/couple-team-HqgN5ApY27kFigc8XAL7sq.webp" alt="Brush and Broom team" />
+            </div>
+          </div>
+
+          <div>
+            <div class="fade-up">
+              <span class="eyebrow eyebrow-green">Why Us</span>
+              <h2>A smaller company can be a better fit.</h2>
+              <p class="why-intro">
+                A lot of people are tired of calling a company and feeling like they are
+                talking to a system. We keep it personal, clear, and easy to deal with.
+              </p>
+            </div>
+
+            <div class="fade-up delay-1">
+              <div class="why-card">
+                <h3>You deal with real people</h3>
+                <p>
+                  No bouncing between sales, scheduling, and random crews. You know who you
+                  are talking to, what the plan is, and what the job includes.
+                </p>
+              </div>
+            </div>
+
+            <div class="fade-up delay-2">
+              <div class="why-card">
+                <h3>The work should feel worth it</h3>
+                <p>
+                  The whole point is for your home to look better, feel cleaner, and take
+                  stress off your plate instead of adding more to it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROCESS ═══ -->
+    <section id="process" class="process">
+      <div class="container">
+        <div class="fade-up">
+          <span class="eyebrow eyebrow-amber">How It Works</span>
+          <h2>Simple from start to finish</h2>
+          <p class="section-intro">
+            You do not need a complicated booking process. Just tell us what is going on,
+            and we will help you figure out the next step.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card fade-up">
+            <span class="step-num">01</span>
+            <h3>Reach out</h3>
+            <p>
+              Send a message, call, or fill out the form with the basics. Photos help,
+              but they are not required.
+            </p>
+          </article>
+
+          <article class="step-card fade-up delay-1">
+            <span class="step-num">02</span>
+            <h3>Get a clear quote</h3>
+            <p>
+              We look at the details and send pricing that makes sense, so you know what
+              is included before anything starts.
+            </p>
+          </article>
+
+          <article class="step-card fade-up delay-2">
+            <span class="step-num">03</span>
+            <h3>We handle the work</h3>
+            <p>
+              We show up, protect the space, do the job properly, and keep communication
+              easy while it is happening.
+            </p>
+          </article>
+
+          <article class="step-card fade-up delay-3">
+            <span class="step-num">04</span>
+            <h3>You get the result</h3>
+            <p>
+              A cleaner home, fresher rooms, or a property that feels ready for the next
+              chapter without the usual headache.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="quote" class="section section-alt">
+    <!-- ═══ GOOD FIT / VALUES ═══ -->
+    <section class="good-fit">
       <div class="container">
-        <div class="text-center fade-up">
-          <h2>Ready for a Refresh?</h2>
-          <p>Tell us about your project and we'll get back to you with a personalized estimate.</p>
+        <div class="fit-grid">
+          <div class="fit-card fade-up">
+            <span class="eyebrow eyebrow-green">Good Fit Jobs</span>
+            <h2>When people usually call us</h2>
+            <ul class="fit-list">
+              <li><span class="fit-dot"></span> The home has gotten behind and needs a real reset.</li>
+              <li><span class="fit-dot"></span> A rental or apartment needs to be turned over fast.</li>
+              <li><span class="fit-dot"></span> Rooms feel beat up, dull, or overdue for fresh paint.</li>
+              <li><span class="fit-dot"></span> Someone wants cleaning and painting handled by one team instead of two.</li>
+              <li><span class="fit-dot"></span> The customer wants straightforward communication instead of a sales routine.</li>
+            </ul>
+          </div>
+
+          <div class="fit-card fade-up delay-1">
+            <span class="eyebrow eyebrow-green">What Matters to Us</span>
+            <h2>Respect for your home and your time</h2>
+            <p>
+              People remember how a company made them feel just as much as the finished job.
+              That is why we try to keep things clear, show respect for the space, and leave
+              things in better shape than we found them.
+            </p>
+            <p>
+              It sounds basic, but basic things done well are what most people actually want.
+            </p>
+          </div>
         </div>
-        
-        <form class="quote-form fade-up">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="service">Service Needed</label>
-            <select id="service">
-              <option>Cleaning</option>
-              <option>Painting</option>
-              <option>Both</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
-          </div>
-          <button type="submit" class="btn btn-amber" style="width: 100%">Send Request</button>
-        </form>
       </div>
     </section>
+
+    <!-- ═══ QUOTE + CONTACT ═══ -->
+    <section id="quote" class="quote-section">
+      <div class="container">
+        <div class="quote-grid">
+          <div class="quote-box fade-up">
+            <span class="eyebrow eyebrow-green">Free Quote</span>
+            <h2>Tell us what you need</h2>
+            <p>
+              Keep it simple. Send the address, timeline, and what kind of help you need.
+              We will take it from there.
+            </p>
+
+            <form class="quote-form" action="https://formspree.io/f/mykbgkbn" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <div class="form-row">
+                <input type="tel" name="phone" placeholder="Phone number" required />
+                <input type="email" name="email" placeholder="Email address" required />
+              </div>
+              <input type="text" name="address" placeholder="Seattle property address" />
+              <select name="service" required>
+                <option value="">What do you need help with?</option>
+                <option>House cleaning</option>
+                <option>Move-out cleaning</option>
+                <option>Interior painting</option>
+                <option>Exterior painting</option>
+                <option>Cleaning and painting</option>
+              </select>
+              <textarea name="details" placeholder="Tell us about the job, your timeline, and anything important we should know."></textarea>
+              <button type="submit" class="btn btn-forest">
+                Request Quote
+                <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="quote-box contact-box fade-up delay-1">
+            <span class="eyebrow eyebrow-green">Contact</span>
+            <h2>Want to talk first?</h2>
+            <p>
+              Some people would rather just call, and that is completely fine.
+            </p>
+
+            <div class="contact-links">
+              <a href="tel:2065711092" class="contact-link">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                (206) 571-1092
+              </a>
+              <a href="mailto:seabnbllp@icloud.com" class="contact-link">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                seabnbllp@icloud.com
+              </a>
+            </div>
+
+            <hr class="contact-divider" />
+
+            <div class="contact-detail">
+              <h3>Seattle only</h3>
+              <p>
+                We keep our focus on Seattle so scheduling stays tighter and service stays more consistent.
+              </p>
+            </div>
+
+            <div class="contact-detail">
+              <h3>Clear next steps</h3>
+              <p>
+                If it is a fit, we will tell you what the job includes, what it costs, and what timing looks like.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="faq-inner">
+          <div class="faq-header fade-up">
+            <span class="eyebrow eyebrow-green">FAQ</span>
+            <h2>Questions people usually ask</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item fade-up">
+              <button class="faq-question" aria-expanded="false">
+                <h3>Do you handle both cleaning and painting?</h3>
+                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. A lot of customers like getting both handled by one team because it keeps the project simpler.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item fade-up delay-1">
+              <button class="faq-question" aria-expanded="false">
+                <h3>Do you give written quotes?</h3>
+                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. We want people to know what they are agreeing to before the work starts.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item fade-up delay-2">
+              <button class="faq-question" aria-expanded="false">
+                <h3>Do you focus on Seattle?</h3>
+                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. We keep our main focus on Seattle jobs.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item fade-up delay-3">
+              <button class="faq-question" aria-expanded="false">
+                <h3>Can I reach out even if I am not sure what I need yet?</h3>
+                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. You do not need to have every detail figured out before contacting us.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BAND ═══ -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="fade-up">
+          <h2>If your place needs attention, we can help.</h2>
+          <p>
+            Cleaning, painting, or both. Tell us what is going on and we will give you a straight answer.
+          </p>
+          <a href="#quote" class="btn btn-amber">
+            Get a Quote
+            <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="section" style="background: var(--forest); color: white; padding: 4rem 0 2rem;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
-        <div>
-          <h3 style="color: white; margin-bottom: 1rem;">Brush & Broom LLP</h3>
-          <p style="opacity: 0.8">A husband-and-wife team serving Seattle and the Eastside.</p>
-        </div>
-        <div>
-          <h4 style="margin-bottom: 1rem;">Contact</h4>
-          <p><a href="tel:2065711092" style="color: white;">(206) 571-1092</a></p>
-          <p>seabnbllp@brushnbroom.com</p>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <p>Seattle cleaning and painting with clear quotes, solid work, and good communication.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:2065711092">(206) 571-1092</a></p>
+        <p><a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a></p>
+      </div>
+
+      <div>
+        <div class="footer-title">Links</div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#process">How It Works</a>
+          <a href="#quote">Get a Quote</a>
         </div>
       </div>
-      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; opacity: 0.6;">
-        &copy; 2026 Brush & Broom LLP. All rights reserved.
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Brush &amp; Broom LLP. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- ═══ SCRIPTS ═══ -->
   <script>
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
     });
 
-    // Reveal animations on scroll
+    // Close mobile nav on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      });
+    });
+
+    // Sticky header background on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Scroll-triggered fade-up animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '-40px' });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
   </script>
+
 </body>
 </html>
