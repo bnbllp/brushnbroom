@@ -410,6 +410,7 @@
                   <option value="light">Light (Regular maintenance)</option>
                   <option value="moderate">Moderate (Needs attention)</option>
                   <option value="heavy">Heavy (Deep clean needed)</option>
+                  <option value="none">Doesn't Apply (Painting only)</option>
                 </select>
               </div>
             </div>
@@ -598,6 +599,7 @@
     const paintingDetails = document.getElementById('paintingDetails');
     const exteriorTypeGroup = document.getElementById('exteriorTypeGroup');
     const serviceRadios = document.querySelectorAll('input[name="service"]');
+    const conditionSelect = document.getElementById('condition');
     const estimateResult = document.getElementById('estimateResult');
     const formActions = document.getElementById('formActions');
 
@@ -611,6 +613,13 @@
         cleaningDetails.style.display = showCleaning ? 'block' : 'none';
         paintingDetails.style.display = showPainting ? 'block' : 'none';
         exteriorTypeGroup.style.display = showExterior ? 'block' : 'none';
+
+        // Auto-select "Doesn't Apply" for painting-only clients
+        if (showPainting && !showCleaning) {
+          conditionSelect.value = 'none';
+        } else if (conditionSelect.value === 'none') {
+          conditionSelect.value = ''; // Reset if switching back to cleaning
+        }
       });
     });
 
@@ -663,7 +672,8 @@
         let basePrice = sqft * 4.50;
         
         const extType = document.getElementById('exteriorType').value;
-        if (extType === 'stucco') basePrice *= 1.2;
+        if (extType === 'siding') basePrice *= 1.0;
+        else if (extType === 'stucco') basePrice *= 1.2;
         else if (extType === 'trim') basePrice = sqft * 1.5; // Much lower if just trim
         
         const prep = document.getElementById('prep').value;
