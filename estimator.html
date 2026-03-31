@@ -630,15 +630,24 @@
       let description = '';
       
       // Cleaning Logic
-      if (service === 'cleaning' || service === 'moveout') {
+      if (service === 'cleaning') {
+        // Standard Maintenance Cleaning: $0.12 per sqft
         let basePrice = sqft * 0.12;
         if (condition === 'light') basePrice *= 0.9;
-        else if (condition === 'heavy') basePrice *= 1.3;
-        if (service === 'moveout') basePrice *= 1.15;
+        else if (condition === 'heavy') basePrice *= 1.3; // Deep clean multiplier
         if (timeline === 'urgent') basePrice *= 1.1;
         estimate = basePrice;
-        description = service === 'moveout' ? 'Move-Out Cleaning' : 'House Cleaning';
-      } 
+        description = 'House Cleaning';
+      }
+      else if (service === 'moveout') {
+        // Move-Out Cleaning: $0.22 per sqft (higher avg for comprehensive service)
+        let basePrice = sqft * 0.22;
+        if (condition === 'light') basePrice *= 0.9;
+        else if (condition === 'heavy') basePrice *= 1.4; // Extra heavy move-out
+        if (timeline === 'urgent') basePrice *= 1.15;
+        estimate = basePrice;
+        description = 'Move-Out Cleaning';
+      }
       // Interior Painting Logic
       else if (service === 'painting') {
         // More accurate interior painting: $2.50 - $4.50 per sqft of floor area (proxy for wall area)
