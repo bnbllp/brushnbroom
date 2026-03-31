@@ -148,7 +148,8 @@
       gap: 10px;
     }
 
-    .checkbox-item input[type="checkbox"] {
+    .checkbox-item input[type="checkbox"],
+    .checkbox-item input[type="radio"] {
       width: 20px;
       height: 20px;
       cursor: pointer;
@@ -358,6 +359,10 @@
                 <label for="service-painting">Interior Painting</label>
               </div>
               <div class="checkbox-item">
+                <input type="radio" id="service-exterior" name="service" value="exterior" />
+                <label for="service-exterior">Exterior Painting</label>
+              </div>
+              <div class="checkbox-item">
                 <input type="radio" id="service-both" name="service" value="both" />
                 <label for="service-both">Cleaning + Painting</label>
               </div>
@@ -372,8 +377,8 @@
             </h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="sqft">Square Footage</label>
-                <input type="number" id="sqft" name="sqft" min="500" max="10000" step="100" placeholder="e.g., 2000" required />
+                <label for="sqft">Square Footage (Total Area)</label>
+                <input type="number" id="sqft" name="sqft" min="100" max="10000" step="100" placeholder="e.g., 2000" required />
               </div>
               <div class="form-group">
                 <label for="bedrooms">Bedrooms</label>
@@ -451,22 +456,40 @@
             </h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="rooms">Rooms to Paint</label>
+                <label for="rooms">Rooms/Areas to Paint</label>
                 <select id="rooms" name="rooms">
                   <option value="">Select...</option>
-                  <option value="1">1 Room</option>
+                  <option value="1">1 Room / Small Area</option>
                   <option value="2">2 Rooms</option>
                   <option value="3">3 Rooms</option>
-                  <option value="4">4+ Rooms</option>
+                  <option value="4">4+ Rooms / Full House</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="prep">Prep Work Needed?</label>
                 <select id="prep" name="prep">
                   <option value="">Select...</option>
-                  <option value="minimal">Minimal (Just paint)</option>
-                  <option value="moderate">Moderate (Some prep)</option>
-                  <option value="extensive">Extensive (Full prep)</option>
+                  <option value="minimal">Minimal (Good condition, just paint)</option>
+                  <option value="moderate">Moderate (Some patching/sanding)</option>
+                  <option value="extensive">Extensive (Major repairs/scraping)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="coats">Number of Coats</label>
+                <select id="coats" name="coats">
+                  <option value="1">1 Coat (Refresh)</option>
+                  <option value="2" selected>2 Coats (Standard)</option>
+                  <option value="3">3 Coats (Major color change)</option>
+                </select>
+              </div>
+              <div class="form-group" id="exteriorTypeGroup" style="display: none;">
+                <label for="exteriorType">Exterior Surface</label>
+                <select id="exteriorType" name="exteriorType">
+                  <option value="siding">Siding (Wood/Vinyl)</option>
+                  <option value="stucco">Stucco / Brick</option>
+                  <option value="trim">Trim & Doors Only</option>
                 </select>
               </div>
             </div>
@@ -573,6 +596,7 @@
     const form = document.getElementById('estimatorForm');
     const cleaningDetails = document.getElementById('cleaningDetails');
     const paintingDetails = document.getElementById('paintingDetails');
+    const exteriorTypeGroup = document.getElementById('exteriorTypeGroup');
     const serviceRadios = document.querySelectorAll('input[name="service"]');
     const estimateResult = document.getElementById('estimateResult');
     const formActions = document.getElementById('formActions');
@@ -581,10 +605,12 @@
     serviceRadios.forEach(radio => {
       radio.addEventListener('change', function() {
         const showCleaning = this.value === 'cleaning' || this.value === 'moveout' || this.value === 'both';
-        const showPainting = this.value === 'painting' || this.value === 'both';
+        const showPainting = this.value === 'painting' || this.value === 'exterior' || this.value === 'both';
+        const showExterior = this.value === 'exterior';
         
         cleaningDetails.style.display = showCleaning ? 'block' : 'none';
         paintingDetails.style.display = showPainting ? 'block' : 'none';
+        exteriorTypeGroup.style.display = showExterior ? 'block' : 'none';
       });
     });
 
@@ -602,64 +628,69 @@
       let estimate = 0;
       let description = '';
       
-      // Base pricing logic (lower to moderate pricing)
+      // Cleaning Logic
       if (service === 'cleaning' || service === 'moveout') {
-        // Cleaning: $0.10-0.15 per sqft base
         let basePrice = sqft * 0.12;
-        
-        // Condition multiplier
         if (condition === 'light') basePrice *= 0.9;
-        else if (condition === 'moderate') basePrice *= 1.0;
         else if (condition === 'heavy') basePrice *= 1.3;
-        
-        // Move-out premium
         if (service === 'moveout') basePrice *= 1.15;
-        
-        // Timeline adjustment
         if (timeline === 'urgent') basePrice *= 1.1;
-        
         estimate = basePrice;
         description = service === 'moveout' ? 'Move-Out Cleaning' : 'House Cleaning';
       } 
+      // Interior Painting Logic
       else if (service === 'painting') {
-        // Painting: $25-40 per room (lower to moderate)
-        const rooms = parseInt(document.getElementById('rooms').value) || 1;
-        let basePrice = rooms * 35;
+        // More accurate interior painting: $2.50 - $4.50 per sqft of floor area (proxy for wall area)
+        let basePrice = sqft * 3.50;
         
-        // Prep work
+        // Prep work adjustment
         const prep = document.getElementById('prep').value;
-        if (prep === 'minimal') basePrice += 50;
-        else if (prep === 'moderate') basePrice += 150;
-        else if (prep === 'extensive') basePrice += 300;
+        if (prep === 'minimal') basePrice *= 0.9;
+        else if (prep === 'extensive') basePrice *= 1.25;
         
-        // Timeline adjustment
+        // Coats adjustment
+        const coats = parseInt(document.getElementById('coats').value) || 2;
+        if (coats === 1) basePrice *= 0.7;
+        else if (coats === 3) basePrice *= 1.4;
+        
         if (timeline === 'urgent') basePrice *= 1.1;
-        
         estimate = basePrice;
         description = 'Interior Painting';
       }
-      else if (service === 'both') {
-        // Combined service: cleaning + painting with slight discount
-        let cleanPrice = sqft * 0.12;
-        if (condition === 'light') cleanPrice *= 0.9;
-        else if (condition === 'moderate') cleanPrice *= 1.0;
-        else if (condition === 'heavy') cleanPrice *= 1.3;
+      // Exterior Painting Logic
+      else if (service === 'exterior') {
+        // Exterior painting: $3.00 - $6.00 per sqft
+        let basePrice = sqft * 4.50;
         
-        const rooms = parseInt(document.getElementById('rooms').value) || 1;
-        let paintPrice = rooms * 35;
+        const extType = document.getElementById('exteriorType').value;
+        if (extType === 'stucco') basePrice *= 1.2;
+        else if (extType === 'trim') basePrice = sqft * 1.5; // Much lower if just trim
+        
         const prep = document.getElementById('prep').value;
-        if (prep === 'minimal') paintPrice += 50;
-        else if (prep === 'moderate') paintPrice += 150;
-        else if (prep === 'extensive') paintPrice += 300;
+        if (prep === 'minimal') basePrice *= 0.85;
+        else if (prep === 'extensive') basePrice *= 1.3;
         
-        estimate = (cleanPrice + paintPrice) * 0.95; // 5% bundle discount
+        if (timeline === 'urgent') basePrice *= 1.15;
+        estimate = basePrice;
+        description = 'Exterior Painting';
+      }
+      // Bundle Logic
+      else if (service === 'both') {
+        let cleanPrice = sqft * 0.12;
+        if (condition === 'heavy') cleanPrice *= 1.3;
+        
+        let paintPrice = sqft * 3.50;
+        const coats = parseInt(document.getElementById('coats').value) || 2;
+        if (coats === 3) paintPrice *= 1.4;
+        
+        estimate = (cleanPrice + paintPrice) * 0.90; // 10% bundle discount
         description = 'Cleaning + Painting Bundle';
       }
       
-      // Round to nearest $25
-      estimate = Math.round(estimate / 25) * 25;
-      const lowEstimate = Math.round(estimate * 0.85);
-      const highEstimate = Math.round(estimate * 1.15);
+      // Round to nearest $50 for larger projects
+      estimate = Math.round(estimate / 50) * 50;
+      const lowEstimate = Math.round(estimate * 0.80);
+      const highEstimate = Math.round(estimate * 1.20);
       
       // Display result
       document.getElementById('estimatePrice').textContent = '$' + estimate.toLocaleString();
@@ -679,11 +710,9 @@
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
       const estimate = document.getElementById('estimatePrice').textContent;
+      const service = document.querySelector('input[name="service"]:checked').parentElement.textContent.trim();
       
-      // Pre-fill the main quote form
-      const message = `I used your pricing estimator and got an estimate of ${estimate}. Please provide an official quote for my project.`;
-      
-      // Redirect to main quote form with pre-filled data
+      const message = `I used your pricing estimator for ${service} and got an estimate of ${estimate}. Please provide an official quote for my project.`;
       window.location.href = `/#quote?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}`;
     }
 
@@ -693,15 +722,14 @@
       formActions.style.display = 'flex';
       cleaningDetails.style.display = 'none';
       paintingDetails.style.display = 'none';
+      exteriorTypeGroup.style.display = 'none';
     }
 
-    // Header scroll effect
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
 
-    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
 
