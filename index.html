@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJPV8T9HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJJPV8T9HN");
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting</title>
@@ -9,14 +17,14 @@
     content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting with clear quotes and real communication."
   />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://www.brushandbroomllp.com/" />
+  <link rel="canonical" href="https://brushnbroom.com/" />
   <meta property="og:title" content="Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting" />
   <meta
     property="og:description"
     content="Seattle house cleaning and painting with clear quotes, good communication, and work done right."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.brushandbroomllp.com/" />
+  <meta property="og:url" content="https://brushnbroom.com/" />
   <meta name="theme-color" content="#1a3c2a" />
 
   <!-- Fonts -->
@@ -500,7 +508,57 @@
       align-items: center;
     }
 
+    .why-us h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 24px;
+    }
+
+    .why-us p {
+      color: var(--charcoal-light);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+    }
+
+    .value-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .value-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(212, 148, 58, 0.1);
+      color: var(--amber);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .value-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .value-text h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .value-text p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
     .why-img {
+      position: relative;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-xl);
@@ -508,619 +566,344 @@
 
     .why-img img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
-    }
-
-    .why-us h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      margin-bottom: 12px;
-    }
-
-    .why-intro {
-      color: var(--charcoal-light);
-      font-size: 1.08rem;
-      line-height: 1.75;
-      margin-bottom: 40px;
-    }
-
-    .why-card {
-      background: var(--cream);
-      border-radius: var(--radius-sm);
-      padding: 24px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
-    }
-
-    .why-card + .why-card {
-      margin-top: 20px;
-    }
-
-    .why-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.08rem;
-      margin-bottom: 6px;
-    }
-
-    .why-card p {
-      color: var(--charcoal-light);
-      line-height: 1.7;
     }
 
     /* ─── Process ─── */
     .process {
       padding: 100px 0;
-      background: var(--forest);
-      position: relative;
-      overflow: hidden;
+      background: var(--cream);
     }
 
-    .process::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.04;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-
-    .process .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .process h2 {
-      color: var(--white);
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      margin-bottom: 12px;
-    }
-
-    .process .section-intro {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1.08rem;
-      max-width: 62ch;
-      margin-bottom: 56px;
-      line-height: 1.75;
-    }
-
-    .steps-grid {
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
+      margin-top: 56px;
     }
 
-    .step-card {
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(4px);
+    .process-card {
+      position: relative;
+      padding: 32px;
+      background: var(--warm-white);
       border-radius: var(--radius);
-      padding: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: background 0.3s ease;
+      border: 1px solid rgba(232, 223, 210, 0.5);
+      transition: all 0.3s ease;
     }
 
-    .step-card:hover {
-      background: rgba(255, 255, 255, 0.12);
+    .process-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
     }
 
     .step-num {
       font-family: 'DM Serif Display', serif;
-      font-size: 2.4rem;
-      color: var(--amber);
-      margin-bottom: 16px;
-      display: block;
+      font-size: 3rem;
+      color: rgba(26, 60, 42, 0.08);
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      line-height: 1;
     }
 
-    .step-card h3 {
+    .process-card h3 {
       font-family: 'DM Sans', sans-serif;
       font-weight: 700;
-      color: var(--white);
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .step-card p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-
-    /* ─── Good Fit / Values ─── */
-    .good-fit {
-      padding: 100px 0;
-      background: var(--cream);
-    }
-
-    .fit-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-    }
-
-    .fit-card {
-      background: var(--warm-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
-      padding: 36px 40px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
-    }
-
-    .fit-card h2 {
-      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-      margin-bottom: 20px;
-    }
-
-    .fit-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .fit-list li {
-      display: flex;
-      gap: 12px;
-      color: var(--charcoal-light);
-      line-height: 1.65;
-    }
-
-    .fit-list li + li {
-      margin-top: 14px;
-    }
-
-    .fit-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--forest);
-      flex-shrink: 0;
-      margin-top: 8px;
-    }
-
-    .fit-card p {
-      color: var(--charcoal-light);
-      font-size: 1.08rem;
-      line-height: 1.75;
-    }
-
-    .fit-card p + p {
-      margin-top: 16px;
-    }
-
-    /* ─── Quote Section ─── */
-    .quote-section {
-      padding: 100px 0;
-      background: var(--warm-white);
-    }
-
-    .quote-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-    }
-
-    .quote-box {
-      background: var(--cream);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      padding: 36px 40px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
-    }
-
-    .quote-box h2 {
-      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-      margin-bottom: 8px;
-    }
-
-    .quote-box > p {
-      color: var(--charcoal-light);
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-
-    .quote-form {
-      display: grid;
-      gap: 14px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
-      width: 100%;
-      padding: 14px 20px;
-      border: 1px solid var(--cream-dark);
-      border-radius: var(--radius-sm);
-      font: inherit;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      background: var(--warm-white);
-      transition: all 0.2s ease;
-    }
-
-    .quote-form input:focus,
-    .quote-form select:focus,
-    .quote-form textarea:focus {
-      outline: none;
-      border-color: var(--forest);
-      box-shadow: 0 0 0 3px rgba(26, 60, 42, 0.12);
-    }
-
-    .quote-form input::placeholder,
-    .quote-form textarea::placeholder {
-      color: rgba(107, 104, 96, 0.6);
-    }
-
-    .quote-form textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .contact-box {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-links {
-      margin-bottom: 28px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .contact-link:hover {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
       color: var(--forest);
     }
 
-    .contact-link + .contact-link {
-      margin-top: 14px;
-    }
-
-    .contact-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(26, 60, 42, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-icon svg {
-      width: 18px;
-      height: 18px;
-      color: var(--forest);
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .contact-divider {
-      border: none;
-      border-top: 1px solid var(--cream-dark);
-      margin: 0 0 24px;
-    }
-
-    .contact-detail h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.08rem;
-      margin-bottom: 4px;
-    }
-
-    .contact-detail p {
+    .process-card p {
+      font-size: 0.95rem;
       color: var(--charcoal-light);
-      line-height: 1.7;
-    }
-
-    .contact-detail + .contact-detail {
-      margin-top: 20px;
+      line-height: 1.6;
     }
 
     /* ─── FAQ ─── */
     .faq {
       padding: 100px 0;
-      background: var(--cream);
+      background: var(--warm-white);
     }
 
-    .faq-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .faq-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .faq h2 {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-    }
-
-    .faq-list {
+    .faq-grid {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 48px;
     }
 
     .faq-item {
-      background: var(--warm-white);
+      background: var(--white);
+      padding: 28px;
       border-radius: var(--radius-sm);
       border: 1px solid rgba(232, 223, 210, 0.4);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
     }
 
-    .faq-question {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 22px 24px;
-      background: none;
-      border: none;
-      font: inherit;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .faq-question h3 {
+    .faq-item h3 {
       font-family: 'DM Sans', sans-serif;
       font-weight: 700;
-      font-size: 1.02rem;
-      color: var(--charcoal);
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      color: var(--forest);
     }
 
-    .faq-chevron {
-      width: 20px;
-      height: 20px;
+    .faq-item p {
+      font-size: 0.95rem;
       color: var(--charcoal-light);
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
+      line-height: 1.6;
     }
 
-    .faq-item.open .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-                  opacity 0.3s ease;
-      opacity: 0;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 200px;
-      opacity: 1;
-    }
-
-    .faq-answer p {
-      padding: 0 24px 22px;
-      color: var(--charcoal-light);
-      line-height: 1.7;
-    }
-
-    /* ─── CTA Band ─── */
-    .cta-band {
-      padding: 88px 0;
+    /* ─── Quote Section ─── */
+    .quote-section {
+      padding: 100px 0;
       background: var(--forest);
+      color: var(--white);
       position: relative;
       overflow: hidden;
-      text-align: center;
     }
 
-    .cta-band::before {
+    .quote-section::before {
       content: "";
       position: absolute;
       inset: 0;
-      opacity: 0.06;
-      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+      opacity: 0.05;
     }
 
-    .cta-band .container {
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
       position: relative;
       z-index: 2;
     }
 
-    .cta-band h2 {
-      color: var(--white);
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      margin-bottom: 12px;
+    .quote-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 20px;
     }
 
-    .cta-band p {
+    .quote-content p {
       color: rgba(255, 255, 255, 0.8);
-      font-size: 1.08rem;
-      max-width: 56ch;
-      margin: 0 auto 28px;
-      line-height: 1.75;
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber);
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .contact-text span {
+      display: block;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .contact-text a {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .quote-form {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-xl);
+      color: var(--charcoal);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--charcoal);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--cream-dark);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+      background: var(--warm-white);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--forest);
+    }
+
+    .quote-form .btn {
+      width: 100%;
+      margin-top: 10px;
     }
 
     /* ─── Footer ─── */
     .footer {
       background: var(--forest-dark);
-      padding: 56px 0 0;
+      color: var(--white);
+      padding: 80px 0 40px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
     }
 
     .footer-brand {
-      color: var(--white);
       font-weight: 800;
-      font-size: 1.12rem;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
     }
 
     .footer-brand span {
       color: var(--amber);
     }
 
-    .footer p,
-    .footer a {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.65;
-    }
-
-    .footer a:hover {
-      color: var(--amber);
+    .footer p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      max-width: 35ch;
     }
 
     .footer-title {
-      color: var(--white);
       font-weight: 700;
-      margin-bottom: 12px;
+      font-size: 1rem;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--amber);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .footer-links a {
-      display: block;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s;
+      font-size: 0.95rem;
     }
 
-    .footer-links a + a {
-      margin-top: 8px;
+    .footer-links a:hover {
+      color: var(--white);
     }
 
     .footer-bottom {
+      padding-top: 40px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
-      padding: 28px 0;
       text-align: center;
-    }
-
-    .footer-bottom p {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
     }
 
     /* ─── Responsive ─── */
-    @media (max-width: 900px) {
-      .hero-grid,
-      .services-grid,
-      .steps-grid,
-      .fit-grid,
-      .quote-grid,
-      .why-grid,
-      .footer-grid {
+    @media (max-width: 1024px) {
+      .hero-grid, .services-grid, .why-grid, .quote-grid {
         grid-template-columns: 1fr;
       }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .steps-grid {
+      .process-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .nav-toggle {
-        display: inline-flex;
+      .hero .container {
+        padding-top: 120px;
       }
+      .hero-card {
+        max-width: 500px;
+      }
+    }
 
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
       .nav {
         display: none;
-        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--forest);
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        padding: 0 0 18px;
-        background: rgba(18, 42, 30, 0.98);
-        backdrop-filter: blur(12px);
+        padding: 40px 5%;
+        gap: 24px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       }
-
       .nav.open {
         display: flex;
       }
-
-      .nav a {
-        display: block;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        width: 100%;
-      }
-
       .nav .btn-amber {
-        margin: 14px 0 0;
+        margin-left: 0;
         width: 100%;
-        text-align: center;
       }
-
-      .nav-wrap {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 16px 0;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero .container {
-        padding: 120px 0 80px;
-      }
-
-      .why-grid {
-        gap: 32px;
-      }
-
-      .quote-box,
-      .fit-card {
-        padding: 28px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .steps-grid {
+      .process-grid, .faq-grid {
         grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
       }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Brush & Broom LLP",
-    "url":"https://www.brushandbroomllp.com/",
-    "telephone":"+1-206-571-1092",
-    "email":"seabnbllp@icloud.com",
-    "areaServed":"Seattle, Washington",
-    "description":"Family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting.",
-    "serviceType":[
-      "House cleaning",
-      "Apartment cleaning",
-      "Move-out cleaning",
-      "Interior painting",
-      "Exterior painting",
-      "Residential painting"
-    ]
-  }
-  </script>
 </head>
 <body>
 
   <!-- ═══ HEADER ═══ -->
   <header class="header" id="site-header">
     <div class="container nav-wrap">
-      <a href="#" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+      <a href="/" class="brand">Brush <span>&amp;</span> Broom LLP</a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         Menu
@@ -1128,7 +911,8 @@
 
       <nav id="site-nav" class="nav" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
+        <a href="/about.html">About</a>
+        <a href="/areas-we-serve.html">Areas</a>
         <a href="#process">How It Works</a>
         <a href="#faq">FAQ</a>
         <a href="#quote" class="btn btn-amber">Get a Quote</a>
@@ -1136,524 +920,300 @@
     </div>
   </header>
 
-  <main>
-
-    <!-- ═══ HERO ═══ -->
-    <section class="hero">
-      <div class="hero-bg">
-        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Beautiful Seattle Craftsman home" />
-      </div>
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="fade-up">
-              <span class="eyebrow eyebrow-amber">Seattle Cleaning &amp; Painting</span>
-            </div>
-            <div class="fade-up delay-1">
-              <h1>Good work, clear communication, and no runaround.</h1>
-            </div>
-            <div class="fade-up delay-2">
-              <p class="hero-text">
-                We help Seattle homeowners, renters, and landlords with the kind of work
-                that actually changes how a place feels. Whether you need a serious clean,
-                fresh paint, or both, the goal is simple: make the process easier and leave
-                the place better than we found it.
-              </p>
-            </div>
-            <div class="fade-up delay-3">
-              <div class="hero-actions">
-                <a href="#quote" class="btn btn-amber">
-                  Get a Free Quote
-                  <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-                <a href="tel:2065711092" class="btn btn-outline">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  Call (206) 571-1092
-                </a>
+  <main id="main-content">
+    <article>
+      <!-- ═══ HERO ═══ -->
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Beautiful Seattle Craftsman home" />
+        </div>
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="fade-up">
+                <span class="eyebrow eyebrow-amber">Seattle &amp; Eastside Cleaning &amp; Painting</span>
               </div>
+              <div class="fade-up delay-1">
+                <h1>Good work, clear communication, and no runaround. That's our promise to you.</h1>
+              </div>
+              <div class="fade-up delay-2">
+                <p class="hero-text">
+                  Hi, we're Dustin and Brittany, the husband-and-wife team behind Brush &amp; Broom LLP. Our journey has taken us from Michigan to Alabama, and eventually, to building a new life here in Seattle. We understand the importance of a clean, well-maintained home, and we're here to make that process easier for you. Whether you need a serious clean, fresh paint, or both, our goal is simple: leave your place better than we found it.
+                </p>
+              </div>
+              <div class="fade-up delay-3">
+                <div class="hero-actions">
+                  <a href="#quote" class="btn btn-amber">
+                    Get a Free Quote
+                    <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                  <a href="tel:2065711092" class="btn btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call (206) 571-1092
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="fade-up delay-4">
+              <aside class="hero-card">
+                <h3>What people usually need help with</h3>
+                <ul>
+                  <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    House and apartment cleaning that feels thorough, not rushed.
+                  </li>
+                  <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Move-out cleaning when you need the place looking ready to hand off.
+                  </li>
+                  <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Interior painting that makes tired rooms feel fresh again.
+                  </li>
+                  <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    One team handling both cleaning and painting so you are not juggling multiple companies.
+                  </li>
+                </ul>
+              </aside>
             </div>
           </div>
-
-          <div class="fade-up delay-4">
-            <aside class="hero-card">
-              <h3>What people usually need help with</h3>
-              <ul>
-                <li>
-                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  House and apartment cleaning that feels thorough, not rushed.
-                </li>
-                <li>
-                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  Move-out cleaning when you need the place looking ready to hand off.
-                </li>
-                <li>
-                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  Interior painting that makes tired rooms feel fresh again.
-                </li>
-                <li>
-                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  One team handling both cleaning and painting so you are not juggling multiple companies.
-                </li>
-              </ul>
-            </aside>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══ SERVICES ═══ -->
-    <section id="services" class="services">
-      <div class="container">
-        <div class="fade-up">
-          <span class="eyebrow eyebrow-green">Services</span>
-          <h2>What we do</h2>
-          <p class="section-intro">
-            We keep our service list straightforward because most people are not looking
-            for ten packages and a bunch of upsells. They just want the job done right.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card fade-up">
-            <div class="service-card-img">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" />
-            </div>
-            <div class="service-card-body">
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg>
-              </div>
-              <h3>House Cleaning</h3>
-              <p>
-                Regular cleaning, deep cleaning, and reset cleaning for homes that need
-                more than a quick wipe-down. Kitchens, bathrooms, floors, baseboards, and
-                the details people actually notice.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up delay-1">
-            <div class="service-card-body">
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-              </div>
-              <h3>Move-Out Cleaning</h3>
-              <p>
-                Helpful for renters, landlords, and turnovers when the place needs to look
-                clean, cared for, and ready for the next person walking through the door.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up delay-2">
-            <div class="service-card-img">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" />
-            </div>
-            <div class="service-card-body">
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
-              </div>
-              <h3>Interior Painting</h3>
-              <p>
-                Walls, trim, doors, touch-ups, and full-room repaints with proper prep,
-                clean lines, and cleanup handled the way it should be.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up delay-3">
-            <div class="service-card-img">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/exterior-painting-Ebx8rDGRhy3v4i7iMdxZCT.webp" alt="Exterior painting" />
-            </div>
-            <div class="service-card-body">
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              </div>
-              <h3>Exterior Painting</h3>
-              <p>
-                Protect your home and boost curb appeal with clean prep, sharp lines, and durable finishes built for Seattle homes.
-              </p>
-            </div>
-          </article>
-        </div>
-
-        <div class="serving-note fade-up">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Serving homeowners in Seattle.
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ WHY US ═══ -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-        <div class="why-grid">
+      <!-- ═══ SERVICES ═══ -->
+      <section id="services" class="services">
+        <div class="container">
           <div class="fade-up">
-            <div class="why-img">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/couple-team-HqgN5ApY27kFigc8XAL7sq.webp" alt="Brush and Broom team" />
-            </div>
+            <span class="eyebrow eyebrow-green">Services</span>
+            <h2>What we do</h2>
+            <p class="section-intro">
+              We keep our service list straightforward because most people aren't looking for ten packages and a bunch of upsells. They just want the job done right, and that's what we deliver.
+            </p>
           </div>
 
-          <div>
-            <div class="fade-up">
-              <span class="eyebrow eyebrow-green">Why Us</span>
-              <h2>A smaller company can be a better fit.</h2>
-              <p class="why-intro">
-                A lot of people are tired of calling a company and feeling like they are
-                talking to a system. We keep it personal, clear, and easy to deal with.
-              </p>
-            </div>
-
-            <div class="fade-up delay-1">
-              <div class="why-card">
-                <h3>You deal with real people</h3>
+          <div class="services-grid">
+            <section class="service-card fade-up">
+              <div class="service-card-img">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" loading="lazy" />
+              </div>
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg>
+                </div>
+                <h3>House Cleaning</h3>
                 <p>
-                  No bouncing between sales, scheduling, and random crews. You know who you
-                  are talking to, what the plan is, and what the job includes.
+                  Regular cleaning, deep cleaning, and reset cleaning for homes that need more than a quick wipe-down. We focus on kitchens, bathrooms, floors, baseboards, and all the details you actually notice.
                 </p>
+                <a href="/routine-deep-maintenance-cleaning-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
               </div>
-            </div>
+            </section>
 
-            <div class="fade-up delay-2">
-              <div class="why-card">
-                <h3>The work should feel worth it</h3>
+            <section class="service-card fade-up delay-1">
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <h3>Move-Out Cleaning</h3>
                 <p>
-                  The whole point is for your home to look better, feel cleaner, and take
-                  stress off your plate instead of adding more to it.
+                  Perfect for renters, landlords, and turnovers when the place needs to look clean, cared for, and ready for the next person walking through the door. We handle the deep clean so you don't have to.
                 </p>
+                <a href="/move-in-move-out-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
               </div>
+            </section>
+
+            <section class="service-card fade-up delay-2">
+              <div class="service-card-img">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" loading="lazy" />
+              </div>
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
+                </div>
+                <h3>Interior Painting</h3>
+                <p>
+                  Walls, trim, doors, touch-ups, and full-room repaints. We handle the details to make tired rooms feel fresh and new again, with clean lines and a smooth finish.
+                </p>
+                <a href="/interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ PROCESS ═══ -->
+      <section id="process" class="section section-alt">
+        <div class="container">
+          <div class="fade-up">
+            <span class="eyebrow eyebrow-amber">Our Approach</span>
+            <h2>How we make it easy for you</h2>
+            <p class="section-intro">
+              We believe in a straightforward process that prioritizes your peace of mind. From your first call to the final walkthrough, we're here to ensure a smooth, stress-free experience.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-card fade-up">
+              <h3>1. Your Free Quote</h3>
+              <p>Reach out to us, and we'll discuss your needs and provide a clear, detailed quote. No hidden fees, no surprises – just honest pricing from the start.</p>
+            </div>
+            <div class="process-card fade-up delay-1">
+              <h3>2. Scheduling &amp; Prep</h3>
+              <p>Once you're ready, we'll schedule a time that works for you. We take care of all the necessary preparations, ensuring your home is protected and ready for our work.</p>
+            </div>
+            <div class="process-card fade-up delay-2">
+              <h3>3. Quality Work</h3>
+              <p>Dustin and Brittany personally oversee every project, ensuring meticulous attention to detail and a high-quality finish. We treat your home as if it were our own.</p>
+            </div>
+            <div class="process-card fade-up delay-3">
+              <h3>4. Final Walkthrough</h3>
+              <p>We'll walk through the completed project with you to ensure everything meets your expectations. Your satisfaction is our top priority.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══ PROCESS ═══ -->
-    <section id="process" class="process">
-      <div class="container">
-        <div class="fade-up">
-          <span class="eyebrow eyebrow-amber">How It Works</span>
-          <h2>Simple from start to finish</h2>
-          <p class="section-intro">
-            You do not need a complicated booking process. Just tell us what is going on,
-            and we will help you figure out the next step.
-          </p>
-        </div>
-
-        <div class="steps-grid">
-          <article class="step-card fade-up">
-            <span class="step-num">01</span>
-            <h3>Reach out</h3>
-            <p>
-              Send a message, call, or fill out the form with the basics. Photos help,
-              but they are not required.
-            </p>
-          </article>
-
-          <article class="step-card fade-up delay-1">
-            <span class="step-num">02</span>
-            <h3>Get a clear quote</h3>
-            <p>
-              We look at the details and send pricing that makes sense, so you know what
-              is included before anything starts.
-            </p>
-          </article>
-
-          <article class="step-card fade-up delay-2">
-            <span class="step-num">03</span>
-            <h3>We handle the work</h3>
-            <p>
-              We show up, protect the space, do the job properly, and keep communication
-              easy while it is happening.
-            </p>
-          </article>
-
-          <article class="step-card fade-up delay-3">
-            <span class="step-num">04</span>
-            <h3>You get the result</h3>
-            <p>
-              A cleaner home, fresher rooms, or a property that feels ready for the next
-              chapter without the usual headache.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ GOOD FIT / VALUES ═══ -->
-    <section class="good-fit">
-      <div class="container">
-        <div class="fit-grid">
-          <div class="fit-card fade-up">
-            <span class="eyebrow eyebrow-green">Good Fit Jobs</span>
-            <h2>When people usually call us</h2>
-            <ul class="fit-list">
-              <li><span class="fit-dot"></span> The home has gotten behind and needs a real reset.</li>
-              <li><span class="fit-dot"></span> A rental or apartment needs to be turned over fast.</li>
-              <li><span class="fit-dot"></span> Rooms feel beat up, dull, or overdue for fresh paint.</li>
-              <li><span class="fit-dot"></span> Someone wants cleaning and painting handled by one team instead of two.</li>
-              <li><span class="fit-dot"></span> The customer wants straightforward communication instead of a sales routine.</li>
-            </ul>
+      <!-- ═══ FAQ ═══ -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="fade-up">
+            <span class="eyebrow eyebrow-green">Questions?</span>
+            <h2>Frequently Asked Questions</h2>
           </div>
 
-          <div class="fit-card fade-up delay-1">
-            <span class="eyebrow eyebrow-green">What Matters to Us</span>
-            <h2>Respect for your home and your time</h2>
-            <p>
-              People remember how a company made them feel just as much as the finished job.
-              That is why we try to keep things clear, show respect for the space, and leave
-              things in better shape than we found them.
-            </p>
-            <p>
-              It sounds basic, but basic things done well are what most people actually want.
-            </p>
+          <div class="faq-grid">
+            <div class="faq-item fade-up">
+              <h3>What areas do you serve?</h3>
+              <p>We proudly serve Seattle and the Eastside, including Bellevue, Kirkland, Redmond, and surrounding communities. Check our <a href="/areas-we-serve.html">Areas We Serve</a> page for more details.</p>
+            </div>
+            <div class="faq-item fade-up delay-1">
+              <h3>Are you licensed and insured?</h3>
+              <p>Yes, Brush &amp; Broom LLP is fully licensed, bonded, and insured for your peace of mind. We believe in operating with complete transparency and professionalism.</p>
+            </div>
+            <div class="faq-item fade-up delay-2">
+              <h3>How do I get a quote?</h3>
+              <p>It's easy! Simply fill out our <a href="#quote">online quote form</a>, or give us a call at <a href="tel:2065711092">(206) 571-1092</a>. We'll get back to you promptly with a detailed estimate.</p>
+            </div>
+            <div class="faq-item fade-up delay-3">
+              <h3>What makes Brush &amp; Broom LLP different?</h3>
+              <p>As a husband-and-wife team, we bring a personal touch to every project. We're not a large franchise; we're your neighbors, committed to honest communication, exceptional quality, and a genuine care for your home.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══ QUOTE + CONTACT ═══ -->
-    <section id="quote" class="quote-section">
-      <div class="container">
-        <div class="quote-grid">
-          <div class="quote-box fade-up">
-            <span class="eyebrow eyebrow-green">Free Quote</span>
-            <h2>Tell us what you need</h2>
-            <p>
-              Keep it simple. Send the address, timeline, and what kind of help you need.
-              We will take it from there.
+      <!-- ═══ QUOTE ═══ -->
+      <section id="quote" class="section section-alt">
+        <div class="container">
+          <div class="fade-up" style="text-align: center;">
+            <span class="eyebrow eyebrow-amber">Ready for a refresh?</span>
+            <h2>Get Your Free Quote Today</h2>
+            <p class="section-intro">
+              We'd love to hear about your project! Fill out the form below, and we'll get back to you with a personalized estimate.
             </p>
+          </div>
 
-            <form class="quote-form" action="https://formspree.io/f/mykbgkbn" method="POST">
-              <input type="text" name="name" placeholder="Your name" required />
-              <div class="form-row">
-                <input type="tel" name="phone" placeholder="Phone number" required />
-                <input type="email" name="email" placeholder="Email address" required />
-              </div>
-              <input type="text" name="address" placeholder="Seattle property address" />
-              <select name="service" required>
-                <option value="">What do you need help with?</option>
-                <option>House cleaning</option>
-                <option>Move-out cleaning</option>
-                <option>Interior painting</option>
-                <option>Exterior painting</option>
-                <option>Cleaning and painting</option>
+          <form class="quote-form fade-up delay-1">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="house-cleaning">House Cleaning</option>
+                <option value="move-out-cleaning">Move-Out Cleaning</option>
+                <option value="interior-painting">Interior Painting</option>
+                <option value="exterior-painting">Exterior Painting</option>
+                <option value="both">Both Cleaning &amp; Painting</option>
+                <option value="other">Other</option>
               </select>
-              <textarea name="details" placeholder="Tell us about the job, your timeline, and anything important we should know."></textarea>
-              <button type="submit" class="btn btn-forest">
-                Request Quote
-                <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </button>
-            </form>
-          </div>
-
-          <div class="quote-box contact-box fade-up delay-1">
-            <span class="eyebrow eyebrow-green">Contact</span>
-            <h2>Want to talk first?</h2>
-            <p>
-              Some people would rather just call, and that is completely fine.
-            </p>
-
-            <div class="contact-links">
-              <a href="tel:2065711092" class="contact-link">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                (206) 571-1092
-              </a>
-              <a href="mailto:seabnbllp@icloud.com" class="contact-link">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </div>
-                seabnbllp@icloud.com
-              </a>
             </div>
-
-            <hr class="contact-divider" />
-
-            <div class="contact-detail">
-              <h3>Seattle only</h3>
-              <p>
-                We keep our focus on Seattle so scheduling stays tighter and service stays more consistent.
-              </p>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-
-            <div class="contact-detail">
-              <h3>Clear next steps</h3>
-              <p>
-                If it is a fit, we will tell you what the job includes, what it costs, and what timing looks like.
-              </p>
-            </div>
-          </div>
+            <button type="submit" class="btn btn-amber">Submit Request</button>
+          </form>
         </div>
-      </div>
-    </section>
-
-    <!-- ═══ FAQ ═══ -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <div class="faq-inner">
-          <div class="faq-header fade-up">
-            <span class="eyebrow eyebrow-green">FAQ</span>
-            <h2>Questions people usually ask</h2>
-          </div>
-
-          <div class="faq-list">
-            <article class="faq-item fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <h3>Do you handle both cleaning and painting?</h3>
-                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes. A lot of customers like getting both handled by one team because it keeps the project simpler.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item fade-up delay-1">
-              <button class="faq-question" aria-expanded="false">
-                <h3>Do you give written quotes?</h3>
-                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes. We want people to know what they are agreeing to before the work starts.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item fade-up delay-2">
-              <button class="faq-question" aria-expanded="false">
-                <h3>Do you focus on Seattle?</h3>
-                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes. We keep our main focus on Seattle jobs.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item fade-up delay-3">
-              <button class="faq-question" aria-expanded="false">
-                <h3>Can I reach out even if I am not sure what I need yet?</h3>
-                <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Yes. You do not need to have every detail figured out before contacting us.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ CTA BAND ═══ -->
-    <section class="cta-band">
-      <div class="container">
-        <div class="fade-up">
-          <h2>If your place needs attention, we can help.</h2>
-          <p>
-            Cleaning, painting, or both. Tell us what is going on and we will give you a straight answer.
-          </p>
-          <a href="#quote" class="btn btn-amber">
-            Get a Quote
-            <svg class="arrow-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
+      </section>
+    </article>
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
-        <p>Seattle cleaning and painting with clear quotes, solid work, and good communication.</p>
+        <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside cleaning and painting. We offer clear quotes, solid work, and honest communication.</p>
       </div>
-
       <div>
         <div class="footer-title">Contact</div>
         <p><a href="tel:2065711092">(206) 571-1092</a></p>
-        <p><a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a></p>
+        <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
       </div>
-
       <div>
         <div class="footer-title">Links</div>
         <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#why-us">Why Us</a>
-          <a href="#process">How It Works</a>
-          <a href="#quote">Get a Quote</a>
+          <a href="/#services">Services</a>
+          <a href="/about.html">About Us</a>
+          <a href="/areas-we-serve.html">Areas We Serve</a>
+          <a href="/#quote">Get a Quote</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Brush &amp; Broom LLP. All rights reserved.</p>
+      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- ═══ SCRIPTS ═══ -->
   <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav");
 
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.textContent = open ? 'Close' : 'Menu';
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Close" : "Menu";
     });
 
-    // Close mobile nav on link click
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "Menu";
       });
     });
 
-    // Sticky header background on scroll
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 20);
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 20);
     }, { passive: true });
 
-    // Scroll-triggered fade-up animations
+    // Intersection Observer for fade-up animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '-40px' });
+    }, observerOptions);
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => {
-          i.classList.remove('open');
-          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
-
-        // Toggle current
-        if (!isOpen) {
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
+    document.querySelectorAll('.fade-up').forEach(el => {
+      observer.observe(el);
     });
   </script>
 
