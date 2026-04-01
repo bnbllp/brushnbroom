@@ -25,7 +25,34 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://brushnbroom.com/" />
+  <meta property="og:image" content="https://brushnbroom.com/assets/images/og-image.png" />
   <meta name="theme-color" content="#1a3c2a" />
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  
+  <!-- Schema.org Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Brush & Broom LLP",
+    "image": "https://brushnbroom.com/assets/images/logo.png",
+    "description": "Seattle and Eastside cleaning and painting company",
+    "url": "https://brushnbroom.com",
+    "telephone": "(206) 571-1092",
+    "email": "seabnbllp@brushnbroom.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seattle",
+      "addressRegion": "WA",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Seattle", "Bellevue", "Kirkland", "Redmond"],
+    "serviceType": ["House Cleaning", "Move-Out Cleaning", "Interior Painting", "Exterior Painting"]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -230,11 +257,21 @@
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
       color: var(--white);
       font-weight: 800;
       font-size: 1.15rem;
       letter-spacing: 0.2px;
       white-space: nowrap;
+    }
+
+    .brand img {
+      height: 50px;
+      width: auto;
+      display: block;
     }
 
     .brand span {
@@ -903,7 +940,7 @@
   <!-- ═══ HEADER ═══ -->
   <header class="header" id="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" /></a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         Menu
