@@ -290,6 +290,11 @@
       }
     }
   </style>
+  <script>
+    if (window.location.pathname.endsWith(".html")) {
+      window.location.replace(window.location.pathname.slice(0, -5));
+    }
+  </script>
 </head>
 <body>
 
@@ -329,7 +334,7 @@
     <section class="section">
       <div class="estimator-container">
         <form id="estimatorForm" class="estimator-form" action="https://formspree.io/f/mykbgkbn" method="POST">
-          <input type="hidden" name="_next" value="https://brushnbroom.com/thank-you.html" />
+          <input type="hidden" name="_next" value="https://brushnbroom.com/thank-you" />
           <input type="hidden" name="_subject" value="Pricing Estimator Request from Brush & Broom" />
           <!-- Service Type Section -->
           <div class="form-section">

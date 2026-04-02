@@ -297,6 +297,11 @@
       }
     }
   </style>
+  <script>
+    if (window.location.pathname.endsWith(".html")) {
+      window.location.replace(window.location.pathname.slice(0, -5));
+    }
+  </script>
 </head>
 <body>
 
