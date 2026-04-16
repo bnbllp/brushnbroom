@@ -53,7 +53,7 @@ brushbroom/
 
 ## Contact Information
 
-- **Phone**: (206) 571-1092
+- **Phone**: 206-571-5568
 - **Email**: seabnbllp@brushnbroom.com
 - **Service Area**: Seattle and the Eastside
 
@@ -147,7 +147,7 @@ This project is proprietary to Brush & Broom LLP.
 
 For issues or questions about the website, please contact:
 - Email: seabnbllp@brushnbroom.com
-- Phone: (206) 571-1092
+- Phone: 206-571-5568
 
 ---
 
