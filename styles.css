@@ -195,11 +195,25 @@
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
       color: var(--white);
       font-weight: 800;
       font-size: 1.15rem;
       letter-spacing: 0.2px;
       white-space: nowrap;
+    }
+
+    .brand img {
+      display: block;
+      height: 50px;
+      width: auto;
+      max-height: 50px;
+      max-width: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
     .brand span {
