@@ -14,7 +14,7 @@
   <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting | (206) 571-5568</title>
   <meta
     name="description"
-    content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting with clear quotes and real communication."
+    content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, post-construction cleaning, vacation rental turnover cleaning, and interior and exterior painting with clear quotes and real communication."
   />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://brushnbroom.com/" />
@@ -50,7 +50,7 @@
       "addressCountry": "US"
     },
     "areaServed": ["Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah"],
-    "serviceType": ["House Cleaning", "Move-Out Cleaning", "Interior Painting", "Exterior Painting"],
+    "serviceType": ["House Cleaning", "Move-Out Cleaning", "Post-Construction Cleaning", "Vacation Rental Cleaning", "Interior Painting", "Exterior Painting"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Services",
@@ -75,6 +75,20 @@
             "@type": "Service",
             "name": "Move-Out Cleaning Seattle"
           }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Post-Construction Cleaning Seattle"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Vacation Rental Cleaning Seattle"
+          }
         }
       ]
     }
@@ -87,12 +101,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════════════════════════════════
-       DESIGN: Pacific Northwest Craftsman
-       Colors: Forest green, warm cream, charcoal, amber
-       Typography: DM Serif Display + DM Sans
-       ═══════════════════════════════════════════════ */
-
     :root {
       --forest: #1a3c2a;
       --forest-light: #2a5c3f;
@@ -114,20 +122,9 @@
       --max: 1200px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    ::selection {
-      background-color: rgba(26, 60, 42, 0.2);
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    ::selection { background-color: rgba(26, 60, 42, 0.2); }
     body {
       font-family: 'DM Sans', system-ui, sans-serif;
       color: var(--charcoal);
@@ -137,28 +134,14 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
     h1, h2, h3, h4 {
       font-family: 'DM Serif Display', Georgia, serif;
       line-height: 1.15;
       letter-spacing: -0.01em;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-    }
-
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(92%, var(--max)); margin: 0 auto; }
     .eyebrow {
       display: inline-block;
       margin-bottom: 16px;
@@ -169,17 +152,8 @@
       padding: 6px 14px;
       border-radius: 999px;
     }
-
-    .eyebrow-green {
-      color: var(--forest);
-      background: rgba(26, 60, 42, 0.1);
-    }
-
-    .eyebrow-amber {
-      color: var(--amber);
-      background: rgba(212, 148, 58, 0.15);
-    }
-
+    .eyebrow-green { color: var(--forest); background: rgba(26, 60, 42, 0.1); }
+    .eyebrow-amber { color: var(--amber); background: rgba(212, 148, 58, 0.15); }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -194,904 +168,113 @@
       cursor: pointer;
       font-family: inherit;
     }
-
-    .btn-amber {
-      background: var(--amber);
-      color: var(--charcoal);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .btn-amber:hover {
-      background: var(--amber-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .btn-forest {
-      background: var(--forest);
-      color: var(--white);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .btn-forest:hover {
-      background: var(--forest-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    /* Arrow SVG for buttons */
-    .arrow-icon {
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    /* ─── Scroll Animations ─── */
+    .btn-amber { background: var(--amber); color: var(--charcoal); box-shadow: var(--shadow-lg); }
+    .btn-amber:hover { background: var(--amber-dark); transform: translateY(-2px); box-shadow: var(--shadow-xl); }
+    .btn-forest { background: var(--forest); color: var(--white); box-shadow: var(--shadow-lg); }
+    .btn-forest:hover { background: var(--forest-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255, 255, 255, 0.25); }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.4); }
+    .arrow-icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .fade-up {
       opacity: 0;
       transform: translateY(32px);
-      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.35s; }
-
-    /* ─── Header ─── */
     .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      transition: all 0.3s ease;
-      background: transparent;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.3s ease; background: transparent;
     }
-
     .header.scrolled {
-      background: rgba(26, 60, 42, 0.97);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      background: rgba(26, 60, 42, 0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
-
     .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      height: 80px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 80px;
     }
-
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.2px;
-      white-space: nowrap;
+      display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.2px; white-space: nowrap;
     }
-
-    .brand img {
-      height: 50px;
-      width: auto;
-      display: block;
-    }
-
-    .brand span {
-      color: var(--amber);
-    }
-
+    .brand img { height: 50px; width: auto; display: block; }
+    .brand span { color: var(--amber); }
     .nav-toggle {
-      display: none;
-      background: transparent;
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      padding: 8px 12px;
-      font: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
+      display: none; background: transparent; color: var(--white); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 10px; padding: 8px 12px; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer;
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav a {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .nav a:hover {
-      color: var(--white);
-    }
-
-    .nav .btn-amber {
-      margin-left: 8px;
-      padding: 10px 22px;
-    }
-
-    /* ─── Hero ─── */
-    .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-    }
-
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav a { color: rgba(255, 255, 255, 0.9); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav a:hover { color: var(--white); }
+    .nav .btn-amber { margin-left: 8px; padding: 10px 22px; }
+    .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
     .hero-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to right,
-        rgba(18, 42, 30, 0.92),
-        rgba(18, 42, 30, 0.80),
-        rgba(18, 42, 30, 0.50)
-      );
+      content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(18, 42, 30, 0.92), rgba(18, 42, 30, 0.80), rgba(18, 42, 30, 0.50));
     }
-
-    .hero .container {
-      position: relative;
-      z-index: 2;
-      padding: 140px 0 100px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      color: var(--white);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      margin-bottom: 24px;
-    }
-
-    .hero-text {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 1.08rem;
-      max-width: 58ch;
-      margin-bottom: 32px;
-      line-height: 1.75;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
+    .hero .container { position: relative; z-index: 2; padding: 140px 0 100px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .hero h1 { color: var(--white); font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 24px; }
+    .hero-text { color: rgba(255, 255, 255, 0.85); font-size: 1.08rem; max-width: 58ch; margin-bottom: 32px; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
     .hero-card {
-      background: var(--warm-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-xl);
-      padding: 28px;
-      border: 1px solid rgba(232, 223, 210, 0.5);
+      background: var(--warm-white); border-radius: var(--radius); box-shadow: var(--shadow-xl); padding: 28px; border: 1px solid rgba(232, 223, 210, 0.5);
     }
-
-    .hero-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.15rem;
-      margin-bottom: 16px;
-      color: var(--charcoal);
-    }
-
-    .hero-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .hero-card li {
-      display: flex;
-      gap: 12px;
-      color: var(--charcoal-light);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .hero-card li + li {
-      margin-top: 14px;
-    }
-
-    .check-icon {
-      width: 18px;
-      height: 18px;
-      color: var(--forest);
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-
-    /* ─── Services ─── */
-    .services {
-      padding: 100px 0;
-      background: var(--cream);
-    }
-
-    .services h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      margin-bottom: 12px;
-    }
-
-    .services .section-intro {
-      color: var(--charcoal-light);
-      font-size: 1.08rem;
-      max-width: 62ch;
-      margin-bottom: 56px;
-      line-height: 1.75;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
+    .hero-card h3 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 16px; color: var(--charcoal); }
+    .hero-card ul { list-style: none; padding: 0; }
+    .hero-card li { display: flex; gap: 12px; color: var(--charcoal-light); font-size: 0.95rem; line-height: 1.6; }
+    .hero-card li + li { margin-top: 14px; }
+    .check-icon { width: 18px; height: 18px; color: var(--forest); flex-shrink: 0; margin-top: 3px; }
+    .services { padding: 100px 0; background: var(--cream); }
+    .services h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 12px; }
+    .services .section-intro { color: var(--charcoal-light); font-size: 1.08rem; max-width: 62ch; margin-bottom: 56px; line-height: 1.75; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .service-card {
-      background: var(--warm-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(232, 223, 210, 0.4);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      background: var(--warm-white); border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid rgba(232, 223, 210, 0.4); overflow: hidden; transition: all 0.3s ease;
     }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .service-card-img {
-      height: 210px;
-      overflow: hidden;
-    }
-
-    .service-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .service-card:hover .service-card-img img {
-      transform: scale(1.05);
-    }
-
-    .service-card-body {
-      padding: 28px;
-    }
-
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+    .service-card-img { height: 210px; overflow: hidden; }
+    .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .service-card:hover .service-card-img img { transform: scale(1.05); }
+    .service-card-body { padding: 28px; }
     .service-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(26, 60, 42, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      color: var(--forest);
-    }
-
-    .service-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .service-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
-
-    .service-card p {
-      color: var(--charcoal-light);
-      line-height: 1.7;
-    }
-
-    .serving-note {
-      margin-top: 40px;
-      text-align: center;
-      color: var(--charcoal-light);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .serving-note svg {
-      width: 16px;
-      height: 16px;
-      color: var(--forest);
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    /* ─── Why Us ─── */
-    .why-us {
-      padding: 100px 0;
-      background: var(--warm-white);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .why-us h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      margin-bottom: 24px;
-    }
-
-    .why-us p {
-      color: var(--charcoal-light);
-      margin-bottom: 24px;
-      font-size: 1.05rem;
-    }
-
-    .value-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .value-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(212, 148, 58, 0.1);
-      color: var(--amber);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .value-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    .value-text h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 4px;
-    }
-
-    .value-text p {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-
-    .why-img {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-    }
-
-    .why-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* ─── Process ─── */
-    .process {
-      padding: 100px 0;
-      background: var(--cream);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 56px;
-    }
-
-    .process-card {
-      position: relative;
-      padding: 32px;
-      background: var(--warm-white);
-      border-radius: var(--radius);
-      border: 1px solid rgba(232, 223, 210, 0.5);
-      transition: all 0.3s ease;
-    }
-
-    .process-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .step-num {
-      font-family: 'DM Serif Display', serif;
-      font-size: 3rem;
-      color: rgba(26, 60, 42, 0.08);
-      position: absolute;
-      top: 16px;
-      right: 24px;
-      line-height: 1;
-    }
-
-    .process-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      color: var(--forest);
-    }
-
-    .process-card p {
-      font-size: 0.95rem;
-      color: var(--charcoal-light);
-      line-height: 1.6;
-    }
-
-    /* ─── FAQ ─── */
-    .faq {
-      padding: 100px 0;
-      background: var(--warm-white);
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-top: 48px;
-    }
-
-    .faq-item {
-      background: var(--white);
-      padding: 28px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(232, 223, 210, 0.4);
-    }
-
-    .faq-item h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-      color: var(--forest);
-    }
-
-    .faq-item p {
-      font-size: 0.95rem;
-      color: var(--charcoal-light);
-      line-height: 1.6;
-    }
-
-    /* ─── Quote Section ─── */
-    .quote-section {
-      padding: 100px 0;
-      background: var(--forest);
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-      opacity: 0.05;
-    }
-
-    .quote-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .quote-content h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 20px;
-    }
-
-    .quote-content p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1.1rem;
-      margin-bottom: 32px;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--amber);
-    }
-
-    .contact-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    .contact-text span {
-      display: block;
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.6);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    .contact-text a {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .quote-form {
-      background: var(--white);
-      padding: 40px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-xl);
-      color: var(--charcoal);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--charcoal);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid var(--cream-dark);
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.2s;
-      background: var(--warm-white);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--forest);
-    }
-
-    .quote-form .btn {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    /* --- Google Reviews --- */
-    .reviews-section {
-      padding: 100px 0;
-      background: var(--warm-white);
-    }
-
-    .reviews-section h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      margin-bottom: 12px;
-    }
-
-    .reviews-section .section-intro {
-      color: var(--charcoal-light);
-      font-size: 1.08rem;
-      max-width: 62ch;
-      margin-bottom: 56px;
-      line-height: 1.75;
-    }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .review-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 28px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-    }
-
-    .review-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .review-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .review-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--forest);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .review-name {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-    }
-
-    .review-meta {
-      font-size: 0.8rem;
-      color: var(--charcoal-light);
-    }
-
-    .review-stars {
-      color: #f4b400;
-      font-size: 1rem;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-
-    .review-text {
-      color: var(--charcoal-light);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      font-style: italic;
-    }
-
-    .reviews-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--white);
-      border: 1px solid rgba(232, 223, 210, 0.4);
-      border-radius: 999px;
-      padding: 10px 20px;
-      margin-bottom: 32px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .reviews-badge-stars {
-      color: #f4b400;
-      font-size: 1rem;
-      letter-spacing: 1px;
-    }
-
-    .reviews-badge-text {
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--charcoal);
-    }
-
-    .reviews-cta {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    /* ─── Footer ─── */
-    .footer {
-      background: var(--forest-dark);
-      color: var(--white);
-      padding: 80px 0 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 60px;
-    }
-
-    .footer-brand {
-      font-weight: 800;
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
-
-    .footer-brand span {
-      color: var(--amber);
-    }
-
-    .footer p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.95rem;
-      max-width: 35ch;
-    }
-
-    .footer-title {
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--amber);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 0.2s;
-      font-size: 0.95rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--white);
-    }
-
-    .footer-bottom {
-      padding-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      text-align: center;
-      color: rgba(255, 255, 255, 0.4);
-      font-size: 0.85rem;
-    }
-
-    /* ─── Responsive ─── */
+      width: 48px; height: 48px; border-radius: 12px; background: rgba(26, 60, 42, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--forest);
+    }
+    .service-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card h3 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 8px; }
+    .service-card p { color: var(--charcoal-light); line-height: 1.7; }
+    .footer { background: var(--forest-dark); color: var(--white); padding: 80px 0 40px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    .footer-brand { font-weight: 800; font-size: 1.4rem; margin-bottom: 20px; }
+    .footer-brand span { color: var(--amber); }
+    .footer p { color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; max-width: 35ch; }
+    .footer-title { font-weight: 700; font-size: 1rem; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { color: rgba(255, 255, 255, 0.7); transition: color 0.2s; font-size: 0.95rem; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
     @media (max-width: 1024px) {
-      .hero-grid, .services-grid, .why-grid, .quote-grid {
-        grid-template-columns: 1fr;
-      }
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .hero .container {
-        padding-top: 120px;
-      }
-      .hero-card {
-        max-width: 500px;
-      }
+      .hero-grid, .services-grid { grid-template-columns: 1fr; }
+      .hero .container { padding-top: 120px; }
+      .hero-card { max-width: 500px; }
     }
-
     @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-      }
+      .nav-toggle { display: block; }
       .nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: var(--forest);
-        flex-direction: column;
-        padding: 40px 5%;
-        gap: 24px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--forest); flex-direction: column; padding: 40px 5%; gap: 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       }
-      .nav.open {
-        display: flex;
-      }
-      .nav .btn-amber {
-        margin-left: 0;
-        width: 100%;
-      }
-      .process-grid, .faq-grid, .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .hero h1 {
-        font-size: 2.4rem;
-      }
+      .nav.open { display: flex; }
+      .nav .btn-amber { margin-left: 0; width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: 2.4rem; }
     }
   </style>
-  <script>
-  </script>
 </head>
-  <body>
-
-  <!-- ═══ HEADER ═══ -->
+<body>
   <header class="header" id="site-header">
     <div class="container nav-wrap">
       <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" /></a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        Menu
-      </button>
-
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="/about">About</a>
@@ -1105,7 +288,6 @@
 
   <main id="main-content">
     <article>
-      <!-- ═══ HERO ═══ -->
       <section class="hero">
         <div class="hero-bg" aria-hidden="true">
           <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Beautiful Seattle Craftsman home" />
@@ -1113,51 +295,26 @@
         <div class="container">
           <div class="hero-grid">
             <div>
-              <div class="fade-up">
-                <span class="eyebrow eyebrow-amber">Seattle &amp; Eastside Cleaning &amp; Painting</span>
-              </div>
-              <div class="fade-up delay-1">
-                <h1>Good work, clear communication, and no runaround. That's our promise to you.</h1>
-              </div>
+              <div class="fade-up"><span class="eyebrow eyebrow-amber">Seattle &amp; Eastside Cleaning &amp; Painting</span></div>
+              <div class="fade-up delay-1"><h1>Good work, clear communication, and no runaround. That's our promise to you.</h1></div>
               <div class="fade-up delay-2">
-                <p class="hero-text">
-                  Hi, we're Dustin and Brittany, the husband-and-wife team behind Brush &amp; Broom LLP. Our journey has taken us from Michigan to Alabama, and eventually, to building a new life here in Seattle. We understand the importance of a clean, well-maintained home, and we're here to make that process easier for you. Whether you need a serious clean, fresh paint, or both, our goal is simple: leave your place better than we found it.
-                </p>
+                <p class="hero-text">Hi, we're Dustin and Brittany, the husband-and-wife team behind Brush &amp; Broom LLP. Our journey has taken us from Michigan to Alabama, and eventually, to building a new life here in Seattle. We understand the importance of a clean, well-maintained home, and we're here to make that process easier for you. Whether you need a serious clean, fresh paint, or both, our goal is simple: leave your place better than we found it.</p>
               </div>
               <div class="fade-up delay-3">
                 <div class="hero-actions">
-                  <a href="#quote" class="btn btn-amber">
-                    Get a Free Quote
-                    <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  </a>
-                  <a href="tel:206-571-5568" class="btn btn-outline">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Call 206-571-5568
-                  </a>
+                  <a href="#quote" class="btn btn-amber">Get a Free Quote<svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                  <a href="tel:206-571-5568" class="btn btn-outline">Call 206-571-5568</a>
                 </div>
               </div>
             </div>
-
             <div class="fade-up delay-4">
               <aside class="hero-card">
                 <h3>What people usually need help with</h3>
                 <ul>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    House and apartment cleaning that feels thorough, not rushed.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    Move-out cleaning when you need the place looking ready to hand off.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    Interior painting that makes tired rooms feel fresh again.
-                  </li>
-                  <li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    One team handling both cleaning and painting so you are not juggling multiple companies.
-                  </li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>House and apartment cleaning that feels thorough, not rushed.</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Move-out cleaning when you need the place looking ready to hand off.</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Interior painting that makes tired rooms feel fresh again.</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>One team handling both cleaning and painting so you are not juggling multiple companies.</li>
                 </ul>
               </aside>
             </div>
@@ -1165,363 +322,86 @@
         </div>
       </section>
 
-      <!-- ═══ SERVICES ═══ -->
       <section id="services" class="services">
         <div class="container">
           <div class="fade-up">
             <span class="eyebrow eyebrow-green">Services</span>
             <h2>What we do</h2>
-            <p class="section-intro">
-              We keep our service list straightforward because most people aren't looking for ten packages and a bunch of upsells. Whether you need <a href="/routine-deep-maintenance-cleaning-bellevue-seattle" style="color: var(--forest); text-decoration: underline;">house cleaning Seattle</a> or professional <a href="/interior-exterior-house-painting-bellevue-seattle" style="color: var(--forest); text-decoration: underline;">interior painting Seattle</a>, they just want the job done right, and that's what we deliver.
-            </p>
+            <p class="section-intro">We keep our service list straightforward because most people aren't looking for ten packages and a bunch of upsells. Whether you need <a href="/routine-deep-maintenance-cleaning-bellevue-seattle" style="color: var(--forest); text-decoration: underline;">house cleaning Seattle</a>, <a href="/post-construction-cleaning-seattle" style="color: var(--forest); text-decoration: underline;">post-construction cleaning</a>, <a href="/vacation-rental-cleaning-seattle" style="color: var(--forest); text-decoration: underline;">vacation rental turnover cleaning</a>, or professional <a href="/interior-exterior-house-painting-bellevue-seattle" style="color: var(--forest); text-decoration: underline;">interior painting Seattle</a>, people just want the job done right, and that's what we deliver.</p>
           </div>
 
           <div class="services-grid">
             <section class="service-card fade-up">
-              <div class="service-card-img">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" loading="lazy" />
-              </div>
+              <div class="service-card-img"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/deep-cleaning-FB2FXhUvxez6qZZuCeAWwv.webp" alt="Professional house cleaning" loading="lazy" /></div>
               <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg>
-                </div>
+                <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 10v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10"/></svg></div>
                 <h3>House Cleaning</h3>
-                <p>
-                  Regular cleaning, deep cleaning, and reset cleaning for homes that need more than a quick wipe-down. We focus on kitchens, bathrooms, floors, baseboards, and all the details you actually notice.
-                </p>
+                <p>Regular cleaning, deep cleaning, and reset cleaning for homes that need more than a quick wipe-down. We focus on kitchens, bathrooms, floors, baseboards, and all the details you actually notice.</p>
                 <a href="/routine-deep-maintenance-cleaning-bellevue-seattle" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
               </div>
             </section>
 
             <section class="service-card fade-up delay-1">
               <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                </div>
+                <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
                 <h3>Move-Out Cleaning</h3>
-                <p>
-                  Perfect for renters, landlords, and turnovers when the place needs to look clean, cared for, and ready for the next person walking through the door. We handle the deep clean so you don't have to.
-                </p>
+                <p>Perfect for renters, landlords, and turnovers when the place needs to look clean, cared for, and ready for the next person walking through the door. We handle the deep clean so you don't have to.</p>
                 <a href="/move-in-move-out-bellevue-seattle" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
               </div>
             </section>
 
             <section class="service-card fade-up delay-2">
-              <div class="service-card-img">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" loading="lazy" />
-              </div>
+              <div class="service-card-img"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/interior-painting-VkGLnx2u5KNM2Ghcfnc7Ao.webp" alt="Interior painting" loading="lazy" /></div>
               <div class="service-card-body">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
-                </div>
+                <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg></div>
                 <h3>Interior Painting</h3>
-                <p>
-                  Walls, trim, doors, touch-ups, and full-room repaints. We handle the details to make tired rooms feel fresh and new again, with clean lines and a smooth finish.
-                </p>
+                <p>Walls, trim, doors, touch-ups, and full-room repaints. We handle the details to make tired rooms feel fresh and new again, with clean lines and a smooth finish.</p>
                 <a href="/interior-exterior-house-painting-bellevue-seattle" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
+              </div>
+            </section>
+
+            <section class="service-card fade-up delay-3">
+              <div class="service-card-img"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Freshly remodeled home ready for post-construction cleaning" loading="lazy" /></div>
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4 6 3v15"/><path d="M9 9h.01"/><path d="M9 13h.01"/><path d="M9 17h.01"/><path d="M14 13h2"/><path d="M14 17h2"/></svg></div>
+                <h3>Post-Construction Cleaning</h3>
+                <p>Remodel done? New build almost ready? We remove dust, debris, sticker residue, and fine construction mess so the space feels finished, livable, and truly clean.</p>
+                <a href="/post-construction-cleaning-seattle" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
+              </div>
+            </section>
+
+            <section class="service-card fade-up">
+              <div class="service-card-img"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Clean guest-ready Airbnb rental in Seattle" loading="lazy" /></div>
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10l8-6 8 6"/><path d="M6 9v11h12V9"/><path d="M9 20v-6h6v6"/></svg></div>
+                <h3>Vacation Rental Cleaning</h3>
+                <p>Turnover cleaning for Airbnb, VRBO, and short-term rentals. We help keep your place guest-ready between bookings with reliable timing, consistent detail, and clear communication.</p>
+                <a href="/vacation-rental-cleaning-seattle" class="btn btn-outline" style="margin-top: 16px; padding: 8px 20px; font-size: 0.85rem; color: var(--forest); border-color: var(--forest);">Learn More</a>
               </div>
             </section>
           </div>
         </div>
       </section>
 
-      <!-- ═══ RECENT WORK ═══ -->
-      <section id="recent-work" class="services" style="padding-top: 0;">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-amber">Portfolio</span>
-            <h2>Recent Work</h2>
-            <p class="section-intro">
-              A look at some of our recent cleaning and painting projects across the Seattle area.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card fade-up">
-              <div class="service-card-img">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Interior painting project in Seattle" loading="lazy" />
-              </div>
-              <div class="service-card-body">
-                <h3>Interior Refresh in Seattle</h3>
-                <p>
-                  Complete interior painting for a classic Seattle craftsman, bringing new life to the living spaces with a clean, modern finish.
-                </p>
-              </div>
-            </article>
-
-            <article class="service-card fade-up delay-1">
-              <div class="service-card-img">
-                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=800" alt="Move-out cleaning in Bellevue" loading="lazy" />
-              </div>
-              <div class="service-card-body">
-                <h3>Move-Out Clean in Bellevue</h3>
-                <p>
-                  A thorough deep clean for a large family home in Bellevue, ensuring every corner was spotless for the new residents.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ PROCESS ═══ -->
-      <section id="process" class="section section-alt">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-amber">Our Approach</span>
-            <h2>How we make it easy for you</h2>
-            <p class="section-intro">
-              We believe in a straightforward process that prioritizes your peace of mind. From your first call to the final walkthrough, we're here to ensure a smooth, stress-free experience.
-            </p>
-          </div>
-
-          <div class="process-grid">
-            <div class="process-card fade-up">
-              <h3>1. Your Free Quote</h3>
-              <p>Reach out to us, and we'll discuss your needs and provide a clear, detailed quote. No hidden fees, no surprises – just honest pricing from the start.</p>
-            </div>
-            <div class="process-card fade-up delay-1">
-              <h3>2. Scheduling &amp; Prep</h3>
-              <p>Once you're ready, we'll schedule a time that works for you. We take care of all the necessary preparations, ensuring your home is protected and ready for our work.</p>
-            </div>
-            <div class="process-card fade-up delay-2">
-              <h3>3. Quality Work</h3>
-              <p>Dustin and Brittany personally oversee every project, ensuring meticulous attention to detail and a high-quality finish. We treat your home as if it were our own.</p>
-            </div>
-            <div class="process-card fade-up delay-3">
-              <h3>4. Final Walkthrough</h3>
-              <p>We'll walk through the completed project with you to ensure everything meets your expectations. Your satisfaction is our top priority.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ SERVICE AREAS ═══ -->
-      <section id="service-areas" class="section" style="background: var(--warm-white); padding-bottom: 0;">
-        <div class="container">
-          <div class="fade-up" style="text-align: center;">
-            <span class="eyebrow eyebrow-green">Where We Work</span>
-            <h2>Service Areas</h2>
-            <p class="section-intro" style="margin-left: auto; margin-right: auto;">
-              We proudly serve homeowners and renters throughout Seattle, Bellevue, Kirkland, Redmond, Mercer Island, and Issaquah.
-            </p>
-            <div style="margin-top: 32px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-              <a href="/interior-exterior-house-painting-bellevue-seattle" class="btn btn-outline" style="color: var(--forest); border-color: var(--forest);">Interior Painting Seattle</a>
-              <a href="/move-in-move-out-bellevue-seattle" class="btn btn-outline" style="color: var(--forest); border-color: var(--forest);">Move-Out Cleaning Seattle</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ FAQ ═══ -->
-      <section id="faq" class="section">
-        <div class="container">
-          <div class="fade-up">
-            <span class="eyebrow eyebrow-green">Questions?</span>
-            <h2>Frequently Asked Questions</h2>
-          </div>
-
-          <div class="faq-grid">
-            <div class="faq-item fade-up">
-              <h3>What areas do you serve?</h3>
-              <p>We proudly serve Seattle and the Eastside, including Bellevue, Kirkland, Redmond, and surrounding communities. Check our <a href="/areas-we-serve">Areas We Serve</a> page for more details.</p>
-            </div>
-            <div class="faq-item fade-up delay-1">
-              <h3>Are you licensed and insured?</h3>
-              <p>Yes, Brush &amp; Broom LLP is fully licensed, bonded, and insured for your peace of mind. We believe in operating with complete transparency and professionalism.</p>
-            </div>
-            <div class="faq-item fade-up delay-2">
-              <h3>How do I get a quote?</h3>
-              <p>It's easy! Simply fill out our <a href="#quote">online quote form</a>, or give us a call at <a href="tel:206-571-5568">206-571-5568</a>. We'll get back to you promptly with a detailed estimate.</p>
-            </div>
-            <div class="faq-item fade-up delay-3">
-              <h3>What makes Brush &amp; Broom LLP different?</h3>
-              <p>As a husband-and-wife team, we bring a personal touch to every project. We're not a large franchise; we're your neighbors, committed to honest communication, exceptional quality, and a genuine care for your home.</p>
-              <ul style="margin-top: 16px; list-style: none; padding: 0;">
-                <li style="display: flex; gap: 8px; font-size: 0.9rem; color: var(--charcoal-light); margin-bottom: 8px;">
-                  <svg style="width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; margin-top: 4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Direct communication (no middlemen)
-                </li>
-                <li style="display: flex; gap: 8px; font-size: 0.9rem; color: var(--charcoal-light); margin-bottom: 8px;">
-                  <svg style="width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; margin-top: 4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Clear quotes
-                </li>
-                <li style="display: flex; gap: 8px; font-size: 0.9rem; color: var(--charcoal-light); margin-bottom: 8px;">
-                  <svg style="width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; margin-top: 4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Flexible scheduling
-                </li>
-                <li style="display: flex; gap: 8px; font-size: 0.9rem; color: var(--charcoal-light);">
-                  <svg style="width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; margin-top: 4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  One team for cleaning + painting
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- GOOGLE REVIEWS -->
-      <section class="reviews-section">
-        <div class="container">
-          <div class="fade-up">
-            <div class="reviews-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
-              <span class="reviews-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span class="reviews-badge-text">5.0 Rating &middot; 14 Google Reviews</span>
-            </div>
-            <h2>What Our Customers Say</h2>
-            <p class="section-intro">
-              Real reviews from real customers on our Google Business Profile. We're proud to maintain a perfect 5.0-star rating.
-            </p>
-          </div>
-
-          <div class="reviews-grid">
-            <div class="review-card fade-up">
-              <div class="review-header">
-                <div class="review-avatar">JB</div>
-                <div>
-                  <div class="review-name">JK Brown</div>
-                  <div class="review-meta">Google Review</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"Dustin and Brittany, husband and wife, cleaned from ceilings (including skylights!) to floors, dusted, polished, vacuumed, and mopped better than I would have done myself."</p>
-            </div>
-
-            <div class="review-card fade-up delay-1">
-              <div class="review-header">
-                <div class="review-avatar">DB</div>
-                <div>
-                  <div class="review-name">Daryl Bentley</div>
-                  <div class="review-meta">Google Review</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"Everything went smoothly and every possible hangup was seen too promptly by the owner himself. I will definitely call Brush and Broom whenever I'm up against a wall with a remodel again!"</p>
-            </div>
-
-            <div class="review-card fade-up delay-2">
-              <div class="review-header">
-                <div class="review-avatar">AS</div>
-                <div>
-                  <div class="review-name">Alisha Strye</div>
-                  <div class="review-meta">Google Review &middot; Local Guide</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"10/10 Brush and Broom has been amazing to work with. They always answered any questions I had and made me feel comfortable with all work being done. I highly recommend giving this company a chance to exceed your expectations."</p>
-            </div>
-
-            <div class="review-card fade-up">
-              <div class="review-header">
-                <div class="review-avatar">KL</div>
-                <div>
-                  <div class="review-name">Kaylyn Lane</div>
-                  <div class="review-meta">Google Review</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"Hired them as we were moving out and they did such a great job. Highly recommend. Very fairly priced, quick work, great communication and super friendly."</p>
-            </div>
-
-            <div class="review-card fade-up delay-1">
-              <div class="review-header">
-                <div class="review-avatar">PM</div>
-                <div>
-                  <div class="review-name">Pamela McBride</div>
-                  <div class="review-meta">Google Review</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"Brush and Broom helped me with a total clean and refresh of a vacant house. Dustin did a great refresh with paint. They are a husband and wife team that work together. They were prompt, efficient, and expert. Plus, they are a very likable couple."</p>
-            </div>
-
-            <div class="review-card fade-up delay-2">
-              <div class="review-header">
-                <div class="review-avatar">RA</div>
-                <div>
-                  <div class="review-name">Robert Arnold</div>
-                  <div class="review-meta">Google Review</div>
-                </div>
-              </div>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p class="review-text">"Hands down best experience I have had with a home repair company. Not only did they do an amazing job, they reassured all my concerns and exceeded all expectations. Would highly recommend to anyone over and over again!"</p>
-            </div>
-          </div>
-
-          <div class="reviews-cta fade-up">
-            <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/" target="_blank" rel="noopener" class="btn btn-forest">
-              See All 14 Reviews on Google
-              <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ═══ COMMUNITY CARE HIGHLIGHT ═══ -->
-      <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(26, 60, 42, 0.05), rgba(212, 148, 58, 0.05));">
-        <div class="container">
-          <div class="fade-up" style="text-align: center;">
-            <span class="eyebrow eyebrow-amber">Giving Back</span>
-            <h2 style="margin-bottom: 16px;">More Than a Business — A Mission</h2>
-            <p class="section-intro" style="margin-bottom: 32px;">
-              We believe everyone deserves a clean, safe place to live. That's why we offer free and discounted cleanings for elderly individuals, disabled people, veterans, and those facing hardship.
-            </p>
-            <a href="/community-care" class="btn btn-forest">Learn About Our Community Care Program</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ QUOTE ═══ -->
-      <section id="quote" class="section section-alt">
+      <section id="quote" class="services" style="background: var(--warm-white);">
         <div class="container">
           <div class="fade-up" style="text-align: center;">
             <span class="eyebrow eyebrow-amber">Ready for a refresh?</span>
             <h2>Get Your Free Quote Today</h2>
-            <p class="section-intro">
-              We'd love to hear about your project! Fill out the form below, and we'll get back to you with a personalized estimate.
-            </p>
+            <p class="section-intro" style="margin-left: auto; margin-right: auto;">We'd love to hear about your project! Fill out the form below, and we'll get back to you with a personalized estimate.</p>
           </div>
-
           <div class="fade-up delay-1" style="max-width: 600px; margin: 0 auto 24px; text-align: center; background: rgba(212, 148, 58, 0.1); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--amber);">
-            <p style="margin: 0; font-weight: 700; color: var(--charcoal); font-size: 0.95rem;">
-              ⚡ Fast response: We typically reply within 2 hours. Feel free to include or send photos for a more accurate quote!
-            </p>
+            <p style="margin: 0; font-weight: 700; color: var(--charcoal); font-size: 0.95rem;">⚡ Fast response: We typically reply within 2 hours. Feel free to include or send photos for a more accurate quote!</p>
           </div>
-
-          <form class="quote-form fade-up delay-1" action="https://formspree.io/f/mykbgkbn" method="POST">
+          <form class="quote-form fade-up delay-1" action="https://formspree.io/f/mykbgkbn" method="POST" style="max-width: 600px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-xl); color: var(--charcoal);">
             <input type="hidden" name="_next" value="https://brushnbroom.com/thank-you.html" />
             <input type="hidden" name="_subject" value="New Quote Request from Brush & Broom" />
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Your Phone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="house-cleaning">House Cleaning</option>
-                <option value="move-out-cleaning">Move-Out Cleaning</option>
-                <option value="interior-painting">Interior Painting</option>
-                <option value="exterior-painting">Exterior Painting</option>
-                <option value="both">Both Cleaning &amp; Painting</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell us about your project</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-amber">Submit Request</button>
+            <div class="form-group" style="margin-bottom: 20px;"><label for="name" style="display:block;font-size:0.9rem;font-weight:700;margin-bottom:8px;color:var(--charcoal);">Your Name</label><input type="text" id="name" name="name" required style="width:100%;padding:12px 16px;border:1px solid var(--cream-dark);border-radius:8px;font-family:inherit;font-size:1rem;background:var(--warm-white);" /></div>
+            <div class="form-group" style="margin-bottom: 20px;"><label for="email" style="display:block;font-size:0.9rem;font-weight:700;margin-bottom:8px;color:var(--charcoal);">Your Email</label><input type="email" id="email" name="email" required style="width:100%;padding:12px 16px;border:1px solid var(--cream-dark);border-radius:8px;font-family:inherit;font-size:1rem;background:var(--warm-white);" /></div>
+            <div class="form-group" style="margin-bottom: 20px;"><label for="phone" style="display:block;font-size:0.9rem;font-weight:700;margin-bottom:8px;color:var(--charcoal);">Your Phone</label><input type="tel" id="phone" name="phone" style="width:100%;padding:12px 16px;border:1px solid var(--cream-dark);border-radius:8px;font-family:inherit;font-size:1rem;background:var(--warm-white);" /></div>
+            <div class="form-group" style="margin-bottom: 20px;"><label for="service" style="display:block;font-size:0.9rem;font-weight:700;margin-bottom:8px;color:var(--charcoal);">Service Needed</label><select id="service" name="service" required style="width:100%;padding:12px 16px;border:1px solid var(--cream-dark);border-radius:8px;font-family:inherit;font-size:1rem;background:var(--warm-white);"><option value="">Select a service</option><option value="house-cleaning">House Cleaning</option><option value="move-out-cleaning">Move-Out Cleaning</option><option value="post-construction-cleaning">Post-Construction Cleaning</option><option value="vacation-rental-cleaning">Vacation Rental Cleaning</option><option value="interior-painting">Interior Painting</option><option value="exterior-painting">Exterior Painting</option><option value="both">Both Cleaning &amp; Painting</option><option value="other">Other</option></select></div>
+            <div class="form-group" style="margin-bottom: 20px;"><label for="message" style="display:block;font-size:0.9rem;font-weight:700;margin-bottom:8px;color:var(--charcoal);">Tell us about your project</label><textarea id="message" name="message" rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--cream-dark);border-radius:8px;font-family:inherit;font-size:1rem;background:var(--warm-white);"></textarea></div>
+            <button type="submit" class="btn btn-amber" style="width:100%;margin-top:10px;">Submit Request</button>
           </form>
         </div>
       </section>
@@ -1540,7 +420,7 @@
         <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
       </div>
       <div>
-                <div class="footer-title">Links</div>
+        <div class="footer-title">Links</div>
         <div class="footer-links">
           <a href="/#services">Services</a>
           <a href="/about">About Us</a>
@@ -1553,63 +433,40 @@
           <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
           <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
           <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
+          <a href="/post-construction-cleaning-seattle">Post-Construction Cleaning</a>
+          <a href="/vacation-rental-cleaning-seattle">Vacation Rental Cleaning</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p></div>
   </footer>
 
   <script>
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav");
-
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Menu";
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
     });
-
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "Menu";
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
       });
     });
-
-    const header = document.getElementById("site-header");
-    window.addEventListener("scroll", () => {
-      header.classList.toggle("scrolled", window.scrollY > 20);
-    }, { passive: true });
-
-    // Intersection Observer for fade-up animations
-    const observerOptions = {
-      threshold: 0.1
-    };
-
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-up').forEach(el => {
-      observer.observe(el);
-    });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 
-<script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
-
-<!-- Tidio Color Customization -->
-<script>
-  window.onTidioChatApiReady = function() {
-    window.tidioChatApi.setColorPalette('#D4943A');
-  };
-</script>
-
+  <script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
+  <script>
+    window.onTidioChatApiReady = function() { window.tidioChatApi.setColorPalette('#D4943A'); };
+  </script>
 </body>
 </html>
