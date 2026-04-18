@@ -11,14 +11,14 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting</title>
+  <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting | (206) 571-5568</title>
   <meta
     name="description"
     content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, interior and exterior painting with clear quotes and real communication."
   />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://brushnbroom.com/" />
-  <meta property="og:title" content="Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting" />
+  <meta property="og:title" content="Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting | (206) 571-5568" />
   <meta
     property="og:description"
     content="Seattle house cleaning and painting with clear quotes, good communication, and work done right."
@@ -846,6 +846,120 @@
       margin-top: 10px;
     }
 
+    /* --- Google Reviews --- */
+    .reviews-section {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+
+    .reviews-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .reviews-section .section-intro {
+      color: var(--charcoal-light);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin-bottom: 56px;
+      line-height: 1.75;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .review-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+
+    .review-meta {
+      font-size: 0.8rem;
+      color: var(--charcoal-light);
+    }
+
+    .review-stars {
+      color: #f4b400;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      color: var(--charcoal-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .reviews-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      border: 1px solid rgba(232, 223, 210, 0.4);
+      border-radius: 999px;
+      padding: 10px 20px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .reviews-badge-stars {
+      color: #f4b400;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .reviews-badge-text {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+    }
+
+    .reviews-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
     /* ─── Footer ─── */
     .footer {
       background: var(--forest-dark);
@@ -914,6 +1028,9 @@
       .hero-grid, .services-grid, .why-grid, .quote-grid {
         grid-template-columns: 1fr;
       }
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -949,7 +1066,7 @@
         margin-left: 0;
         width: 100%;
       }
-      .process-grid, .faq-grid {
+      .process-grid, .faq-grid, .reviews-grid {
         grid-template-columns: 1fr;
       }
       .footer-grid {
@@ -1243,6 +1360,105 @@
         </div>
       </section>
 
+      <!-- GOOGLE REVIEWS -->
+      <section class="reviews-section">
+        <div class="container">
+          <div class="fade-up">
+            <div class="reviews-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
+              <span class="reviews-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="reviews-badge-text">5.0 Rating &middot; 14 Google Reviews</span>
+            </div>
+            <h2>What Our Customers Say</h2>
+            <p class="section-intro">
+              Real reviews from real customers on our Google Business Profile. We're proud to maintain a perfect 5.0-star rating.
+            </p>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card fade-up">
+              <div class="review-header">
+                <div class="review-avatar">JB</div>
+                <div>
+                  <div class="review-name">JK Brown</div>
+                  <div class="review-meta">Google Review</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"Dustin and Brittany, husband and wife, cleaned from ceilings (including skylights!) to floors, dusted, polished, vacuumed, and mopped better than I would have done myself."</p>
+            </div>
+
+            <div class="review-card fade-up delay-1">
+              <div class="review-header">
+                <div class="review-avatar">DB</div>
+                <div>
+                  <div class="review-name">Daryl Bentley</div>
+                  <div class="review-meta">Google Review</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"Everything went smoothly and every possible hangup was seen too promptly by the owner himself. I will definitely call Brush and Broom whenever I'm up against a wall with a remodel again!"</p>
+            </div>
+
+            <div class="review-card fade-up delay-2">
+              <div class="review-header">
+                <div class="review-avatar">AS</div>
+                <div>
+                  <div class="review-name">Alisha Strye</div>
+                  <div class="review-meta">Google Review &middot; Local Guide</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"10/10 Brush and Broom has been amazing to work with. They always answered any questions I had and made me feel comfortable with all work being done. I highly recommend giving this company a chance to exceed your expectations."</p>
+            </div>
+
+            <div class="review-card fade-up">
+              <div class="review-header">
+                <div class="review-avatar">KL</div>
+                <div>
+                  <div class="review-name">Kaylyn Lane</div>
+                  <div class="review-meta">Google Review</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"Hired them as we were moving out and they did such a great job. Highly recommend. Very fairly priced, quick work, great communication and super friendly."</p>
+            </div>
+
+            <div class="review-card fade-up delay-1">
+              <div class="review-header">
+                <div class="review-avatar">PM</div>
+                <div>
+                  <div class="review-name">Pamela McBride</div>
+                  <div class="review-meta">Google Review</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"Brush and Broom helped me with a total clean and refresh of a vacant house. Dustin did a great refresh with paint. They are a husband and wife team that work together. They were prompt, efficient, and expert. Plus, they are a very likable couple."</p>
+            </div>
+
+            <div class="review-card fade-up delay-2">
+              <div class="review-header">
+                <div class="review-avatar">RA</div>
+                <div>
+                  <div class="review-name">Robert Arnold</div>
+                  <div class="review-meta">Google Review</div>
+                </div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="review-text">"Hands down best experience I have had with a home repair company. Not only did they do an amazing job, they reassured all my concerns and exceeded all expectations. Would highly recommend to anyone over and over again!"</p>
+            </div>
+          </div>
+
+          <div class="reviews-cta fade-up">
+            <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/" target="_blank" rel="noopener" class="btn btn-forest">
+              See All 14 Reviews on Google
+              <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
       <!-- ═══ COMMUNITY CARE HIGHLIGHT ═══ -->
       <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(26, 60, 42, 0.05), rgba(212, 148, 58, 0.05));">
         <div class="container">
@@ -1324,7 +1540,7 @@
         <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
       </div>
       <div>
-        <div class="footer-title">Links</div>
+                <div class="footer-title">Links</div>
         <div class="footer-links">
           <a href="/#services">Services</a>
           <a href="/about">About Us</a>
@@ -1333,7 +1549,9 @@
           <a href="/community-care">Community Care</a>
           <a href="/#quote">Get a Quote</a>
           <a href="/interior-exterior-house-painting-bellevue-seattle">Interior Painting Seattle</a>
+          <a href="/exterior-painting-seattle">Exterior Painting Seattle</a>
           <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
+          <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
           <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
         </div>
       </div>
