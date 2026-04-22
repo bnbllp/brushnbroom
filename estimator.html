@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJPV8T9HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJJPV8T9HN");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Estimator | Brush & Broom LLP – Seattle Cleaning & Painting</title>
+  <meta
+    name="description"
+    content="Use our AI-powered pricing estimator to get an instant estimate for your cleaning or painting project. Quick, transparent, and accurate quotes for Seattle and Eastside."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://brushnbroom.com/estimator" />
+  <meta property="og:title" content="Pricing Estimator | Brush & Broom LLP" />
+  <meta
+    property="og:description"
+    content="Get an instant estimate for your cleaning or painting project with our AI-powered pricing tool."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brushnbroom.com/estimator" />
+  <meta name="theme-color" content="#001844" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    .estimator-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .estimator-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .estimator-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+      color: var(--forest);
+    }
+
+    .estimator-header p {
+      color: var(--charcoal-light);
+      font-size: 1.08rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .estimator-form {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 40px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+    }
+
+    .form-section {
+      margin-bottom: 32px;
+    }
+
+    .form-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-section h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      color: var(--forest);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-section-icon {
+      display: none;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--charcoal);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--cream-dark);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+      background: var(--white);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(0, 24, 68, 0.12);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .checkbox-item input[type="checkbox"],
+    .checkbox-item input[type="radio"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: var(--forest);
+    }
+
+    .checkbox-item label {
+      margin: 0;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .range-input {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--cream-dark);
+      outline: none;
+      -webkit-appearance: none;
+      accent-color: var(--forest);
+    }
+
+    .range-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--forest);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 24, 68, 0.2);
+    }
+
+    .range-input::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--forest);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0, 24, 68, 0.2);
+    }
+
+    .range-display {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--charcoal-light);
+    }
+
+    .range-value {
+      font-weight: 600;
+      color: var(--forest);
+    }
+
+    .estimate-result {
+      background: linear-gradient(135deg, rgba(0, 24, 68, 0.05), rgba(212, 148, 58, 0.05));
+      border: 2px solid var(--forest);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-top: 32px;
+      text-align: center;
+      display: none;
+    }
+
+    .estimate-result.show {
+      display: block;
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .estimate-label {
+      font-size: 0.95rem;
+      color: var(--charcoal-light);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .estimate-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      color: var(--forest);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .estimate-range {
+      color: var(--charcoal-light);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    .estimate-note {
+      background: rgba(212, 148, 58, 0.1);
+      border-left: 4px solid var(--amber);
+      padding: 16px;
+      border-radius: 4px;
+      text-align: left;
+      color: var(--charcoal-light);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .form-actions .btn {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    @media (max-width: 768px) {
+      .estimator-form {
+        padding: 28px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .form-actions .btn {
+        width: 100%;
+      }
+
+      .estimate-price {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+  <script>
+  </script>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/about">About</a>
+        <a href="/areas-we-serve">Areas</a>
+        <a href="/estimator">Estimator</a>
+        <a href="/community-care">Community Care</a>
+        <a href="/#quote" class="btn btn-amber">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" style="min-height: 40vh;">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663473266789/NqzQsQBsXKoyDCsKkBt6Rm/hero-seattle-home-oYaMiYM9FnA6Z8VAYt8buu.webp" alt="Pricing Estimator" />
+      </div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center;">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.1); color: var(--white);">AI-Powered Tool</span>
+        <h1 style="color: var(--white); margin-bottom: 16px;">Get Your Instant Estimate</h1>
+        <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.8); font-size: 1.08rem; line-height: 1.75;">
+          Use our intelligent pricing estimator to get a quick, transparent estimate for your cleaning or painting project. Prices may vary based on final walkthrough.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="estimator-container">
+        <form id="estimatorForm" class="estimator-form" action="https://formspree.io/f/mykbgkbn" method="POST">
+          <input type="hidden" name="_next" value="https://brushnbroom.com/thank-you" />
+          <input type="hidden" name="_subject" value="Pricing Estimator Request from Brush & Broom" />
+          <!-- Service Type Section -->
+          <div class="form-section">
+            <h3>
+              <div class="form-section-icon"></div>
+              What service do you need?
+            </h3>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="radio" id="service-cleaning" name="service" value="cleaning" required />
+                <label for="service-cleaning">House Cleaning</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="radio" id="service-moveout" name="service" value="moveout" />
+                <label for="service-moveout">Move-Out Cleaning</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="radio" id="service-painting" name="service" value="painting" />
+                <label for="service-painting">Interior Painting</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="radio" id="service-exterior" name="service" value="exterior" />
+                <label for="service-exterior">Exterior Painting</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="radio" id="service-both" name="service" value="both" />
+                <label for="service-both">Cleaning + Painting</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Property Details Section -->
+          <div class="form-section">
+            <h3>
+              <div class="form-section-icon"></div>
+              Tell us about your space
+            </h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sqft">Square Footage (Total Area)</label>
+                <input type="number" id="sqft" name="sqft" min="100" max="10000" step="100" placeholder="e.g., 2000" required />
+              </div>
+              <div class="form-group">
+                <label for="bedrooms">Bedrooms</label>
+                <select id="bedrooms" name="bedrooms" required>
+                  <option value="">Select...</option>
+                  <option value="1">1 Bedroom</option>
+                  <option value="2">2 Bedrooms</option>
+                  <option value="3">3 Bedrooms</option>
+                  <option value="4">4 Bedrooms</option>
+                  <option value="5">5+ Bedrooms</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bathrooms">Bathrooms</label>
+                <select id="bathrooms" name="bathrooms" required>
+                  <option value="">Select...</option>
+                  <option value="1">1 Bathroom</option>
+                  <option value="2">2 Bathrooms</option>
+                  <option value="3">3 Bathrooms</option>
+                  <option value="4">4+ Bathrooms</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="condition">Current Condition</label>
+                <select id="condition" name="condition" required>
+                  <option value="">Select...</option>
+                  <option value="light">Light (Regular maintenance)</option>
+                  <option value="moderate">Moderate (Needs attention)</option>
+                  <option value="heavy">Heavy (Deep clean needed)</option>
+                  <option value="none">Doesn't Apply (Painting only)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cleaning Details Section (for cleaning services) -->
+          <div class="form-section" id="cleaningDetails" style="display: none;">
+            <h3>
+              <div class="form-section-icon"></div>
+              Cleaning specifics
+            </h3>
+            <div class="form-group">
+              <label>What areas need cleaning?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="area-kitchen" name="areas" value="kitchen" />
+                  <label for="area-kitchen">Kitchen</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="area-bathrooms" name="areas" value="bathrooms" />
+                  <label for="area-bathrooms">Bathrooms</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="area-floors" name="areas" value="floors" />
+                  <label for="area-floors">Floors</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="area-windows" name="areas" value="windows" />
+                  <label for="area-windows">Windows</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="area-baseboards" name="areas" value="baseboards" />
+                  <label for="area-baseboards">Baseboards</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Painting Details Section (for painting services) -->
+          <div class="form-section" id="paintingDetails" style="display: none;">
+            <h3>
+              <div class="form-section-icon"></div>
+              Painting specifics
+            </h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rooms">Rooms/Areas to Paint</label>
+                <select id="rooms" name="rooms">
+                  <option value="">Select...</option>
+                  <option value="1">1 Room / Small Area</option>
+                  <option value="2">2 Rooms</option>
+                  <option value="3">3 Rooms</option>
+                  <option value="4">4+ Rooms / Full House</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="prep">Prep Work Needed?</label>
+                <select id="prep" name="prep">
+                  <option value="">Select...</option>
+                  <option value="minimal">Minimal (Good condition, just paint)</option>
+                  <option value="moderate">Moderate (Some patching/sanding)</option>
+                  <option value="extensive">Extensive (Major repairs/scraping)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="coats">Number of Coats</label>
+                <select id="coats" name="coats">
+                  <option value="1">1 Coat (Refresh)</option>
+                  <option value="2" selected>2 Coats (Standard)</option>
+                  <option value="3">3 Coats (Major color change)</option>
+                </select>
+              </div>
+              <div class="form-group" id="exteriorTypeGroup" style="display: none;">
+                <label for="exteriorType">Exterior Surface</label>
+                <select id="exteriorType" name="exteriorType">
+                  <option value="siding">Siding (Wood/Vinyl)</option>
+                  <option value="stucco">Stucco / Brick</option>
+                  <option value="trim">Trim & Doors Only</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Section -->
+          <div class="form-section">
+            <h3>
+              <div class="form-section-icon"></div>
+              When do you need this done?
+            </h3>
+            <div class="form-group">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="">Select...</option>
+                <option value="flexible">Flexible (No rush)</option>
+                <option value="2weeks">Within 2 weeks</option>
+                <option value="1week">Within 1 week</option>
+                <option value="urgent">Urgent (ASAP)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="form-section">
+            <h3>
+              <div class="form-section-icon"></div>
+              Your contact information
+            </h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Your Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <!-- Estimate Result -->
+          <div class="estimate-result" id="estimateResult">
+            <div class="estimate-label">Your Estimated Price Range</div>
+            <div class="estimate-price" id="estimatePrice">$0</div>
+            <div class="estimate-range" id="estimateRange">Based on your project details</div>
+            <div class="estimate-note">
+              <strong>Note:</strong> This is an AI-powered estimate based on typical market rates for Seattle and the Eastside. Final pricing will be confirmed after a detailed walkthrough of your space. Prices may vary based on accessibility, special requirements, and current market conditions.
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-amber" onclick="submitEstimate()">
+                Get Official Quote
+                <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <button type="button" class="btn btn-forest" onclick="resetForm()">Start Over</button>
+            </div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions" id="formActions">
+            <button type="submit" class="btn btn-amber">
+              Calculate Estimate
+              <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <button type="reset" class="btn btn-forest" style="background: transparent; color: var(--forest); border: 2px solid var(--forest);">Clear Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside cleaning and painting. We offer clear quotes, solid work, and honest communication.</p>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:206-571-5568">206-571-5568</a></p>
+        <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
+      </div>
+      <div>
+                <div class="footer-title">Links</div>
+        <div class="footer-links">
+          <a href="/#services">Services</a>
+          <a href="/about">About Us</a>
+          <a href="/areas-we-serve">Areas We Serve</a>
+          <a href="/estimator">Pricing Estimator</a>
+          <a href="/community-care">Community Care</a>
+          <a href="/#quote">Get a Quote</a>
+          <a href="/interior-exterior-house-painting-bellevue-seattle">Interior Painting Seattle</a>
+          <a href="/exterior-painting-seattle">Exterior Painting Seattle</a>
+          <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
+          <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
+          <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('estimatorForm');
+    const cleaningDetails = document.getElementById('cleaningDetails');
+    const paintingDetails = document.getElementById('paintingDetails');
+    const exteriorTypeGroup = document.getElementById('exteriorTypeGroup');
+    const serviceRadios = document.querySelectorAll('input[name="service"]');
+    const conditionSelect = document.getElementById('condition');
+    const estimateResult = document.getElementById('estimateResult');
+    const formActions = document.getElementById('formActions');
+
+    // Show/hide relevant sections based on service type
+    serviceRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        const showCleaning = this.value === 'cleaning' || this.value === 'moveout' || this.value === 'both';
+        const showPainting = this.value === 'painting' || this.value === 'exterior' || this.value === 'both';
+        const showExterior = this.value === 'exterior';
+        
+        cleaningDetails.style.display = showCleaning ? 'block' : 'none';
+        paintingDetails.style.display = showPainting ? 'block' : 'none';
+        exteriorTypeGroup.style.display = showExterior ? 'block' : 'none';
+
+        // Auto-select "Doesn't Apply" for painting-only clients
+        if (showPainting && !showCleaning) {
+          conditionSelect.value = 'none';
+        } else if (conditionSelect.value === 'none') {
+          conditionSelect.value = ''; // Reset if switching back to cleaning
+        }
+      });
+    });
+
+    // Calculate estimate
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const service = document.querySelector('input[name="service"]:checked').value;
+      const sqft = parseInt(document.getElementById('sqft').value) || 0;
+      const condition = document.getElementById('condition').value;
+      const timeline = document.getElementById('timeline').value;
+      const bedrooms = parseInt(document.getElementById('bedrooms').value) || 1;
+      const bathrooms = parseInt(document.getElementById('bathrooms').value) || 1;
+      
+      let estimate = 0;
+      let description = '';
+      
+      // Cleaning Logic
+      if (service === 'cleaning') {
+        // Standard Maintenance Cleaning: $0.12 per sqft
+        let basePrice = sqft * 0.12;
+        if (condition === 'light') basePrice *= 0.9;
+        else if (condition === 'heavy') basePrice *= 1.3; // Deep clean multiplier
+        if (timeline === 'urgent') basePrice *= 1.1;
+        estimate = basePrice;
+        description = 'House Cleaning';
+      }
+      else if (service === 'moveout') {
+        // Move-Out Cleaning: $0.22 per sqft (higher avg for comprehensive service)
+        let basePrice = sqft * 0.22;
+        if (condition === 'light') basePrice *= 0.9;
+        else if (condition === 'heavy') basePrice *= 1.4; // Extra heavy move-out
+        if (timeline === 'urgent') basePrice *= 1.15;
+        estimate = basePrice;
+        description = 'Move-Out Cleaning';
+      }
+      // Interior Painting Logic
+      else if (service === 'painting') {
+        // More accurate interior painting: $2.50 - $4.50 per sqft of floor area (proxy for wall area)
+        let basePrice = sqft * 3.50;
+        
+        // Prep work adjustment
+        const prep = document.getElementById('prep').value;
+        if (prep === 'minimal') basePrice *= 0.9;
+        else if (prep === 'extensive') basePrice *= 1.25;
+        
+        // Coats adjustment
+        const coats = parseInt(document.getElementById('coats').value) || 2;
+        if (coats === 1) basePrice *= 0.7;
+        else if (coats === 3) basePrice *= 1.4;
+        
+        if (timeline === 'urgent') basePrice *= 1.1;
+        estimate = basePrice;
+        description = 'Interior Painting';
+      }
+      // Exterior Painting Logic
+      else if (service === 'exterior') {
+        // Exterior painting: $3.00 - $6.00 per sqft
+        let basePrice = sqft * 4.50;
+        
+        const extType = document.getElementById('exteriorType').value;
+        if (extType === 'siding') basePrice *= 1.0;
+        else if (extType === 'stucco') basePrice *= 1.2;
+        else if (extType === 'trim') basePrice = sqft * 1.5; // Much lower if just trim
+        
+        const prep = document.getElementById('prep').value;
+        if (prep === 'minimal') basePrice *= 0.85;
+        else if (prep === 'extensive') basePrice *= 1.3;
+        
+        if (timeline === 'urgent') basePrice *= 1.15;
+        estimate = basePrice;
+        description = 'Exterior Painting';
+      }
+      // Bundle Logic
+      else if (service === 'both') {
+        let cleanPrice = sqft * 0.12;
+        if (condition === 'heavy') cleanPrice *= 1.3;
+        
+        let paintPrice = sqft * 3.50;
+        const coats = parseInt(document.getElementById('coats').value) || 2;
+        if (coats === 3) paintPrice *= 1.4;
+        
+        estimate = (cleanPrice + paintPrice) * 0.90; // 10% bundle discount
+        description = 'Cleaning + Painting Bundle';
+      }
+      
+      // Round to nearest $50 for larger projects
+      estimate = Math.round(estimate / 50) * 50;
+      const lowEstimate = Math.round(estimate * 0.80);
+      const highEstimate = Math.round(estimate * 1.20);
+      
+      // Display result
+      document.getElementById('estimatePrice').textContent = '$' + estimate.toLocaleString();
+      document.getElementById('estimateRange').textContent = `$${lowEstimate.toLocaleString()} - $${highEstimate.toLocaleString()} • ${description}`;
+      
+      estimateResult.classList.add('show');
+      formActions.style.display = 'none';
+      
+      // Scroll to result
+      setTimeout(() => {
+        estimateResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    });
+
+    function submitEstimate() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const estimate = document.getElementById('estimatePrice').textContent;
+      const service = document.querySelector('input[name="service"]:checked').parentElement.textContent.trim();
+      
+      const message = `I used your pricing estimator for ${service} and got an estimate of ${estimate}. Please provide an official quote for my project.`;
+      window.location.href = `/#quote?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}`;
+    }
+
+    function resetForm() {
+      form.reset();
+      estimateResult.classList.remove('show');
+      formActions.style.display = 'flex';
+      cleaningDetails.style.display = 'none';
+      paintingDetails.style.display = 'none';
+      exteriorTypeGroup.style.display = 'none';
+    }
+
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      });
+    });
+  </script>
+
+<script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
+
+<!-- Tidio Color Customization -->
+<script>
+  window.onTidioChatApiReady = function() {
+    window.tidioChatApi.setColorPalette('#D4943A');
+  };
+</script>
+
+</body>
+</html>

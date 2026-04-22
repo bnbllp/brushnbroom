@@ -35,7 +35,7 @@ brushbroom/
 ## Design System
 
 ### Color Palette
-- **Forest Green**: `#1a3c2a` (primary brand color)
+- **Forest Green**: `#001844` (primary brand color)
 - **Amber**: `#d4943a` (accent color)
 - **Charcoal**: `#2c2a26` (text color)
 - **Cream**: `#f5f0e8` (background color)
