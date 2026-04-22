@@ -67,7 +67,7 @@ class BrushBroomAIAssistant {
 
     // Detect budget concerns
     if (lowerMessage.includes('budget') || lowerMessage.includes('afford') || lowerMessage.includes('cost') || lowerMessage.includes('price')) {
-      response.message += ' We offer transparent pricing with no hidden fees. Would you like to use our pricing estimator for a quick estimate?';
+      response.message += ' We offer transparent pricing with no hidden fees. Would you like a personalized quote for your project?';
     }
 
     // Detect accessibility concerns
