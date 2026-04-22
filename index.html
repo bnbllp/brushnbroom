@@ -166,21 +166,7 @@
 </head>
 <body>
 
-    <header class="header" id="site-header">
-    <div class="container nav-wrap">
-      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush \& Broom LLP Logo" /></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
-      <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="/#services">Services</a>
-        <a href="/about">About</a>
-        <a href="/areas-we-serve">Areas</a>
-        <a href="/community-care">Community Care</a>
-        <a href="/#quote" class="btn btn-amber">Get a Quote</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
+    <main id="main-content">
     <article>
 
       <section class="hero">
@@ -326,63 +312,11 @@
     </article>
   </main>
 
-    <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">Brush <span>\&amp;</span> Broom LLP</div>
-        <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
-      </div>
-      <div>
-        <div class="footer-title">Contact</div>
-        <p><a href="tel:206-571-5568">206-571-5568</a></p>
-        <p style="margin-top:8px;"><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
-      </div>
-      <div>
-        <div class="footer-title">Links</div>
-        <div class="footer-links">
-          <a href="/#services">Services</a>
-          <a href="/about">About Us</a>
-          <a href="/areas-we-serve">Areas We Serve</a>
-          <a href="/community-care">Community Care</a>
-          <a href="/#quote">Get a Quote</a>
-          <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
-          <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
-          <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
-          <a href="/post-construction-cleaning-seattle">Post-Construction Cleaning</a>
-          <a href="/vacation-rental-cleaning-seattle">Vacation Rental Cleaning</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><p>\&copy; 2026 Brush \&amp; Broom LLP. All rights reserved.</p></div>
-  </footer>
-
-    <script>
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav");
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Menu";
-    });
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "Menu";
-      });
-    });
-    const header = document.getElementById("site-header");
-    window.addEventListener("scroll", () => { header.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
-  </script>
-
-  <script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
+    <script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
   <script>
-    window.onTidioChatApiReady = function() { window.tidioChatApi.setColorPalette('#D4943A'); };
+    window.onTidioChatApiReady = function() { window.tidioChatApi.setColorPalette('#C5A059'); };
   </script>
 
+  <script src="/components.js"></script>
 </body>
 </html>
