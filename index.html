@@ -166,16 +166,16 @@
 </head>
 <body>
 
-  <header class="header" id="site-header">
+    <header class="header" id="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
+      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush \& Broom LLP Logo" /></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
+        <a href="/#services">Services</a>
         <a href="/about">About</a>
         <a href="/areas-we-serve">Areas</a>
         <a href="/community-care">Community Care</a>
-        <a href="#quote" class="btn btn-amber">Get a Quote</a>
+        <a href="/#quote" class="btn btn-amber">Get a Quote</a>
       </nav>
     </div>
   </header>
@@ -326,10 +326,10 @@
     </article>
   </main>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <div class="footer-brand">Brush <span>\&amp;</span> Broom LLP</div>
         <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
       </div>
       <div>
@@ -353,30 +353,30 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p></div>
+    <div class="footer-bottom"><p>\&copy; 2026 Brush \&amp; Broom LLP. All rights reserved.</p></div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.textContent = open ? 'Close' : 'Menu';
+    <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Close" : "Menu";
     });
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "Menu";
       });
     });
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => { header.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
   </script>
 
   <script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
