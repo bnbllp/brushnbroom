@@ -70,10 +70,11 @@
       --amber: #d4943a; --amber-dark: #b87a2a;
       --charcoal: #2c2a26; --charcoal-light: #6b6860;
       --warm-white: #faf8f5; --white: #ffffff;
-      --shadow-sm: 0 2px 8px rgba(26,60,42,0.06);
-      --shadow-md: 0 8px 24px rgba(26,60,42,0.08);
-      --shadow-lg: 0 16px 40px rgba(26,60,42,0.10);
-      --shadow-xl: 0 24px 56px rgba(26,60,42,0.14);
+      --seahawks-green: #69BE28;
+      --shadow-sm: 0 2px 8px rgba(0,24,68,0.06);
+      --shadow-md: 0 8px 24px rgba(0,24,68,0.08);
+      --shadow-lg: 0 16px 40px rgba(0,24,68,0.10);
+      --shadow-xl: 0 24px 56px rgba(0,24,68,0.14);
       --radius: 16px; --radius-sm: 12px; --max: 1200px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -99,20 +100,20 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.35s; }
     .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.3s ease; background: transparent; }
-    .header.scrolled { background: rgba(26,60,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .header.scrolled { background: var(--seahawks-green); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 80px; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.2px; white-space: nowrap; }
     .brand img { height: 50px; width: auto; display: block; }
-    .brand span { color: var(--amber); }
+    .brand span { color: var(--white); }
     .nav-toggle { display: none; background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 8px 12px; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
     .nav { display: flex; align-items: center; gap: 28px; }
-    .nav a { color: rgba(255,255,255,0.9); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav a { color: var(--white); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
     .nav a:hover { color: var(--white); }
     .nav .btn-amber { margin-left: 8px; padding: 10px 22px; }
     .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(18,42,30,0.92), rgba(18,42,30,0.80), rgba(18,42,30,0.50)); }
+    .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,24,68,0.92), rgba(0,24,68,0.80), rgba(0,24,68,0.50)); }
     .hero .container { position: relative; z-index: 2; padding: 140px 0 100px; }
     .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
     .hero h1 { color: var(--white); font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 24px; }
@@ -247,7 +248,7 @@
             </section>
 
             <section class="service-card fade-up delay-2">
-              <div class="service-card-img"><img src="/assets/images/Beige%20Minimalist%20Beauty%20Before%20After%20Collage%20Instagram%20Post.png" alt="Commercial and office cleaning by Brush and Broom LLP" loading="lazy" /></div>
+              <div class="service-card-img"><img src="/assets/images/commercial-office.jpg" alt="Commercial and office cleaning by Brush and Broom LLP" loading="lazy" /></div>
               <div class="service-card-body">
                 <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
                 <h3>Commercial &amp; Office Cleaning</h3>
@@ -257,7 +258,7 @@
             </section>
 
             <section class="service-card fade-up delay-3">
-              <div class="service-card-img"><img src="/assets/images/IMG_4075.png" alt="Building exterior and entryway detail cleaning by Brush and Broom LLP" loading="lazy" /></div>
+              <div class="service-card-img"><img src="/assets/images/common-areas.jpg" alt="Building exterior and entryway detail cleaning by Brush and Broom LLP" loading="lazy" /></div>
               <div class="service-card-body">
                 <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
                 <h3>Small Business &amp; Common Areas</h3>
