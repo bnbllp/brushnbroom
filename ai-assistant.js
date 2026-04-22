@@ -36,28 +36,18 @@ class BrushBroomAIAssistant {
       } else if (lowerMessage.includes('deep') || lowerMessage.includes('thorough')) {
         response.suggestedService = 'deep-cleaning';
         response.message = "You're looking for a deep clean! We specialize in thorough cleaning that goes beyond the basics—kitchens, bathrooms, floors, baseboards, and all the details you actually notice.";
+      } else if (lowerMessage.includes('airbnb') || lowerMessage.includes('rental') || lowerMessage.includes('vrbo')) {
+        response.suggestedService = 'vacation-rental-cleaning';
+        response.message = "We specialize in vacation rental turnover cleaning. We help keep your place guest-ready between bookings with reliable timing and consistent detail.";
+      } else if (lowerMessage.includes('office') || lowerMessage.includes('commercial') || lowerMessage.includes('business')) {
+        response.suggestedService = 'commercial-cleaning';
+        response.message = "We offer professional commercial and office cleaning for small businesses. We focus on creating a clean, welcoming environment for your team and clients.";
       } else {
         response.suggestedService = 'house-cleaning';
         response.message = "We'd love to help with your cleaning needs. Whether it's regular maintenance, deep cleaning, or a reset clean, we focus on doing it right.";
       }
       response.followUpQuestions.push('How many bedrooms and bathrooms does your home have?');
       response.followUpQuestions.push('When would you like the cleaning done?');
-    }
-
-    if (lowerMessage.includes('paint') || lowerMessage.includes('color') || lowerMessage.includes('refresh') || lowerMessage.includes('tired')) {
-      response.recommendations.push('painting');
-      response.suggestedService = 'interior-painting';
-      response.message = "Interior painting is a great way to refresh tired rooms! We handle walls, trim, doors, touch-ups, and full-room repaints with clean lines and smooth finishes.";
-      response.followUpQuestions.push('How many rooms are you looking to paint?');
-      response.followUpQuestions.push('Do you have a timeline in mind?');
-    }
-
-    if (lowerMessage.includes('both') || (lowerMessage.includes('clean') && lowerMessage.includes('paint'))) {
-      response.recommendations = ['house-cleaning', 'painting'];
-      response.suggestedService = 'combined-service';
-      response.message = "Perfect! We can handle both cleaning and painting as one coordinated project. This saves you the hassle of juggling multiple companies and ensures everything flows smoothly.";
-      response.followUpQuestions.push('What\'s your approximate square footage?');
-      response.followUpQuestions.push('What\'s your budget range?');
     }
 
     // Detect urgency
@@ -77,7 +67,7 @@ class BrushBroomAIAssistant {
 
     // Default response if no service detected
     if (!response.suggestedService) {
-      response.message = "Thanks for reaching out! We offer house cleaning, move-out cleaning, and interior painting services for Seattle and the Eastside. What can we help you with today?";
+      response.message = "Thanks for reaching out! We offer house cleaning, move-out cleaning, vacation rental turnover, and commercial cleaning services for Seattle and the Eastside. What can we help you with today?";
       response.followUpQuestions = [
         'What type of service are you interested in?',
         'Tell us about your project',
@@ -132,15 +122,6 @@ class BrushBroomAIAssistant {
         service: 'regular-cleaning',
         reason: 'Regular maintenance cleaning is a cost-effective way to keep your home fresh between deep cleans.',
         priority: 'medium'
-      });
-    }
-
-    // Combined service recommendation
-    if (userProfile.serviceNeeds.includes('cleaning') && userProfile.serviceNeeds.includes('painting')) {
-      recommendations.push({
-        service: 'combined-service',
-        reason: 'Combining cleaning and painting saves time and coordination. We can handle both seamlessly.',
-        priority: 'high'
       });
     }
 

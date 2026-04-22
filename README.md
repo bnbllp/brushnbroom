@@ -1,6 +1,6 @@
-# Brush & Broom LLP - Seattle Cleaning & Painting
+# Brush & Broom LLP - Seattle Cleaning
 
-A professional website for Brush & Broom LLP, a family-run Seattle-based cleaning and painting company specializing in house cleaning, move-out cleaning, interior painting, and exterior painting services.
+A professional website for Brush & Broom LLP, a family-run Seattle-based cleaning company specializing in house cleaning, move-out cleaning, interior painting, and exterior painting services.
 
 ## Overview
 
@@ -13,7 +13,6 @@ brushbroom/
 ├── index.html                                          # Homepage
 ├── about.html                                          # About us page
 ├── areas-we-serve.html                                # Service areas page
-├── interior-exterior-house-painting-bellevue-seattle.html  # Painting services page
 ├── move-in-move-out-bellevue-seattle.html            # Move-out cleaning services page
 ├── routine-deep-maintenance-cleaning-bellevue-seattle.html # Routine cleaning services page
 ├── thank-you.html                                      # Form submission confirmation page
@@ -48,8 +47,6 @@ brushbroom/
 
 1. **House Cleaning**: Regular, deep, and reset cleaning services
 2. **Move-Out Cleaning**: Turnover cleaning for renters and landlords
-3. **Interior Painting**: Wall painting, trim work, and full-room repaints
-4. **Exterior Painting**: Curb appeal and home protection services
 
 ## Contact Information
 

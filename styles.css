@@ -5,18 +5,18 @@
        ═══════════════════════════════════════════════ */
 
     :root {
-      --forest: #001844;
-      --forest-light: #002a7a;
-      --forest-dark: #000d26;
-      --cream: #f5f0e8;
-      --cream-dark: #e8dfd2;
-      --amber: #d4943a;
-      --amber-dark: #b87a2a;
-      --charcoal: #2c2a26;
-      --charcoal-light: #6b6860;
-      --warm-white: #faf8f5;
+      --forest: #1A3C2A; /* Deep British Racing Green for a premium feel */
+      --forest-light: #2D5A42;
+      --forest-dark: #0F2419;
+      --cream: #F9F7F2;
+      --cream-dark: #E8E2D6;
+      --amber: #C5A059; /* Muted Gold/Champagne for high-end appeal */
+      --amber-dark: #A68546;
+      --charcoal: #242424;
+      --charcoal-light: #5C5C5C;
+      --warm-white: #FFFFFF;
       --white: #ffffff;
-      --seahawks-green: #69BE28;
+      --accent-soft: #E8E2D6; /* Replacing Seahawks Green with a soft neutral */
       --shadow-sm: 0 2px 8px rgba(0, 24, 68, 0.06);
       --shadow-md: 0 8px 24px rgba(0, 24, 68, 0.08);
       --shadow-lg: 0 16px 40px rgba(0, 24, 68, 0.10);
@@ -182,7 +182,7 @@
     }
 
     .header.scrolled {
-      background: var(--seahawks-green);
+      background: rgba(26, 60, 42, 0.95); /* Using the deep green for scrolled header */
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
