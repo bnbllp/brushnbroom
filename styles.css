@@ -16,6 +16,7 @@
       --charcoal-light: #6b6860;
       --warm-white: #faf8f5;
       --white: #ffffff;
+      --seahawks-green: #69BE28;
       --shadow-sm: 0 2px 8px rgba(0, 24, 68, 0.06);
       --shadow-md: 0 8px 24px rgba(0, 24, 68, 0.08);
       --shadow-lg: 0 16px 40px rgba(0, 24, 68, 0.10);
@@ -181,7 +182,7 @@
     }
 
     .header.scrolled {
-      background: rgba(0, 24, 68, 0.97);
+      background: var(--seahawks-green);
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
@@ -217,7 +218,7 @@
     }
 
     .brand span {
-      color: var(--amber);
+      color: var(--white);
     }
 
     .nav-toggle {
@@ -240,8 +241,8 @@
     }
 
     .nav a {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
+      color: var(--white);
+      font-weight: 600;
       font-size: 0.95rem;
       transition: color 0.2s;
     }
@@ -281,9 +282,9 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        rgba(18, 42, 30, 0.92),
-        rgba(18, 42, 30, 0.80),
-        rgba(18, 42, 30, 0.50)
+        rgba(0, 24, 68, 0.92),
+        rgba(0, 24, 68, 0.80),
+        rgba(0, 24, 68, 0.50)
       );
     }
 
