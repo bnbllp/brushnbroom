@@ -10,20 +10,24 @@ domain: brushnbroom.com
 # Build settings
 markdown: kramdown
 theme: null
-plugins: []
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
 
 # Exclude unnecessary files from processing
 exclude:
   - .gitignore
   - README.md
   - node_modules
+  - switch-index.sh
 
 # Ensure static files are served correctly
 include:
   - .htaccess
 
 # Permalink structure
-permalink: /:title/
+# Setting this to 'pretty' helps with clean URLs on Jekyll
+permalink: pretty
 
 # Disable Jekyll processing for static HTML
 future: true

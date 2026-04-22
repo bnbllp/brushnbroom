@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJPV8T9HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJJPV8T9HN");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Care Program | Brush & Broom LLP – Free Cleanings for Those in Need</title>
+  <meta
+    name="description"
+    content="Brush & Broom LLP's Community Care Program provides free and discounted cleanings for elderly individuals, disabled people, veterans, and those facing hardship in Seattle and the Eastside."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://brushnbroom.com/community-care" />
+  <meta property="og:title" content="Community Care Program | Brush & Broom LLP" />
+  <meta
+    property="og:description"
+    content="Free and discounted cleanings for elderly, disabled, veterans, and those facing hardship. Our mission to give back to the community."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brushnbroom.com/community-care" />
+  <meta name="theme-color" content="#001844" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    .program-hero {
+      background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+      color: var(--white);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .program-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 24px;
+    }
+
+    .program-hero p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+      line-height: 1.75;
+    }
+
+    .program-content {
+      padding: 80px 0;
+    }
+
+    .program-section {
+      margin-bottom: 80px;
+    }
+
+    .program-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 32px;
+      color: var(--forest);
+    }
+
+    .eligibility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .eligibility-card {
+      background: linear-gradient(135deg, rgba(0, 24, 68, 0.05), rgba(212, 148, 58, 0.05));
+      border: 2px solid var(--forest);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .eligibility-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--forest);
+    }
+
+    .eligibility-card p {
+      color: var(--charcoal-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .how-it-works {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+
+    .steps-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 20px;
+    }
+
+    .step-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--amber);
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(212, 148, 58, 0.1);
+      border-radius: 12px;
+    }
+
+    .step-content h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--forest);
+    }
+
+    .step-content p {
+      color: var(--charcoal-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .impact-section {
+      background: var(--forest);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 60px 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .impact-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 32px;
+    }
+
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .impact-stat {
+      padding: 20px;
+    }
+
+    .impact-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.8rem;
+      color: var(--amber);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .impact-label {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .impact-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    .testimonials {
+      margin-top: 40px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-sm);
+      padding: 28px;
+      border: 1px solid rgba(232, 223, 210, 0.4);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testimonial-text {
+      color: var(--charcoal-light);
+      font-style: italic;
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--forest);
+    }
+
+    .testimonial-role {
+      font-size: 0.85rem;
+      color: var(--charcoal-light);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+      color: var(--charcoal);
+      border-radius: var(--radius);
+      padding: 60px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons .btn {
+      min-width: 200px;
+    }
+
+    @media (max-width: 768px) {
+      .program-hero {
+        padding: 60px 0;
+      }
+
+      .program-content {
+        padding: 60px 0;
+      }
+
+      .how-it-works {
+        padding: 28px;
+      }
+
+      .impact-section {
+        padding: 40px 28px;
+      }
+
+      .cta-section {
+        padding: 40px 28px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+  </script>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/about">About</a>
+        <a href="/areas-we-serve">Areas</a>
+        <a href="/estimator">Estimator</a>
+        <a href="/community-care">Community Care</a>
+        <a href="/#quote" class="btn btn-amber">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="program-hero">
+      <div class="container">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.2); color: var(--white);">Our Mission</span>
+        <h1>Community Care Program</h1>
+        <p>
+          We believe everyone deserves a clean, safe place to live. That's why we offer free and discounted cleanings for elderly individuals, disabled people, veterans, and those facing hardship. Giving back isn't something we plan to do someday — it's something we're already doing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="program-content">
+      <div class="container">
+        <!-- Who We Help -->
+        <div class="program-section">
+          <h2 class="section-title">Who We Help</h2>
+          <div class="eligibility-grid">
+            <div class="eligibility-card">
+              <h3>Elderly Individuals</h3>
+              <p>We provide free or deeply discounted cleanings for seniors on fixed incomes who may struggle with physical maintenance of their homes.</p>
+            </div>
+            <div class="eligibility-card">
+              <h3>Disabled Individuals</h3>
+              <p>For those with disabilities that make cleaning difficult or impossible, we step in to help keep their homes safe and livable.</p>
+            </div>
+            <div class="eligibility-card">
+              <h3>Veterans</h3>
+              <p>We honor those who served by offering free cleanings to veterans facing housing instability or eviction due to unclean conditions.</p>
+            </div>
+            <div class="eligibility-card">
+              <h3>Those Facing Hardship</h3>
+              <p>If you're experiencing financial hardship, homelessness, or facing eviction, we're here to help you maintain a clean, dignified home.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="program-section">
+          <h2 class="section-title">How It Works</h2>
+          <div class="how-it-works">
+            <p style="color: var(--charcoal-light); font-size: 1.05rem; margin-bottom: 0;">
+              Our process is simple, confidential, and designed with dignity in mind. There's no judgment, no complicated paperwork, just genuine help.
+            </p>
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Reach Out</h4>
+                  <p>Call us at 206-571-5568 or email seabnbllp@brushnbroom.com. Tell us about your situation — we listen without judgment.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>We Assess</h4>
+                  <p>We'll discuss your needs and determine the best way we can help, whether that's a free cleaning or a discounted service.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>We Schedule</h4>
+                  <p>We'll find a time that works for you and show up ready to work. Our team treats your home with the same respect we'd give our own.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>We Deliver</h4>
+                  <p>We complete the cleaning with care and attention to detail, leaving your home fresh, clean, and ready for living.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Impact -->
+        <div class="program-section">
+          <div class="impact-section">
+            <h3>Our Impact So Far</h3>
+            <div class="impact-stats">
+              <div class="impact-stat">
+                <div class="impact-number">15+</div>
+                <div class="impact-label">Free Cleanings Provided</div>
+              </div>
+              <div class="impact-stat">
+                <div class="impact-number">100%</div>
+                <div class="impact-label">Confidential & Judgment-Free</div>
+              </div>
+              <div class="impact-stat">
+                <div class="impact-number">∞</div>
+                <div class="impact-label">Committed to Growing</div>
+              </div>
+            </div>
+            <p class="impact-text">
+              Since launching Brush & Broom LLP in January 2025, we've already helped families and individuals facing housing instability. Our long-term vision is to expand this program to support homeless communities, especially families with children and the most vulnerable. Every job we take funds the difference we want to make tomorrow.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="program-section">
+          <h2 class="section-title">Stories of Impact</h2>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "After my injury, I couldn't clean my home anymore. Brush & Broom came in and made everything feel fresh and safe again. They treated me with such respect and kindness."
+              </p>
+              <div class="testimonial-author">Margaret S.</div>
+              <div class="testimonial-role">Disabled Individual, Bellevue</div>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "I was facing eviction because my home had gotten out of control. These folks didn't just clean—they gave me hope and a second chance. I'm so grateful."
+              </p>
+              <div class="testimonial-author">James T.</div>
+              <div class="testimonial-role">Veteran, Seattle</div>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "At 82, I couldn't keep up with my home anymore. Dustin and Brittany made me feel like a person, not a charity case. They're the real deal."
+              </p>
+              <div class="testimonial-author">Dorothy M.</div>
+              <div class="testimonial-role">Senior, Kirkland</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Commitment -->
+        <div class="program-section">
+          <h2 class="section-title">Our Commitment</h2>
+          <div style="background: var(--warm-white); border-radius: var(--radius); padding: 40px; border: 1px solid rgba(232, 223, 210, 0.4);">
+            <p style="color: var(--charcoal-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+              <strong>Confidentiality:</strong> Your situation is private. We don't share information or make judgments.
+            </p>
+            <p style="color: var(--charcoal-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+              <strong>Dignity:</strong> You deserve respect. We treat every person with the same care and professionalism we'd show anyone else.
+            </p>
+            <p style="color: var(--charcoal-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+              <strong>Quality:</strong> Free doesn't mean less. We bring the same attention to detail and care to community cleanings as we do to all our work.
+            </p>
+            <p style="color: var(--charcoal-light); font-size: 1.05rem; line-height: 1.8;">
+              <strong>Sustainability:</strong> Every paying job we take helps fund our community care work. We're building toward a future where we can help even more people.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Need Help? Let's Talk</h2>
+        <p>
+          If you or someone you know could benefit from our Community Care Program, please reach out. There's no judgment, no complicated process — just genuine help from neighbors who care.
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:206-571-5568" class="btn btn-forest">
+            Call 206-571-5568
+          </a>
+          <a href="mailto:seabnbllp@brushnbroom.com" class="btn btn-forest">
+            Email Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:206-571-5568">206-571-5568</a></p>
+        <p><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
+      </div>
+      <div>
+        <div class="footer-title">Links</div>
+        <div class="footer-links">
+          <a href="/#services">Services</a>
+          <a href="/about">About Us</a>
+          <a href="/areas-we-serve">Areas We Serve</a>
+          <a href="/estimator">Pricing Estimator</a>
+          <a href="/community-care">Community Care</a>
+          <a href="/#quote">Get a Quote</a>
+          <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
+          <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
+          <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
+          <a href="/post-construction-cleaning-seattle">Post-Construction Cleaning</a>
+          <a href="/vacation-rental-cleaning-seattle">Vacation Rental Cleaning</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      });
+    });
+  </script>
+
+<script src="//code.tidio.co/rfvqr1n7oq3ho7i2bkjeoyocltjwuvyw.js" async></script>
+
+<script>
+  window.onTidioChatApiReady = function() {
+    window.tidioChatApi.setColorPalette('#D4943A');
+  };
+</script>
+
+</body>
+</html>
