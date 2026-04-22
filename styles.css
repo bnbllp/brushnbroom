@@ -1025,13 +1025,30 @@
 
       .nav {
         display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: 0 0 18px;
-        background: rgba(18, 42, 30, 0.98);
+        padding: 16px 0;
+        background: rgba(26, 60, 42, 0.98);
         backdrop-filter: blur(12px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.3s ease-out;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .nav.open {
@@ -1040,15 +1057,27 @@
 
       .nav a {
         display: block;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 16px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         width: 100%;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+      }
+
+      .nav a:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--amber);
       }
 
       .nav .btn-amber {
-        margin: 14px 0 0;
-        width: 100%;
+        margin: 16px 16px 0;
+        width: calc(100% - 32px);
         text-align: center;
+        border-radius: 8px;
+        padding: 14px 28px;
       }
 
       .nav-wrap {
