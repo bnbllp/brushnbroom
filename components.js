@@ -67,6 +67,7 @@ class BrushBroomComponents {
             <a href="/areas-we-serve">Areas We Serve</a>
             <a href="/community-care">Community Care</a>
             <a href="/#quote">Get a Quote</a>
+            <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
             <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
             <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
