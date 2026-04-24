@@ -1,151 +1,100 @@
-# Brush & Broom LLP - Seattle Cleaning
+# Brush & Broom LLP — brushnbroom.com
 
-A professional website for Brush & Broom LLP, a family-run Seattle-based cleaning company specializing in house cleaning, move-out cleaning, interior painting, and exterior painting services.
-
-## Overview
-
-This is a static website built with HTML, CSS, and JavaScript. The site features a modern "Pacific Northwest Craftsman" design system with responsive layouts and smooth scroll animations.
+The primary production website for Brush & Broom LLP, a family-run Seattle-area cleaning company. Deployed via GitHub Pages at **[brushnbroom.com](https://brushnbroom.com)**.
 
 ## Project Structure
 
 ```
-brushbroom/
-├── index.html                                          # Homepage
-├── about.html                                          # About us page
-├── areas-we-serve.html                                # Service areas page
-├── move-in-move-out-bellevue-seattle.html            # Move-out cleaning services page
-├── routine-deep-maintenance-cleaning-bellevue-seattle.html # Routine cleaning services page
-├── thank-you.html                                      # Form submission confirmation page
-├── styles.css                                          # Global stylesheet
-├── sitemap.xml                                         # XML sitemap for search engines
-├── robots.txt                                          # Search engine crawler instructions
-└── README.md                                           # This file
+brush nbroom/
+├── index.html                                                   # Homepage
+├── about.html                                                   # About us
+├── areas-we-serve.html                                          # Service areas
+├── community-care.html                                          # Community care program
+├── deep-cleaning-seattle.html                                   # Deep cleaning service page
+├── move-in-move-out-bellevue-seattle.html                       # Move-in/out cleaning
+├── post-construction-cleaning-seattle.html                      # Post-construction cleaning
+├── routine-deep-maintenance-cleaning-bellevue-seattle.html      # Routine cleaning
+├── vacation-rental-cleaning-seattle.html                        # Vacation rental cleaning
+├── thank-you.html                                               # Form confirmation page
+├── styles.css                                                   # Global stylesheet
+├── components.js                                                # Shared nav/footer components
+├── ai-assistant.js                                              # AI chat assistant
+├── sitemap.xml                                                  # XML sitemap (.html URLs)
+├── robots.txt                                                   # Crawler instructions
+├── _config.yml                                                  # GitHub Pages / Jekyll config
+├── .htaccess                                                    # Apache config (not used on GH Pages)
+├── .nojekyll                                                    # Disables Jekyll processing
+├── CNAME                                                        # Custom domain: brushnbroom.com
+└── assets/                                                      # Images and static assets
 ```
 
-## Features
+## Important: GitHub Pages & URLs
 
-- **Responsive Design**: Mobile-first approach with responsive grid layouts
-- **Smooth Animations**: Scroll-triggered fade-up animations for visual engagement
-- **Form Integration**: Contact form powered by Formspree for quote requests
-- **SEO Optimized**: Proper meta tags, structured data (JSON-LD), and XML sitemap
-- **Accessibility**: Semantic HTML and ARIA labels for screen readers
-- **Modern Typography**: Custom fonts (DM Serif Display and DM Sans) from Google Fonts
+GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Clean URL rewrites defined in `.htaccess` are ignored. All sitemap URLs and canonical tags use `.html` extensions (e.g. `/about.html`, `/deep-cleaning-seattle.html`) to match the actual served files. Do not change these to extensionless URLs unless the hosting platform supports rewrites.
 
 ## Design System
 
 ### Color Palette
-- **Forest Green**: `#001844` (primary brand color)
-- **Amber**: `#d4943a` (accent color)
-- **Charcoal**: `#2c2a26` (text color)
-- **Cream**: `#f5f0e8` (background color)
+- **Forest Green**: `#001844` — primary brand color
+- **Amber**: `#d4943a` — accent color
+- **Charcoal**: `#2c2a26` — text color
+- **Cream**: `#f5f0e8` — background color
 
 ### Typography
-- **Headings**: DM Serif Display
-- **Body**: DM Sans
+- **Headings**: DM Serif Display (Google Fonts)
+- **Body**: DM Sans (Google Fonts)
 
-## Services Offered
+## Services
 
-1. **House Cleaning**: Regular, deep, and reset cleaning services
-2. **Move-Out Cleaning**: Turnover cleaning for renters and landlords
+- Routine & deep house cleaning
+- Move-in / move-out cleaning
+- Post-construction cleaning
+- Vacation rental cleaning
+- Community care program
 
-## Contact Information
+## Contact
 
 - **Phone**: 206-571-5568
 - **Email**: seabnbllp@brushnbroom.com
-- **Service Area**: Seattle and the Eastside
+- **Service Area**: Seattle, Bellevue, and the Eastside
 
-## Getting Started
+## Local Development
 
-### Local Development
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Bnbllp/brushnbroom.git
-   cd brushnbroom
-   ```
-
-2. Open `index.html` in your web browser or use a local server:
-   ```bash
-   python3 -m http.server 8000
-   # Then navigate to http://localhost:8000
-   ```
-
-### Deployment
-
-This is a static website and can be deployed to any static hosting service such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3 + CloudFront
-
-Ensure the `CNAME` file is configured correctly for custom domain deployment.
-
-## File Descriptions
-
-### HTML Files
-- **index.html**: Main landing page with hero section, services overview, process explanation, FAQ, and contact form
-- **about.html**: Company story, team members, and core values
-- **areas-we-serve.html**: Service area map and neighborhood listings
-- **Service Pages**: Detailed pages for each service offering with specific information and CTAs
-
-### CSS
-- **styles.css**: Centralized stylesheet containing all design system styles, responsive breakpoints, and animations
-
-### JavaScript
-JavaScript functionality is embedded directly in HTML files for mobile navigation toggle, sticky header behavior, scroll animations, and form interactions.
-
-### SEO & Configuration
-- **sitemap.xml**: XML sitemap listing all pages for search engine crawling
-- **robots.txt**: Instructions for search engine bots
-- **CNAME**: Custom domain configuration file
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance Considerations
-
-- External CSS file for better caching
-- Optimized images hosted on CDN (Cloudfront)
-- Minimal JavaScript for fast page load
-- Responsive images and lazy loading ready
+```bash
+git clone https://github.com/bnbllp/brushnbroom.git
+cd brushnbroom
+python3 -m http.server 8000
+# Visit http://localhost:8000
+```
 
 ## Maintenance
 
 ### Adding New Pages
-1. Create a new HTML file with the same structure as existing pages
-2. Ensure it links to `/styles.css`
-3. Update `sitemap.xml` with the new page URL
-4. Update navigation links across all pages
+1. Create the new `.html` file following the existing page structure
+2. Link to `styles.css` and include `components.js` for shared nav/footer
+3. Add a `<link rel="canonical">` tag pointing to `https://brushnbroom.com/your-page.html`
+4. Add the page to `sitemap.xml` using the `.html` URL
+5. Update navigation links in all other pages as needed
 
-### Updating Styles
-All styles are centralized in `styles.css`. Make changes there and they will apply across all pages.
+### Sitemap
+The sitemap lives at `https://brushnbroom.com/sitemap.xml` and is referenced in `robots.txt`. All URLs must end in `.html` (or `/` for the homepage). Do not use extensionless URLs — they will 404 on GitHub Pages.
 
 ### Form Submissions
-The contact form uses Formspree. Submissions are sent to the configured email address. To change the form endpoint, update the `action` attribute in the form tag.
+The contact form uses Formspree. To update the endpoint, change the `action` attribute on the `<form>` tag in `index.html`.
 
-## Future Enhancements
+### JavaScript
+- `components.js` — injects shared nav and footer HTML across all pages
+- `ai-assistant.js` — powers the on-page AI chat widget
 
-- Add blog section for home maintenance tips
-- Implement photo gallery for before/after comparisons
-- Add online booking system
-- Implement customer testimonials section
-- Add team member profiles with photos
+## Relationship to brushandbroomllp.com
 
-## License
+The repo `bnbllp/brushandbroomllp.com` (hosted at `brushandbroomllp.com`) contains redirect stubs only. Every page there performs a `meta refresh` to the corresponding page on this site and includes a canonical tag pointing here. That repo exists solely to redirect legacy traffic — all real content lives in this repository.
 
-This project is proprietary to Brush & Broom LLP.
+## Browser Support
 
-## Support
-
-For issues or questions about the website, please contact:
-- Email: seabnbllp@brushnbroom.com
-- Phone: 206-571-5568
+- Chrome, Firefox, Safari, Edge (latest)
+- iOS Safari, Chrome Mobile
 
 ---
 
-**Last Updated**: March 25, 2026
+**Last Updated**: April 24, 2026
