@@ -28,11 +28,11 @@ class BrushBroomComponents {
         <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
-          <a href="/#services">Services</a>
+          <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/areas-we-serve">Areas</a>
           <a href="/community-care">Community Care</a>
-          <a href="/#quote" class="btn btn-amber">Get a Quote</a>
+          <a href="/" class="btn btn-amber">Get a Quote</a>
         </nav>
       </div>
     `;
@@ -62,11 +62,10 @@ class BrushBroomComponents {
         <div>
           <div class="footer-title">Links</div>
           <div class="footer-links">
-            <a href="/#services">Services</a>
+            <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/areas-we-serve">Areas We Serve</a>
             <a href="/community-care">Community Care</a>
-            <a href="/#quote">Get a Quote</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
             <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>

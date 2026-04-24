@@ -3,65 +3,65 @@
 
   <url>
     <loc>https://brushnbroom.com/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://brushnbroom.com/about</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://brushnbroom.com/areas-we-serve</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://brushnbroom.com/move-in-move-out-bellevue-seattle</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://brushnbroom.com/community-care</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://brushnbroom.com/routine-deep-maintenance-cleaning-bellevue-seattle</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://brushnbroom.com/move-in-move-out-bellevue-seattle</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://brushnbroom.com/deep-cleaning-seattle</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://brushnbroom.com/vacation-rental-cleaning-seattle</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://brushnbroom.com/post-construction-cleaning-seattle</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://brushnbroom.com/community-care</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://brushnbroom.com/vacation-rental-cleaning-seattle</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
