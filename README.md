@@ -35,8 +35,9 @@ GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Cle
 ## Design System
 
 ### Color Palette
-- **Forest Green**: `#001844` — primary brand color
-- **Amber**: `#d4943a` — accent color
+- **College Navy**: `#002244` — primary brand color
+- **Action Green**: `#69BE28` — accent color
+- **Wolf Gray**: `#A5ACAF` — optional neutral accent
 - **Charcoal**: `#2c2a26` — text color
 - **Cream**: `#f5f0e8` — background color
 
