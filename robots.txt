@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
+# Discourage crawling of extensionless URLs which 404 on GitHub Pages
+Disallow: /about$
+Disallow: /areas-we-serve$
+Disallow: /community-care$
+Disallow: /routine-deep-maintenance-cleaning-bellevue-seattle$
+Disallow: /move-in-move-out-bellevue-seattle$
+Disallow: /deep-cleaning-seattle$
+Disallow: /post-construction-cleaning-seattle$
+Disallow: /vacation-rental-cleaning-seattle$
+Disallow: /thank-you$
 
 Sitemap: https://brushnbroom.com/sitemap.xml

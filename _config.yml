@@ -26,8 +26,8 @@ include:
   - .htaccess
 
 # Permalink structure
-# Setting this to 'pretty' helps with clean URLs on Jekyll
-permalink: pretty
+# Set to none to preserve .html extensions on GitHub Pages
+permalink: none
 
 # Disable Jekyll processing for static HTML
 future: true

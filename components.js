@@ -29,9 +29,9 @@ class BrushBroomComponents {
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/areas-we-serve">Areas</a>
-          <a href="/community-care">Community Care</a>
+          <a href="/about.html">About</a>
+          <a href="/areas-we-serve.html">Areas</a>
+          <a href="/community-care.html">Community Care</a>
           <a href="/" class="btn btn-amber">Get a Quote</a>
         </nav>
       </div>
@@ -63,15 +63,15 @@ class BrushBroomComponents {
           <div class="footer-title">Links</div>
           <div class="footer-links">
             <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/areas-we-serve">Areas We Serve</a>
-            <a href="/community-care">Community Care</a>
+            <a href="/about.html">About Us</a>
+            <a href="/areas-we-serve.html">Areas We Serve</a>
+            <a href="/community-care.html">Community Care</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
-            <a href="/routine-deep-maintenance-cleaning-bellevue-seattle">House Cleaning Seattle</a>
-            <a href="/deep-cleaning-seattle">Deep Cleaning Seattle</a>
-            <a href="/move-in-move-out-bellevue-seattle">Move-Out Cleaning Seattle</a>
-            <a href="/post-construction-cleaning-seattle">Post-Construction Cleaning</a>
-            <a href="/vacation-rental-cleaning-seattle">Vacation Rental Cleaning</a>
+            <a href="/routine-deep-maintenance-cleaning-bellevue-seattle.html">House Cleaning Seattle</a>
+            <a href="/deep-cleaning-seattle.html">Deep Cleaning Seattle</a>
+            <a href="/move-in-move-out-bellevue-seattle.html">Move-Out Cleaning Seattle</a>
+            <a href="/post-construction-cleaning-seattle.html">Post-Construction Cleaning</a>
+            <a href="/vacation-rental-cleaning-seattle.html">Vacation Rental Cleaning</a>
           </div>
         </div>
       </div>
