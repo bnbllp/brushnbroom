@@ -1370,3 +1370,253 @@
   color: var(--charcoal-light);
   line-height: 1.7;
 }
+
+/* ─── Community Care Page Styles ─── */
+.program-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--forest);
+  text-align: center;
+}
+
+.program-hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 140px 0 80px;
+}
+
+.program-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 24px;
+}
+
+.program-hero p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.program-content {
+  padding: 80px 0;
+  background: var(--cream);
+}
+
+.program-section {
+  margin-bottom: 80px;
+}
+
+.program-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 32px;
+  color: var(--forest);
+}
+
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.eligibility-card {
+  background: var(--warm-white);
+  border: 2px solid var(--forest);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.eligibility-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--forest);
+}
+
+.eligibility-card p {
+  color: var(--charcoal-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.how-it-works {
+  background: var(--warm-white);
+  border-radius: var(--radius);
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(232, 223, 210, 0.4);
+}
+
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+}
+
+.step-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem;
+  color: var(--amber);
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 148, 58, 0.1);
+  border-radius: 12px;
+}
+
+.step-content h4 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--forest);
+}
+
+.step-content p {
+  color: var(--charcoal-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.impact-section {
+  background: var(--forest);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 60px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.impact-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.impact-stat {
+  padding: 20px;
+}
+
+.impact-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  color: var(--amber);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.impact-label {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.impact-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.testimonial-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-sm);
+  padding: 28px;
+  border: 1px solid rgba(232, 223, 210, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-text {
+  color: var(--charcoal-light);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.75;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: var(--charcoal-light);
+}
+
+.cta-section-alt {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  color: var(--charcoal);
+  border-radius: var(--radius);
+  padding: 60px 40px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta-section-alt h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--charcoal);
+}
+
+.cta-section-alt p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .program-hero {
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .program-content {
+    padding: 60px 0;
+  }
+
+  .how-it-works {
+    padding: 28px;
+  }
+
+  .impact-section {
+    padding: 40px 28px;
+  }
+
+  .cta-section-alt {
+    padding: 40px 28px;
+  }
+}

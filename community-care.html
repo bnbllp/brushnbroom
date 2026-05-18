@@ -33,264 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 
-  <style>
-    .program-hero {
-      background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
-      color: var(--white);
-      padding: 100px 0;
-      text-align: center;
-    }
 
-    .program-hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      margin-bottom: 24px;
-    }
-
-    .program-hero p {
-      font-size: 1.15rem;
-      max-width: 700px;
-      margin: 0 auto;
-      opacity: 0.95;
-      line-height: 1.75;
-    }
-
-    .program-content {
-      padding: 80px 0;
-    }
-
-    .program-section {
-      margin-bottom: 80px;
-    }
-
-    .program-section:last-child {
-      margin-bottom: 0;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      margin-bottom: 32px;
-      color: var(--forest);
-    }
-
-    .eligibility-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      margin-bottom: 40px;
-    }
-
-    .eligibility-card {
-      background: linear-gradient(135deg, rgba(0, 24, 68, 0.05), rgba(212, 148, 58, 0.05));
-      border: 2px solid var(--forest);
-      border-radius: var(--radius);
-      padding: 32px;
-      text-align: center;
-    }
-
-    .eligibility-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--forest);
-    }
-
-    .eligibility-card p {
-      color: var(--charcoal-light);
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
-
-    .how-it-works {
-      background: var(--warm-white);
-      border-radius: var(--radius);
-      padding: 40px;
-      margin-bottom: 40px;
-    }
-
-    .steps-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 32px;
-      margin-top: 32px;
-    }
-
-    .step-item {
-      display: flex;
-      gap: 20px;
-    }
-
-    .step-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.4rem;
-      color: var(--amber);
-      font-weight: 700;
-      flex-shrink: 0;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(212, 148, 58, 0.1);
-      border-radius: 12px;
-    }
-
-    .step-content h4 {
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--forest);
-    }
-
-    .step-content p {
-      color: var(--charcoal-light);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .impact-section {
-      background: var(--forest);
-      color: var(--white);
-      border-radius: var(--radius);
-      padding: 60px 40px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .impact-section h3 {
-      font-size: 1.8rem;
-      margin-bottom: 32px;
-    }
-
-    .impact-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin-bottom: 32px;
-    }
-
-    .impact-stat {
-      padding: 20px;
-    }
-
-    .impact-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.8rem;
-      color: var(--amber);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .impact-label {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    .impact-text {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      max-width: 700px;
-      margin: 0 auto;
-      opacity: 0.95;
-    }
-
-    .testimonials {
-      margin-top: 40px;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .testimonial-card {
-      background: var(--warm-white);
-      border-radius: var(--radius-sm);
-      padding: 28px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
-      box-shadow: var(--shadow-md);
-    }
-
-    .testimonial-text {
-      color: var(--charcoal-light);
-      font-style: italic;
-      margin-bottom: 16px;
-      line-height: 1.75;
-    }
-
-    .testimonial-author {
-      font-weight: 600;
-      color: var(--forest);
-    }
-
-    .testimonial-role {
-      font-size: 0.85rem;
-      color: var(--charcoal-light);
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
-      color: var(--charcoal);
-      border-radius: var(--radius);
-      padding: 60px 40px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      color: var(--charcoal);
-    }
-
-    .cta-section p {
-      font-size: 1.1rem;
-      margin-bottom: 32px;
-      opacity: 0.95;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .cta-buttons .btn {
-      min-width: 200px;
-    }
-
-    @media (max-width: 768px) {
-      .program-hero {
-        padding: 60px 0;
-      }
-
-      .program-content {
-        padding: 60px 0;
-      }
-
-      .how-it-works {
-        padding: 28px;
-      }
-
-      .impact-section {
-        padding: 40px 28px;
-      }
-
-      .cta-section {
-        padding: 40px 28px;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-      }
-
-      .cta-buttons .btn {
-        width: 100%;
-      }
-    }
-  </style>
   
 </head>
 <body>
@@ -299,8 +42,11 @@
     <main>
     <!-- Hero Section -->
     <section class="program-hero">
+      <div class="hero-bg">
+        <img src="/assets/images/family-photo.jpeg" alt="Dustin and Brittany, founders of Brush & Broom LLP" />
+      </div>
       <div class="container">
-        <span class="eyebrow" style="background: rgba(255,255,255,0.2); color: var(--white);">Our Mission</span>
+        <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: var(--white);">Our Mission</span>
         <h1>Community Care Program</h1>
         <p>
           We believe everyone deserves a clean, safe place to live. That's why we offer free and discounted cleanings for elderly individuals, disabled people, veterans, and those facing hardship. Giving back isn't something we plan to do someday — it's something we're already doing.
@@ -448,17 +194,17 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="cta-section">
+    <section class="cta-section-alt">
       <div class="container">
         <h2>Need Help? Let's Talk</h2>
         <p>
           If you or someone you know could benefit from our Community Care Program, please reach out. There's no judgment, no complicated process — just genuine help from neighbors who care.
         </p>
         <div class="cta-buttons">
-          <a href="tel:206-571-5568" class="btn btn-forest">
+          <a href="tel:206-571-5568" class="btn btn-amber">
             Call 206-571-5568
           </a>
-          <a href="mailto:seabnbllp@brushnbroom.com" class="btn btn-forest">
+          <a href="mailto:seabnbllp@brushnbroom.com" class="btn btn-amber">
             Email Us
           </a>
         </div>
