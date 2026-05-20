@@ -14,6 +14,7 @@ class BrushBroomComponents {
     this.injectFooter();
     this.setupNavigation();
     this.setupScrollEffects();
+    this.setupChatWidgetPolish();
   }
 
   /**
@@ -109,6 +110,135 @@ class BrushBroomComponents {
         toggle.textContent = 'Menu';
       });
     });
+  }
+
+  /**
+   * Keep the third-party chat helper from visually overwhelming the site.
+   * The widget is injected asynchronously with generated class names, so these
+   * overrides target stable class-name fragments and re-apply when the DOM changes.
+   */
+  setupChatWidgetPolish() {
+    const styleId = 'brush-broom-chat-polish';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = `
+        [class*="artibot-wrapper"] [class*="artibot-chatwindow-wrapper"] {
+          width: min(380px, calc(100vw - 32px)) !important;
+          max-width: calc(100vw - 32px) !important;
+          height: min(620px, calc(100vh - 112px)) !important;
+          max-height: calc(100vh - 112px) !important;
+          right: 16px !important;
+          left: auto !important;
+          bottom: 88px !important;
+          border-radius: 18px !important;
+          overflow: hidden !important;
+          box-shadow: 0 22px 55px rgba(15, 36, 25, 0.32) !important;
+          z-index: 999 !important;
+        }
+
+        [class*="artibot-wrapper"] [class*="artibot-chatwindow-iframe"] {
+          border-radius: 18px !important;
+          background: var(--forest) !important;
+        }
+
+        [class*="artibot-wrapper"] [class*="artibot-launcher-bubble"] {
+          display: none !important;
+        }
+
+        [class*="artibot-wrapper"] [class*="artibot-launcher"] {
+          right: 18px !important;
+          bottom: 18px !important;
+          width: 58px !important;
+          height: 58px !important;
+          background: var(--amber) !important;
+          border: 2px solid rgba(255, 255, 255, 0.86) !important;
+          box-shadow: 0 12px 30px rgba(15, 36, 25, 0.28) !important;
+          z-index: 1001 !important;
+        }
+
+        [class*="artibot-wrapper"] [class*="artibot-launcher"] svg,
+        [class*="artibot-wrapper"] [class*="artibot-closer"] svg {
+          fill: var(--forest-dark) !important;
+          stroke: var(--forest-dark) !important;
+        }
+
+        [class*="artibot-wrapper"] [class*="artibot-closer"] {
+          top: 12px !important;
+          right: 12px !important;
+          background: rgba(249, 247, 242, 0.94) !important;
+          border-radius: 999px !important;
+          box-shadow: 0 6px 16px rgba(15, 36, 25, 0.22) !important;
+          z-index: 1002 !important;
+        }
+
+        @media (max-width: 700px) {
+          [class*="artibot-wrapper"] [class*="artibot-chatwindow-wrapper"] {
+            width: calc(100vw - 24px) !important;
+            height: min(70vh, 560px) !important;
+            right: 12px !important;
+            bottom: 84px !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    let visitorOpenedChat = false;
+
+    const polish = () => {
+      const launcher = document.querySelector('[class*="artibot-launcher"]');
+      const chatWindow = document.querySelector('[class*="artibot-chatwindow-wrapper"]');
+
+      if (launcher && !launcher.dataset.brushBroomBound) {
+        launcher.dataset.brushBroomBound = 'true';
+        launcher.setAttribute('aria-label', 'Open chat helper');
+        launcher.addEventListener('click', () => {
+          visitorOpenedChat = true;
+        }, { capture: true });
+      }
+
+      if (chatWindow) {
+        chatWindow.style.setProperty('width', 'min(380px, calc(100vw - 32px))', 'important');
+        chatWindow.style.setProperty('max-width', 'calc(100vw - 32px)', 'important');
+        chatWindow.style.setProperty('height', 'min(620px, calc(100vh - 112px))', 'important');
+        chatWindow.style.setProperty('max-height', 'calc(100vh - 112px)', 'important');
+        chatWindow.style.setProperty('right', '16px', 'important');
+        chatWindow.style.setProperty('left', 'auto', 'important');
+        chatWindow.style.setProperty('bottom', '88px', 'important');
+        chatWindow.style.setProperty('border-radius', '18px', 'important');
+        chatWindow.style.setProperty('overflow', 'hidden', 'important');
+        chatWindow.style.setProperty('box-shadow', '0 22px 55px rgba(15, 36, 25, 0.32)', 'important');
+        chatWindow.style.setProperty('z-index', '999', 'important');
+      }
+    };
+
+    const closeInitialChatIfExpanded = () => {
+      if (visitorOpenedChat) return false;
+      const closer = document.querySelector('[class*="artibot-closer"]');
+      const chatWindow = document.querySelector('[class*="artibot-chatwindow-wrapper"]');
+      if (closer && chatWindow && chatWindow.getBoundingClientRect().width > 0) {
+        closer.click();
+        return true;
+      }
+      return false;
+    };
+
+    polish();
+    setTimeout(polish, 500);
+    setTimeout(polish, 1500);
+
+    let closeAttempts = 0;
+    const initialCloseTimer = setInterval(() => {
+      closeAttempts += 1;
+      polish();
+      if (closeInitialChatIfExpanded() || closeAttempts >= 14 || visitorOpenedChat) {
+        clearInterval(initialCloseTimer);
+      }
+    }, 700);
+
+    const observer = new MutationObserver(polish);
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   /**

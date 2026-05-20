@@ -450,10 +450,10 @@
       margin-bottom: 8px;
     }
 
-    .service-card p {
-      color: var(--charcoal-light);
-      line-height: 1.7;
-    }
+.service-card p {
+  color: var(--charcoal);
+  line-height: 1.7;
+}
 
     .serving-note {
       margin-top: 40px;
@@ -1202,9 +1202,9 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(18, 42, 30, 0.92),
-    rgba(18, 42, 30, 0.80),
-    rgba(18, 42, 30, 0.50)
+    rgba(18, 42, 30, 0.94),
+    rgba(18, 42, 30, 0.86),
+    rgba(18, 42, 30, 0.68)
   );
 }
 
@@ -1243,6 +1243,16 @@
   color: var(--white);
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 16px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
+}
+
+.page-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.12rem;
+  line-height: 1.75;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.38);
 }
 
 .section {
