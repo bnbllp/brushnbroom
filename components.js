@@ -72,6 +72,7 @@ class BrushBroomComponents {
             <a href="/move-in-move-out-bellevue-seattle.html">Move-Out Cleaning Seattle</a>
             <a href="/post-construction-cleaning-seattle.html">Post-Construction Cleaning</a>
             <a href="/vacation-rental-cleaning-seattle.html">Vacation Rental Cleaning</a>
+            <a href="/interior-exterior-painting-seattle.html">Interior/Exterior Painting</a>
           </div>
         </div>
       </div>
