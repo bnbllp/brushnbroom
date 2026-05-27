@@ -177,7 +177,7 @@ class BrushBroomAIAssistant {
       return {
         eligible: true,
         message: "We have a community care program that offers free or discounted cleanings for elderly individuals, disabled people, veterans, and those facing hardship. Please reach out directly at 206-571-5568 or seabnbllp@brushnbroom.com to discuss your situation.",
-        programLink: '/community-care'
+        programLink: '/community-care.html'
       };
     }
 
