@@ -67,7 +67,7 @@ class BrushBroomAIAssistant {
 
     // Default response if no service detected
     if (!response.suggestedService) {
-      response.message = "Thanks for reaching out! We offer house cleaning, move-out cleaning, vacation rental turnover, and commercial cleaning services for Seattle and the Eastside. What can we help you with today?";
+      response.message = "Thanks for reaching out! We offer house cleaning, move-out cleaning, vacation rental turnover, and commercial cleaning services for Mount Vernon and surrounding areas. What can we help you with today?";
       response.followUpQuestions = [
         'What type of service are you interested in?',
         'Tell us about your project',

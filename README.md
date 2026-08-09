@@ -1,6 +1,6 @@
 # Brush & Broom LLP — brushnbroom.com
 
-The primary production website for Brush & Broom LLP, a family-run Seattle-area cleaning company. Deployed via GitHub Pages at **[brushnbroom.com](https://brushnbroom.com)**.
+The primary production website for Brush & Broom LLP, a family-run Mount Vernon-area cleaning company. Deployed via GitHub Pages at **[brushnbroom.com](https://brushnbroom.com)**.
 
 ## Project Structure
 
@@ -10,11 +10,11 @@ brush nbroom/
 ├── about.html                                                   # About us
 ├── areas-we-serve.html                                          # Service areas
 ├── community-care.html                                          # Community care program
-├── deep-cleaning-seattle.html                                   # Deep cleaning service page
-├── move-in-move-out-bellevue-seattle.html                       # Move-in/out cleaning
-├── post-construction-cleaning-seattle.html                      # Post-construction cleaning
-├── routine-deep-maintenance-cleaning-bellevue-seattle.html      # Routine cleaning
-├── vacation-rental-cleaning-seattle.html                        # Vacation rental cleaning
+├── deep-cleaning-mount-vernon.html                                   # Deep cleaning service page
+├── move-in-move-out-mount-vernon.html                       # Move-in/out cleaning
+├── post-construction-cleaning-mount-vernon.html                      # Post-construction cleaning
+├── routine-deep-maintenance-cleaning-mount-vernon.html      # Routine cleaning
+├── vacation-rental-cleaning-mount-vernon.html                        # Vacation rental cleaning
 ├── thank-you.html                                               # Form confirmation page
 ├── styles.css                                                   # Global stylesheet
 ├── components.js                                                # Shared nav/footer components
@@ -30,7 +30,7 @@ brush nbroom/
 
 ## Important: GitHub Pages & URLs
 
-GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Clean URL rewrites defined in `.htaccess` are ignored. All sitemap URLs and canonical tags use `.html` extensions (e.g. `/about.html`, `/deep-cleaning-seattle.html`) to match the actual served files. Do not change these to extensionless URLs unless the hosting platform supports rewrites.
+GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Clean URL rewrites defined in `.htaccess` are ignored. All sitemap URLs and canonical tags use `.html` extensions (e.g. `/about.html`, `/deep-cleaning-mount-vernon.html`) to match the actual served files. Do not change these to extensionless URLs unless the hosting platform supports rewrites.
 
 ## Design System
 
@@ -57,7 +57,7 @@ GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Cle
 
 - **Phone**: 206-571-5568
 - **Email**: seabnbllp@brushnbroom.com
-- **Service Area**: Seattle, Bellevue, and the Eastside
+- **Service Area**: Mount Vernon and surrounding areas
 
 ## Local Development
 

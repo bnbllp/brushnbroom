@@ -52,7 +52,7 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
-          <p>Dustin and Brittany, a husband-and-wife team, provide Seattle and Eastside residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
+          <p>Dustin and Brittany, a husband-and-wife team, provide Mount Vernon and surrounding areas residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
         </div>
         <div>
           <div class="footer-title">Contact</div>
@@ -67,13 +67,13 @@ class BrushBroomComponents {
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
-            <a href="/routine-deep-maintenance-cleaning-bellevue-seattle.html">House Cleaning Seattle</a>
-            <a href="/deep-cleaning-seattle.html">Deep Cleaning Seattle</a>
-            <a href="/move-in-move-out-bellevue-seattle.html">Move-Out Cleaning Seattle</a>
-            <a href="/post-construction-cleaning-seattle.html">Post-Construction Cleaning</a>
-            <a href="/vacation-rental-cleaning-seattle.html">Vacation Rental Cleaning</a>
-            <a href="/residential-painting-seattle.html">Residential Painting</a>
-            <a href="/interior-exterior-painting-seattle.html">Interior/Exterior Painting</a>
+            <a href="/routine-deep-maintenance-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
+            <a href="/deep-cleaning-mount-vernon.html">Deep Cleaning Mount Vernon</a>
+            <a href="/move-in-move-out-mount-vernon.html">Move-Out Cleaning Mount Vernon</a>
+            <a href="/post-construction-cleaning-mount-vernon.html">Post-Construction Cleaning</a>
+            <a href="/vacation-rental-cleaning-mount-vernon.html">Vacation Rental Cleaning</a>
+            <a href="/residential-painting-mount-vernon.html">Residential Painting</a>
+            <a href="/interior-exterior-painting-mount-vernon.html">Interior/Exterior Painting</a>
           </div>
         </div>
       </div>
