@@ -13,7 +13,7 @@ brush nbroom/
 ├── deep-cleaning-mount-vernon.html                                   # Deep cleaning service page
 ├── move-in-move-out-mount-vernon.html                       # Move-in/out cleaning
 ├── post-construction-cleaning-mount-vernon.html                      # Post-construction cleaning
-├── routine-deep-maintenance-cleaning-mount-vernon.html      # Routine cleaning
+├── routine-house-cleaning-mount-vernon.html      # Routine cleaning
 ├── vacation-rental-cleaning-mount-vernon.html                        # Vacation rental cleaning
 ├── thank-you.html                                               # Form confirmation page
 ├── styles.css                                                   # Global stylesheet

@@ -67,7 +67,7 @@ class BrushBroomComponents {
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
-            <a href="/routine-deep-maintenance-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
+            <a href="/routine-house-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
             <a href="/deep-cleaning-mount-vernon.html">Deep Cleaning Mount Vernon</a>
             <a href="/move-in-move-out-mount-vernon.html">Move-Out Cleaning Mount Vernon</a>
             <a href="/post-construction-cleaning-mount-vernon.html">Post-Construction Cleaning</a>
