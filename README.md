@@ -90,14 +90,14 @@ The contact form uses Formspree (`https://formspree.io/f/mykbgkbn`). It accepts 
 ### Images
 Hero and service photos live in `assets/images/` as compressed WebP. Do not hotlink the old CloudFront URLs; those objects return Access Denied. Phone originals and unused stock files were removed so the homepage stays light.
 
-### HTTPS and the old domain
-GitHub Pages ignores `.htaccess`, so HTTPS has to be forced in Cloudflare: SSL/TLS → Edge Certificates → Always Use HTTPS, then enable HSTS. `http://brushnbroom.com` was still returning 200 as of September 2026.
+### HTTPS
+GitHub Pages ignores `.htaccess`. `https://www.brushnbroom.com` already redirects to the canonical site, `https://brushnbroom.com`. Plain `http://brushnbroom.com` was still returning 200 as of September 2026. Force HTTPS in Cloudflare if you want that closed: SSL/TLS → Edge Certificates → Always Use HTTPS, then HSTS.
 
-`brushandbroomllp.com` does not resolve. The redirect stubs live in `bnbllp/brushandbroomllp.com`. To bring that domain back, point DNS at GitHub Pages (www CNAME `bnbllp.github.io`, apex A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and keep the `CNAME` file. Also update the website field on the GitHub profile, which still lists the dead domain.
+`brushandbroomllp.com` is retired on purpose. New clients use brushnbroom.com. Do not restore the old domain.
 
 ## Relationship to brushandbroomllp.com
 
-The repo `bnbllp/brushandbroomllp.com` (hosted at `brushandbroomllp.com`) contains redirect stubs only. Every page there performs a `meta refresh` to the corresponding page on this site and includes a canonical tag pointing here. That repo exists solely to redirect legacy traffic — all real content lives in this repository.
+The repo `bnbllp/brushandbroomllp.com` is an unused leftover of redirect stubs. It is not part of the live site. All content lives in this repository.
 
 ## Browser Support
 
