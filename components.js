@@ -1,3 +1,9 @@
+(function () {
+  if (location.protocol === "http:" && /(^|\.)brushnbroom\.com$/.test(location.hostname)) {
+    location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+  }
+})();
+
 /**
  * Brush & Broom LLP - Centralized Components
  * This file manages the header, footer, and global styles across all pages
@@ -24,6 +30,7 @@ class BrushBroomComponents {
     header.className = 'header';
     header.id = 'site-header';
     header.innerHTML = `
+      <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
         <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
@@ -32,7 +39,7 @@ class BrushBroomComponents {
           <a href="/about.html">About</a>
           <a href="/areas-we-serve.html">Areas</a>
           <a href="/community-care.html">Community Care</a>
-          <a href="/" class="btn btn-amber">Get a Quote</a>
+          <a href="/#quote" class="btn btn-amber">Get a Quote</a>
         </nav>
       </div>
     `;
@@ -66,6 +73,7 @@ class BrushBroomComponents {
             <a href="/about.html">About Us</a>
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
+            <a href="/privacy.html">Privacy</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-house-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
             <a href="/deep-cleaning-mount-vernon.html">Deep Cleaning Mount Vernon</a>

@@ -16,9 +16,10 @@ brush nbroom/
 ├── routine-house-cleaning-mount-vernon.html      # Routine cleaning
 ├── vacation-rental-cleaning-mount-vernon.html                        # Vacation rental cleaning
 ├── thank-you.html                                               # Form confirmation page
+├── privacy.html                                                 # Privacy note
+├── 404.html                                                     # Branded missing-page
 ├── styles.css                                                   # Global stylesheet
 ├── components.js                                                # Shared nav/footer components
-├── ai-assistant.js                                              # AI chat assistant
 ├── sitemap.xml                                                  # XML sitemap (.html URLs)
 ├── robots.txt                                                   # Crawler instructions
 ├── _config.yml                                                  # GitHub Pages / Jekyll config
@@ -35,11 +36,11 @@ GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Cle
 ## Design System
 
 ### Color Palette
-- **College Navy**: `#002244` — primary brand color
-- **Action Green**: `#69BE28` — accent color
-- **Wolf Gray**: `#A5ACAF` — optional neutral accent
-- **Charcoal**: `#2c2a26` — text color
-- **Cream**: `#f5f0e8` — background color
+- **Forest**: `#1A3C2A` — primary brand color
+- **Amber**: `#C5A059` — button and accent color
+- **Amber text**: `#7A5E2A` — gold used as text on cream (passes contrast)
+- **Charcoal**: `#242424` — text color
+- **Cream**: `#F9F7F2` — background color
 
 ### Typography
 - **Headings**: DM Serif Display (Google Fonts)
@@ -81,11 +82,18 @@ python3 -m http.server 8000
 The sitemap lives at `https://brushnbroom.com/sitemap.xml` and is referenced in `robots.txt`. All URLs must end in `.html` (or `/` for the homepage). Do not use extensionless URLs — they will 404 on GitHub Pages.
 
 ### Form Submissions
-The contact form uses Formspree. To update the endpoint, change the `action` attribute on the `<form>` tag in `index.html`.
+The contact form uses Formspree (`https://formspree.io/f/mykbgkbn`). It accepts an optional photo upload, includes a `_gotcha` honeypot, and links to `privacy.html`. The homepage and thank-you page both say we reply within one business day.
 
 ### JavaScript
-- `components.js` — injects shared nav and footer HTML across all pages
-- `ai-assistant.js` — powers the on-page AI chat widget
+- `components.js` — injects the shared nav and footer, a skip link, and upgrades `http://` visits on brushnbroom.com to HTTPS
+
+### Images
+Hero and service photos live in `assets/images/` as compressed WebP. Do not hotlink the old CloudFront URLs; those objects return Access Denied. Phone originals and unused stock files were removed so the homepage stays light.
+
+### HTTPS and the old domain
+GitHub Pages ignores `.htaccess`, so HTTPS has to be forced in Cloudflare: SSL/TLS → Edge Certificates → Always Use HTTPS, then enable HSTS. `http://brushnbroom.com` was still returning 200 as of September 2026.
+
+`brushandbroomllp.com` does not resolve. The redirect stubs live in `bnbllp/brushandbroomllp.com`. To bring that domain back, point DNS at GitHub Pages (www CNAME `bnbllp.github.io`, apex A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and keep the `CNAME` file. Also update the website field on the GitHub profile, which still lists the dead domain.
 
 ## Relationship to brushandbroomllp.com
 
@@ -98,4 +106,4 @@ The repo `bnbllp/brushandbroomllp.com` (hosted at `brushandbroomllp.com`) contai
 
 ---
 
-**Last Updated**: August 10, 2026
+**Last Updated**: September 22, 2026
