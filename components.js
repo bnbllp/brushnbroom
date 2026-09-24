@@ -61,7 +61,7 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
-          <p>Dustin and Brittany, a husband-and-wife team, clean and paint homes and small businesses in Mount Vernon and the surrounding areas. Clear quotes, solid work, and the same people for both.</p>
+          <p>Dustin and Brittany clean and paint homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
         </div>
         <div>
           <div class="footer-title">Contact</div>

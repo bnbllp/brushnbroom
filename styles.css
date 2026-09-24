@@ -1402,6 +1402,11 @@
   border: 1px solid rgba(232, 223, 210, 0.4);
 }
 
+.area-card p {
+  color: var(--charcoal-light);
+  margin: 0 0 12px;
+}
+
 .area-card h3 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
