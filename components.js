@@ -36,9 +36,11 @@ class BrushBroomComponents {
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
+          <a href="/#cleaning">Cleaning</a>
+          <a href="/#painting">Painting</a>
           <a href="/about.html">About</a>
           <a href="/areas-we-serve.html">Areas</a>
-          <a href="/community-care.html">Community Care</a>
+          <a href="/community-care.html">Community</a>
           <a href="/#quote" class="btn btn-amber">Get a Quote</a>
         </nav>
       </div>
@@ -59,7 +61,7 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
-          <p>Dustin and Brittany, a husband-and-wife team, provide Mount Vernon and surrounding areas residential and commercial cleaning. We offer clear quotes, solid work, and honest communication.</p>
+          <p>Dustin and Brittany, a husband-and-wife team, clean and paint homes and small businesses in Mount Vernon and the surrounding areas. Clear quotes, solid work, and the same people for both.</p>
         </div>
         <div>
           <div class="footer-title">Contact</div>
