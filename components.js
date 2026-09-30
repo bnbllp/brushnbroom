@@ -1,6 +1,10 @@
 (function () {
   if (location.protocol === "http:" && /(^|\.)brushnbroom\.com$/.test(location.hostname)) {
     location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    return;
+  }
+  if (location.hostname && location.pathname === "/index.html") {
+    location.replace("/" + location.search + location.hash);
   }
 })();
 
@@ -32,7 +36,7 @@ class BrushBroomComponents {
     header.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
-        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush &amp; Broom LLP Logo" /></a>
+        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
@@ -60,7 +64,7 @@ class BrushBroomComponents {
     footer.innerHTML = `
       <div class="container footer-grid">
         <div>
-          <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+          <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
           <p>Dustin and Brittany clean and paint homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
         </div>
         <div>
@@ -87,7 +91,7 @@ class BrushBroomComponents {
           </div>
         </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p></div>
+      <div class="footer-bottom"><p>&copy; 2026 Brush & Broom LLP. All rights reserved.</p></div>
     `;
     
     // Append footer at the end of the body (before scripts)
