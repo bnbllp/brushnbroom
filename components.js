@@ -14,6 +14,13 @@
  * Update this file to instantly reflect changes across the entire website
  */
 
+// Washington L&I construction contractor registration (CC01 General).
+// Update here and the footer trust line changes on every page.
+const BNB_CONTRACTOR_REG = 'CC BRUSHBL742OP';
+const BNB_LNI_VERIFY_URL = 'https://secure.lni.wa.gov/verify/';
+// Phone used by the sticky mobile call bar (same number shown across the site).
+const BNB_PHONE = '206-571-5568';
+
 class BrushBroomComponents {
   constructor() {
     this.init();
@@ -22,6 +29,7 @@ class BrushBroomComponents {
   init() {
     this.injectHeader();
     this.injectFooter();
+    this.injectMobileCallBar();
     this.setupNavigation();
     this.setupScrollEffects();
   }
@@ -36,12 +44,14 @@ class BrushBroomComponents {
     header.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
-        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" /></a>
+        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" width="50" height="50" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/#cleaning">Cleaning</a>
           <a href="/#painting">Painting</a>
+          <a href="/handyman-mount-vernon.html">Handyman</a>
+          <a href="/flooring-mount-vernon.html">Flooring</a>
           <a href="/about.html">About</a>
           <a href="/areas-we-serve.html">Areas</a>
           <a href="/community-care.html">Community</a>
@@ -65,12 +75,17 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
-          <p>Dustin and Brittany clean and paint homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
+          <p>Dustin and Brittany clean, paint, repair, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
         </div>
         <div>
           <div class="footer-title">Contact</div>
           <p><a href="tel:206-571-5568">206-571-5568</a></p>
           <p style="margin-top:8px;"><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
+          <div class="footer-trust">
+            <p class="footer-trust-badge">Licensed, Bonded &amp; Insured</p>
+            <p>WA Contractor Reg. #${BNB_CONTRACTOR_REG}</p>
+            <p><a href="${BNB_LNI_VERIFY_URL}" target="_blank" rel="noopener">Verify with WA L&amp;I</a></p>
+          </div>
         </div>
         <div>
           <div class="footer-title">Links</div>
@@ -79,6 +94,7 @@ class BrushBroomComponents {
             <a href="/about.html">About Us</a>
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
+            <a href="/gallery.html">Before &amp; After Gallery</a>
             <a href="/privacy.html">Privacy</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-house-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
@@ -88,6 +104,8 @@ class BrushBroomComponents {
             <a href="/vacation-rental-cleaning-mount-vernon.html">Vacation Rental Cleaning</a>
             <a href="/residential-painting-mount-vernon.html">Residential Painting</a>
             <a href="/interior-exterior-painting-mount-vernon.html">Interior/Exterior Painting</a>
+            <a href="/handyman-mount-vernon.html">Handyman Services</a>
+            <a href="/flooring-mount-vernon.html">LVP &amp; Laminate Flooring</a>
           </div>
         </div>
       </div>
@@ -101,6 +119,24 @@ class BrushBroomComponents {
     } else {
       document.body.appendChild(footer);
     }
+  }
+
+  /**
+   * Sticky Call + Quote bar shown only on small screens (see .mobile-cta in styles.css)
+   */
+  injectMobileCallBar() {
+    if (document.querySelector('.mobile-cta')) return;
+    const bar = document.createElement('div');
+    bar.className = 'mobile-cta';
+    bar.innerHTML = `
+      <a href="tel:${BNB_PHONE}" class="mobile-cta-call" aria-label="Call Brush and Broom at ${BNB_PHONE}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a href="/#quote" class="mobile-cta-quote">Free Quote</a>
+    `;
+    document.body.appendChild(bar);
+    document.body.classList.add('has-mobile-cta');
   }
 
   /**
