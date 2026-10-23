@@ -47,6 +47,8 @@ class BrushBroomComponents {
           <a href="/">Home</a>
           <a href="/#cleaning">Cleaning</a>
           <a href="/#painting">Painting</a>
+          <a href="/handyman-mount-vernon.html">Handyman</a>
+          <a href="/flooring-mount-vernon.html">Flooring</a>
           <a href="/about.html">About</a>
           <a href="/areas-we-serve.html">Areas</a>
           <a href="/community-care.html">Community</a>
@@ -70,7 +72,7 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
-          <p>Dustin and Brittany clean and paint homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
+          <p>Dustin and Brittany clean, paint, repair, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
         </div>
         <div>
           <div class="footer-title">Contact</div>
@@ -98,6 +100,8 @@ class BrushBroomComponents {
             <a href="/vacation-rental-cleaning-mount-vernon.html">Vacation Rental Cleaning</a>
             <a href="/residential-painting-mount-vernon.html">Residential Painting</a>
             <a href="/interior-exterior-painting-mount-vernon.html">Interior/Exterior Painting</a>
+            <a href="/handyman-mount-vernon.html">Handyman Services</a>
+            <a href="/flooring-mount-vernon.html">LVP &amp; Laminate Flooring</a>
           </div>
         </div>
       </div>

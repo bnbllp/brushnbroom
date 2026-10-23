@@ -1827,3 +1827,28 @@
   color: var(--amber) !important;
   letter-spacing: 0.3px;
 }
+
+
+/* ─── Also: handyman and flooring cards on homepage ─── */
+.also-lanes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+.also-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 28px;
+}
+.also-card h3 { margin: 6px 0 8px; }
+.also-card p { color: var(--charcoal-light); line-height: 1.7; }
+.also-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 18px;
+}
+.also-actions a:not(.btn) { color: var(--forest); font-weight: 600; text-decoration: underline; }
