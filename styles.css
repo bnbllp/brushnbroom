@@ -1862,6 +1862,7 @@
   gap: 16px;
   margin-top: 28px;
 }
+#google-review-link[hidden] { display: none !important; }
 .review-alt-btn {
   color: var(--forest);
   border-color: var(--forest);
