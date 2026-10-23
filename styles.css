@@ -1898,3 +1898,43 @@
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item img { height: auto; }
 }
+
+
+/* ─── Sticky mobile Call + Quote bar ─── */
+.mobile-cta { display: none; }
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(15, 36, 25, 0.96);
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.18);
+  }
+  .mobile-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .mobile-cta-call {
+    background: var(--amber);
+    color: var(--forest-dark);
+  }
+  .mobile-cta-quote {
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+  }
+  body.has-mobile-cta { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+}
+@media print { .mobile-cta { display: none !important; } }
