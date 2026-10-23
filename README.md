@@ -1,6 +1,6 @@
 # Brush & Broom LLP — brushnbroom.com
 
-The primary production website for Brush & Broom LLP, a family-run Mount Vernon-area cleaning company. Deployed via GitHub Pages at **[brushnbroom.com](https://brushnbroom.com)**.
+The primary production website for Brush & Broom LLP, a family-run Mount Vernon-area cleaning, painting, handyman, and flooring company (licensed, bonded & insured; WA L&I Contractor Reg. #CC BRUSHBL742OP). Deployed via GitHub Pages at **[brushnbroom.com](https://brushnbroom.com)**.
 
 ## Project Structure
 
@@ -15,6 +15,12 @@ brush nbroom/
 ├── post-construction-cleaning-mount-vernon.html                      # Post-construction cleaning
 ├── routine-house-cleaning-mount-vernon.html      # Routine cleaning
 ├── vacation-rental-cleaning-mount-vernon.html                        # Vacation rental cleaning
+├── residential-painting-mount-vernon.html                       # Residential painting
+├── interior-exterior-painting-mount-vernon.html                 # Interior/exterior painting
+├── handyman-mount-vernon.html                                   # Handyman services
+├── flooring-mount-vernon.html                                   # LVP & laminate flooring
+├── gallery.html                                                 # Before & after gallery (real job photos only)
+├── reviews.html                                                 # Leave-a-review page (set GOOGLE_REVIEW_URL)
 ├── thank-you.html                                               # Form confirmation page
 ├── privacy.html                                                 # Privacy note
 ├── 404.html                                                     # Branded missing-page
@@ -52,6 +58,9 @@ GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Cle
 - Move-in / move-out cleaning
 - Post-construction cleaning
 - Vacation rental cleaning
+- Interior and exterior painting
+- Handyman repairs, drywall patching, small carpentry, hanging and mounting
+- LVP and laminate flooring installation, old flooring removal
 - Community care program
 
 ## Contact
@@ -106,4 +115,4 @@ The repo `bnbllp/brushandbroomllp.com` is an unused leftover of redirect stubs. 
 
 ---
 
-**Last Updated**: September 22, 2026
+**Last Updated**: October 23, 2026

@@ -44,7 +44,7 @@ class BrushBroomComponents {
     header.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
-        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" /></a>
+        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" width="50" height="50" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
