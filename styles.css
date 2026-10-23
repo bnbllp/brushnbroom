@@ -1852,3 +1852,49 @@
   margin-top: 18px;
 }
 .also-actions a:not(.btn) { color: var(--forest); font-weight: 600; text-decoration: underline; }
+
+
+/* ─── Reviews page ─── */
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+.review-alt-btn {
+  color: var(--forest);
+  border-color: var(--forest);
+}
+.review-alt-btn:hover { color: var(--white); background: var(--forest); }
+
+/* ─── Gallery page ─── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.gallery-item {
+  margin: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+.gallery-item-wide { grid-column: 1 / -1; }
+.gallery-item-wide img { height: auto; object-fit: contain; }
+.gallery-item figcaption {
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item img { height: auto; }
+}

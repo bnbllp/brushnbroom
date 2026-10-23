@@ -91,6 +91,7 @@ class BrushBroomComponents {
             <a href="/about.html">About Us</a>
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
+            <a href="/gallery.html">Before &amp; After Gallery</a>
             <a href="/privacy.html">Privacy</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-house-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
