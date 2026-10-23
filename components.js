@@ -14,6 +14,11 @@
  * Update this file to instantly reflect changes across the entire website
  */
 
+// Washington L&I construction contractor registration (CC01 General).
+// Update here and the footer trust line changes on every page.
+const BNB_CONTRACTOR_REG = 'CC BRUSHBL742OP';
+const BNB_LNI_VERIFY_URL = 'https://secure.lni.wa.gov/verify/';
+
 class BrushBroomComponents {
   constructor() {
     this.init();
@@ -71,6 +76,11 @@ class BrushBroomComponents {
           <div class="footer-title">Contact</div>
           <p><a href="tel:206-571-5568">206-571-5568</a></p>
           <p style="margin-top:8px;"><a href="mailto:seabnbllp@brushnbroom.com">seabnbllp@brushnbroom.com</a></p>
+          <div class="footer-trust">
+            <p class="footer-trust-badge">Licensed, Bonded &amp; Insured</p>
+            <p>WA Contractor Reg. #${BNB_CONTRACTOR_REG}</p>
+            <p><a href="${BNB_LNI_VERIFY_URL}" target="_blank" rel="noopener">Verify with WA L&amp;I</a></p>
+          </div>
         </div>
         <div>
           <div class="footer-title">Links</div>

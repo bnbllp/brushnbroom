@@ -1799,3 +1799,31 @@
 @media (scripting: none) {
   .fade-up { opacity: 1; transform: none; }
 }
+
+
+/* ─── Trust: licensed, bonded & insured ─── */
+.trust-line {
+  font-size: 0.9rem;
+  color: var(--charcoal-light);
+  line-height: 1.6;
+}
+.trust-line strong { color: var(--forest); }
+.trust-line a { color: var(--forest); text-decoration: underline; }
+.trust-line-hero {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+.trust-line-hero strong { color: var(--amber); }
+.trust-line-hero a { color: rgba(255, 255, 255, 0.95); }
+.footer-trust {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.85rem;
+}
+.footer-trust p + p { margin-top: 4px; }
+.footer-trust-badge {
+  font-weight: 700;
+  color: var(--amber) !important;
+  letter-spacing: 0.3px;
+}
