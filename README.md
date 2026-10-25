@@ -42,11 +42,11 @@ GitHub Pages **does not process `.htaccess`** — it uses nginx, not Apache. Cle
 ## Design System
 
 ### Color Palette
-- **Forest**: `#1A3C2A` — primary brand color
-- **Amber**: `#C5A059` — button and accent color
-- **Amber text**: `#7A5E2A` — gold used as text on cream (passes contrast)
+- **Navy** (`--forest`): `#011641` — primary brand color (logo navy)
+- **Lime** (`--amber`): `#89D810` — button and accent color (logo lime); button text is navy
+- **Lime text** (`--amber-text`): `#3F6B00` — dark lime for text on light backgrounds (passes AA)
 - **Charcoal**: `#242424` — text color
-- **Cream**: `#F9F7F2` — background color
+- **Light gray** (`--cream`): `#F4F6F9` — background color
 
 ### Typography
 - **Headings**: DM Serif Display (Google Fonts)

@@ -1,6 +1,6 @@
     /* ═══════════════════════════════════════════════
        DESIGN: Pacific Northwest Craftsman
-       Colors: Forest green, warm cream, charcoal, amber
+       Colors: Logo navy (#011641), logo lime (#89D810), cool gray, charcoal
        Typography: DM Serif Display + DM Sans
        ═══════════════════════════════════════════════ */
 
@@ -18,10 +18,10 @@
       --warm-white: #FFFFFF;
       --white: #ffffff;
       --accent-soft: #E3E8EF;
-      --shadow-sm: 0 2px 8px rgba(0, 24, 68, 0.06);
-      --shadow-md: 0 8px 24px rgba(0, 24, 68, 0.08);
-      --shadow-lg: 0 16px 40px rgba(0, 24, 68, 0.10);
-      --shadow-xl: 0 24px 56px rgba(0, 24, 68, 0.14);
+      --shadow-sm: 0 2px 8px rgba(1, 22, 65, 0.06);
+      --shadow-md: 0 8px 24px rgba(1, 22, 65, 0.08);
+      --shadow-lg: 0 16px 40px rgba(1, 22, 65, 0.10);
+      --shadow-xl: 0 24px 56px rgba(1, 22, 65, 0.14);
       --radius: 16px;
       --radius-sm: 12px;
       --max: 1200px;
@@ -38,7 +38,7 @@
     }
 
     ::selection {
-      background-color: rgba(0, 24, 68, 0.2);
+      background-color: rgba(1, 22, 65, 0.2);
     }
 
     body {
@@ -85,7 +85,7 @@
 
     .eyebrow-green {
       color: var(--forest);
-      background: rgba(0, 24, 68, 0.1);
+      background: rgba(1, 22, 65, 0.1);
     }
 
     .eyebrow-amber {
@@ -252,6 +252,11 @@
       color: var(--white);
     }
 
+    .nav .btn-amber,
+    .nav .btn-amber:hover {
+      color: var(--forest); /* navy on lime: 9.97:1 */
+    }
+
     .nav .btn-amber {
       margin-left: 8px;
       padding: 10px 22px;
@@ -283,9 +288,9 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        rgba(0, 24, 68, 0.92),
-        rgba(0, 24, 68, 0.80),
-        rgba(0, 24, 68, 0.50)
+        rgba(1, 22, 65, 0.92),
+        rgba(1, 22, 65, 0.80),
+        rgba(1, 22, 65, 0.50)
       );
     }
 
@@ -426,7 +431,7 @@
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: rgba(0, 24, 68, 0.1);
+      background: rgba(1, 22, 65, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -846,7 +851,7 @@
     .quote-form textarea:focus {
       outline: none;
       border-color: var(--forest);
-      box-shadow: 0 0 0 3px rgba(0, 24, 68, 0.12);
+      box-shadow: 0 0 0 3px rgba(1, 22, 65, 0.12);
     }
 
     .quote-form input::placeholder,
@@ -888,7 +893,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: rgba(0, 24, 68, 0.1);
+      background: rgba(1, 22, 65, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1246,7 +1251,7 @@
   width: 80px;
   height: 80px;
   margin: 0 auto 32px;
-  background: rgba(0, 24, 68, 0.1);
+  background: rgba(1, 22, 65, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
