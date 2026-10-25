@@ -1554,9 +1554,8 @@
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.6rem);
   margin-bottom: 32px;
-  color: var(--forest);
+  color: var(--charcoal);
 }
 
 .eligibility-grid {
@@ -1948,3 +1947,26 @@
 /* Logo palette: lime eyebrow on dark hero backgrounds (dark-lime text is for light backgrounds only) */
 .hero .eyebrow-amber,
 .page-hero .eyebrow-amber { color: var(--amber); background: rgba(137, 216, 16, 0.16); }
+
+/* Solid navy header on pages without a dark hero (privacy-style pages, thank-you) */
+.header.header-solid { background: rgba(1, 22, 65, 0.98); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
+body.has-solid-header main { padding-top: 80px; }
+
+/* One shared minimum height for service and info page heroes */
+@media (min-width: 769px) {
+  .page-hero { min-height: 600px; }
+}
+
+/* Secondary "Review us on Google" button (footer, dark backgrounds): white text on navy 17.6:1; hover navy on lime 9.97:1 */
+.btn-review {
+  background: transparent;
+  color: var(--white) !important;
+  border: 2px solid var(--amber);
+  padding: 10px 22px;
+  font-size: 0.95rem;
+}
+.btn-review:hover,
+.btn-review:focus-visible {
+  background: var(--amber);
+  color: var(--forest) !important;
+}

@@ -20,6 +20,9 @@ const BNB_CONTRACTOR_REG = 'CC BRUSHBL742OP';
 const BNB_LNI_VERIFY_URL = 'https://secure.lni.wa.gov/verify/';
 // Phone used by the sticky mobile call bar (same number shown across the site).
 const BNB_PHONE = '206-571-5568';
+// Google Business Profile review link (from the profile's "Ask for reviews" share link).
+// Leave empty to hide the footer review button.
+const BNB_GOOGLE_REVIEW_URL = 'https://g.page/r/CczrjqYCPIx3EBM/review';
 
 class BrushBroomComponents {
   constructor() {
@@ -41,10 +44,15 @@ class BrushBroomComponents {
     const header = document.createElement('header');
     header.className = 'header';
     header.id = 'site-header';
+    // Pages without a dark hero behind the header get a solid navy header
+    if (!document.querySelector('.hero, .page-hero')) {
+      header.classList.add('header-solid');
+      document.body.classList.add('has-solid-header');
+    }
     header.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
-        <a href="/" class="brand"><img src="/assets/images/header-logo.png" alt="Brush & Broom LLP Logo" width="50" height="50" /></a>
+        <a href="/" class="brand"><img src="/assets/images/logo-dark-bg-header.png" alt="Brush & Broom LLP Logo" width="71" height="50" /></a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="/">Home</a>
@@ -76,6 +84,7 @@ class BrushBroomComponents {
         <div>
           <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
           <p>Dustin and Brittany clean, paint, repair, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
+          ${BNB_GOOGLE_REVIEW_URL ? `<p style="margin-top:18px;"><a class="btn btn-review" href="${BNB_GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Review us on Google</a></p>` : ''}
         </div>
         <div>
           <div class="footer-title">Contact</div>
@@ -95,6 +104,7 @@ class BrushBroomComponents {
             <a href="/areas-we-serve.html">Areas We Serve</a>
             <a href="/community-care.html">Community Care</a>
             <a href="/gallery.html">Before &amp; After Gallery</a>
+            ${BNB_GOOGLE_REVIEW_URL ? `<a href="${BNB_GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Review us on Google</a>` : ''}
             <a href="/privacy.html">Privacy</a>
             <div style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Our Specialties</div>
             <a href="/routine-house-cleaning-mount-vernon.html">House Cleaning Mount Vernon</a>
