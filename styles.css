@@ -5,19 +5,19 @@
        ═══════════════════════════════════════════════ */
 
     :root {
-      --forest: #1A3C2A; /* Deep British Racing Green for a premium feel */
-      --forest-light: #2D5A42;
-      --forest-dark: #0F2419;
-      --cream: #F9F7F2;
-      --cream-dark: #E8E2D6;
-      --amber: #C5A059; /* Muted Gold/Champagne for high-end appeal */
-      --amber-text: #7A5E2A; /* Gold dark enough for text on cream */
-      --amber-dark: #A68546;
+      --forest: #011641; /* Logo navy (primary) */
+      --forest-light: #1C3A73;
+      --forest-dark: #000B24;
+      --cream: #F4F6F9;
+      --cream-dark: #E3E8EF;
+      --amber: #89D810; /* Logo lime (accent) */
+      --amber-text: #3F6B00; /* Dark lime, passes AA on white/gray */
+      --amber-dark: #6FB00A;
       --charcoal: #242424;
       --charcoal-light: #5C5C5C;
       --warm-white: #FFFFFF;
       --white: #ffffff;
-      --accent-soft: #E8E2D6; /* Replacing Seahawks Green with a soft neutral */
+      --accent-soft: #E3E8EF;
       --shadow-sm: 0 2px 8px rgba(0, 24, 68, 0.06);
       --shadow-md: 0 8px 24px rgba(0, 24, 68, 0.08);
       --shadow-lg: 0 16px 40px rgba(0, 24, 68, 0.10);
@@ -90,7 +90,7 @@
 
     .eyebrow-amber {
       color: var(--amber-text);
-      background: rgba(212, 148, 58, 0.15);
+      background: rgba(137, 216, 16, 0.15);
     }
 
     .btn {
@@ -110,7 +110,7 @@
 
     .btn-amber {
       background: var(--amber);
-      color: var(--charcoal);
+      color: var(--forest);
       box-shadow: var(--shadow-lg);
     }
 
@@ -183,7 +183,7 @@
     }
 
     .header.scrolled {
-      background: rgba(26, 60, 42, 0.95); /* Using the deep green for scrolled header */
+      background: rgba(1, 22, 65, 0.95); /* Logo navy for scrolled header */
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
@@ -327,7 +327,7 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow-xl);
       padding: 28px;
-      border: 1px solid rgba(232, 223, 210, 0.5);
+      border: 1px solid rgba(227, 232, 239, 0.5);
     }
 
     .hero-card h3 {
@@ -392,7 +392,7 @@
       background: var(--warm-white);
       border-radius: var(--radius);
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
       overflow: hidden;
       transition: all 0.3s ease;
     }
@@ -521,7 +521,7 @@
       background: var(--warm-white);
       border-radius: var(--radius);
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
       overflow: hidden;
     }
 
@@ -630,7 +630,7 @@
       background: var(--cream);
       border-radius: var(--radius-sm);
       padding: 24px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
     }
 
     .why-card + .why-card {
@@ -742,7 +742,7 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow-md);
       padding: 36px 40px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
     }
 
     .fit-card h2 {
@@ -802,7 +802,7 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
       padding: 36px 40px;
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
     }
 
     .quote-box h2 {
@@ -956,7 +956,7 @@
     .faq-item {
       background: var(--warm-white);
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(232, 223, 210, 0.4);
+      border: 1px solid rgba(227, 232, 239, 0.4);
       box-shadow: var(--shadow-sm);
       overflow: hidden;
     }
@@ -1150,7 +1150,7 @@
         align-items: flex-start;
         gap: 0;
         padding: 16px 0;
-        background: rgba(26, 60, 42, 0.98);
+        background: rgba(1, 22, 65, 0.98);
         backdrop-filter: blur(12px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         animation: slideDown 0.3s ease-out;
@@ -1318,9 +1318,9 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(18, 42, 30, 0.94),
-    rgba(18, 42, 30, 0.86),
-    rgba(18, 42, 30, 0.68)
+    rgba(1, 22, 65, 0.94),
+    rgba(1, 22, 65, 0.86),
+    rgba(1, 22, 65, 0.68)
   );
 }
 
@@ -1399,7 +1399,7 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
   padding: 28px;
-  border: 1px solid rgba(232, 223, 210, 0.4);
+  border: 1px solid rgba(227, 232, 239, 0.4);
 }
 
 .area-card p {
@@ -1450,7 +1450,7 @@
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
   padding: 28px;
-  border: 1px solid rgba(232, 223, 210, 0.4);
+  border: 1px solid rgba(227, 232, 239, 0.4);
 }
 
 .founder-card h3 {
@@ -1469,7 +1469,7 @@
 .founder-role {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--amber);
+  color: var(--amber-text);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
@@ -1487,7 +1487,7 @@
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
   padding: 28px;
-  border: 1px solid rgba(232, 223, 210, 0.4);
+  border: 1px solid rgba(227, 232, 239, 0.4);
 }
 
 .community-card h3 {
@@ -1587,7 +1587,7 @@
   border-radius: var(--radius);
   padding: 40px;
   margin-bottom: 40px;
-  border: 1px solid rgba(232, 223, 210, 0.4);
+  border: 1px solid rgba(227, 232, 239, 0.4);
 }
 
 .steps-list {
@@ -1605,7 +1605,7 @@
 .step-number {
   font-family: 'DM Serif Display', serif;
   font-size: 2.4rem;
-  color: var(--amber);
+  color: var(--amber-text);
   font-weight: 700;
   flex-shrink: 0;
   width: 60px;
@@ -1613,7 +1613,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 148, 58, 0.1);
+  background: rgba(137, 216, 16, 0.1);
   border-radius: 12px;
 }
 
@@ -1685,7 +1685,7 @@
   background: var(--warm-white);
   border-radius: var(--radius-sm);
   padding: 28px;
-  border: 1px solid rgba(232, 223, 210, 0.4);
+  border: 1px solid rgba(227, 232, 239, 0.4);
   box-shadow: var(--shadow-md);
 }
 
@@ -1708,7 +1708,7 @@
 
 .cta-section-alt {
   background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
-  color: var(--charcoal);
+  color: var(--forest);
   border-radius: var(--radius);
   padding: 60px 40px;
   text-align: center;
@@ -1914,7 +1914,7 @@
     bottom: 0;
     z-index: 999;
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(15, 36, 25, 0.96);
+    background: rgba(0, 11, 36, 0.96);
     box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.18);
   }
   .mobile-cta a {
@@ -1939,3 +1939,7 @@
   body.has-mobile-cta { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
 }
 @media print { .mobile-cta { display: none !important; } }
+
+/* Logo palette: lime eyebrow on dark hero backgrounds (dark-lime text is for light backgrounds only) */
+.hero .eyebrow-amber,
+.page-hero .eyebrow-amber { color: var(--amber); background: rgba(137, 216, 16, 0.16); }
