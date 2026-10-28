@@ -229,3 +229,78 @@ if (document.readyState === 'loading') {
 } else {
   new BrushBroomComponents();
 }
+
+/**
+ * Lead tracking (GA4, tag G-LJJPV8T9HN loaded in each page's <head>).
+ * Sends: click_to_call (tel:), click_text (sms:), click_email (mailto:),
+ * social_click (Google reviews / Facebook / Nextdoor), and generate_lead
+ * when the Formspree quote form is submitted (after browser validation passes).
+ * Every call is guarded so a missing or blocked gtag never breaks links or the form.
+ */
+(function () {
+  function bnbTrack(name, params) {
+    try {
+      if (typeof window.gtag !== 'function') return;
+      window.gtag('event', name, Object.assign({
+        page_path: location.pathname,
+        page_title: document.title,
+        transport_type: 'beacon'
+      }, params || {}));
+    } catch (e) { /* never block the click or submit */ }
+  }
+  window.bnbTrack = bnbTrack;
+
+  function socialNetwork(href) {
+    if (/g\.page\/|google\.com\/(maps|search)|business\.google/i.test(href)) return 'google_reviews';
+    if (/facebook\.com/i.test(href)) return 'facebook';
+    if (/nextdoor\.com/i.test(href)) return 'nextdoor';
+    if (/yelp\.com/i.test(href)) return 'yelp';
+    return '';
+  }
+
+  function linkLocation(a) {
+    if (a.closest('.mobile-cta')) return 'mobile_call_bar';
+    if (a.closest('footer')) return 'footer';
+    if (a.closest('header')) return 'header';
+    return 'content';
+  }
+
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var common = { link_url: href, link_text: (a.textContent || '').trim().slice(0, 100), link_location: linkLocation(a) };
+    if (/^tel:/i.test(href)) {
+      bnbTrack('click_to_call', common);
+    } else if (/^sms:/i.test(href)) {
+      bnbTrack('click_text', common);
+    } else if (/^mailto:/i.test(href)) {
+      bnbTrack('click_email', common);
+    } else {
+      var net = socialNetwork(href);
+      if (net) bnbTrack('social_click', Object.assign({ social_network: net }, common));
+    }
+  }, true);
+
+  // Quote form posts natively to Formspree. 'submit' only fires once the browser's
+  // required-field validation passes; we skip honeypot (bot) submissions.
+  document.addEventListener('submit', function (ev) {
+    var form = ev.target;
+    if (!form || !form.matches || !form.matches('form.quote-form, form[action*="formspree.io"]')) return;
+    var hp = form.querySelector('[name="_gotcha"]');
+    if (hp && hp.value) return;
+    var need = form.querySelector('[name="need"]');
+    var service = form.querySelector('[name="service"]');
+    bnbTrack('generate_lead', {
+      form_id: form.id || 'quote-form',
+      lead_source: 'quote_form',
+      service_need: need ? need.value : '',
+      service_detail: service ? service.value : ''
+    });
+  }, true);
+
+  // Track 404 hits so old/broken links show up in GA4 (404.html sets data-page="404").
+  if (document.body && document.body.getAttribute('data-page') === '404') {
+    bnbTrack('page_not_found', { page_location: location.href, page_referrer: document.referrer });
+  }
+})();
