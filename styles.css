@@ -1508,6 +1508,38 @@
   line-height: 1.7;
 }
 
+.giving-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 14px;
+}
+
+.giving-list li {
+  color: var(--charcoal-light);
+  padding: 4px 0 4px 1.3em;
+  line-height: 1.6;
+  position: relative;
+}
+
+.giving-list li::before {
+  content: "\2713";
+  color: var(--amber-text);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.community-card p + p,
+.community-card .giving-list + p {
+  margin-top: 0;
+}
+
+.community-card a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* ─── Community Care Page Styles ─── */
 .program-hero {
   position: relative;
