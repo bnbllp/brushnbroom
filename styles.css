@@ -1970,3 +1970,46 @@ body.has-solid-header main { padding-top: 80px; }
   background: var(--amber);
   color: var(--forest) !important;
 }
+
+/* Footer "Find us on" row: Google Reviews, Facebook, Nextdoor (dark navy background) */
+.footer-social { margin-top: 22px; }
+.footer-social .footer-title { margin-bottom: 10px; }
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer .social-btn,
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  min-height: 44px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.social-btn svg { flex: none; color: var(--amber); transition: color 0.2s; }
+.footer .social-btn:hover,
+.footer .social-btn:focus-visible,
+.social-btn:hover,
+.social-btn:focus-visible {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--forest);
+}
+.social-btn:hover svg,
+.social-btn:focus-visible svg { color: var(--forest); }
+/* Light-background variant (reviews page) */
+.social-row-light { justify-content: center; }
+.social-row-light .social-btn {
+  color: var(--forest);
+  border-color: rgba(1, 22, 65, 0.3);
+}
+.social-row-light .social-btn svg { color: var(--forest); }

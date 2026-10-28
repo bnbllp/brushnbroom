@@ -23,6 +23,25 @@ const BNB_PHONE = '206-571-5568';
 // Google Business Profile review link (from the profile's "Ask for reviews" share link).
 // Leave empty to hide the footer review button.
 const BNB_GOOGLE_REVIEW_URL = 'https://g.page/r/CczrjqYCPIx3EBM/review';
+// Social profiles shown in the footer "Find us on" row. Leave a URL empty to hide that button.
+const BNB_FACEBOOK_URL = 'https://www.facebook.com/Seabnbllp/';
+const BNB_NEXTDOOR_URL = 'https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/';
+
+// Small inline icons (no external requests)
+const BNB_ICONS = {
+  star: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-7.5h2.53l.38-2.94H13.5V8.69c0-.85.24-1.43 1.46-1.43h1.56V4.63A20.9 20.9 0 0 0 14.25 4.5c-2.25 0-3.79 1.37-3.79 3.89v2.17H7.92v2.94h2.54V21z"/></svg>',
+  home: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3.2 2.5 11h2.7v9.3h5.3v-6h3v6h5.3V11h2.7z"/></svg>'
+};
+
+function bnbSocialLinks() {
+  const links = [
+    BNB_GOOGLE_REVIEW_URL && { href: BNB_GOOGLE_REVIEW_URL, icon: BNB_ICONS.star, label: 'Google Reviews' },
+    BNB_FACEBOOK_URL && { href: BNB_FACEBOOK_URL, icon: BNB_ICONS.facebook, label: 'Facebook' },
+    BNB_NEXTDOOR_URL && { href: BNB_NEXTDOOR_URL, icon: BNB_ICONS.home, label: 'Nextdoor' }
+  ].filter(Boolean);
+  return links.map(l => `<a class="social-btn" href="${l.href}" target="_blank" rel="noopener">${l.icon}<span>${l.label}</span></a>`).join('');
+}
 
 class BrushBroomComponents {
   constructor() {
@@ -85,6 +104,10 @@ class BrushBroomComponents {
           <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
           <p>Dustin and Brittany clean, paint, repair, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
           ${BNB_GOOGLE_REVIEW_URL ? `<p style="margin-top:18px;"><a class="btn btn-review" href="${BNB_GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Review us on Google</a></p>` : ''}
+          <div class="footer-social">
+            <div class="footer-title">Find us on</div>
+            <div class="social-row">${bnbSocialLinks()}</div>
+          </div>
         </div>
         <div>
           <div class="footer-title">Contact</div>
