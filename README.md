@@ -91,7 +91,7 @@ python3 -m http.server 8000
 The sitemap lives at `https://brushnbroom.com/sitemap.xml` and is referenced in `robots.txt`. All URLs must end in `.html` (or `/` for the homepage). Do not use extensionless URLs — they will 404 on GitHub Pages.
 
 ### Form Submissions
-The contact form uses Formspree (`https://formspree.io/f/mykbgkbn`). It accepts an optional photo upload, includes a `_gotcha` honeypot, and links to `privacy.html`. The homepage and thank-you page both say we reply within one business day.
+The contact form uses Formspree (`https://formspree.io/f/mykbgkbn`). Phone is required and email is optional (a blank email field is not sent, so Formspree never gets an empty Reply-To). The form has no file upload; customers text photos to 206-571-5568 instead (the homepage and the mobile sticky bar have `sms:` "Text us photos" links). It includes a `_gotcha` honeypot and links to `privacy.html`. The homepage and thank-you page both say we reply within one business day.
 
 ### JavaScript
 - `components.js` — injects the shared nav and footer, a skip link, and upgrades `http://` visits on brushnbroom.com to HTTPS

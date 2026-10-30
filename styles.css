@@ -493,6 +493,10 @@
       color: var(--amber);
     }
 
+    .phone-link + .phone-link {
+      margin-left: 20px;
+    }
+
     .hero-card-split {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1942,8 +1946,8 @@
 @media (max-width: 768px) {
   .mobile-cta {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
     position: fixed;
     left: 0;
     right: 0;
@@ -1968,10 +1972,12 @@
     background: var(--amber);
     color: var(--forest-dark);
   }
-  .mobile-cta-quote {
+  .mobile-cta-quote,
+  .mobile-cta-text {
     color: var(--white);
     border: 2px solid rgba(255, 255, 255, 0.35);
   }
+  .mobile-cta a { font-size: 0.92rem; text-align: center; line-height: 1.15; padding: 0 6px; }
   body.has-mobile-cta { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
 }
 @media print { .mobile-cta { display: none !important; } }
@@ -2045,3 +2051,15 @@ body.has-solid-header main { padding-top: 80px; }
   border-color: rgba(1, 22, 65, 0.3);
 }
 .social-row-light .social-btn svg { color: var(--forest); }
+
+/* Google reviews (verbatim quotes from our Google Business Profile) */
+.review-card { margin: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.review-card blockquote { margin: 0 0 16px; }
+.review-card figcaption { display: flex; flex-direction: column; gap: 2px; }
+.review-rating { margin: 12px 0 0; color: var(--charcoal); font-size: 1rem; }
+.review-rating a { color: var(--forest); text-decoration: underline; font-weight: 600; }
+.review-stars { color: #f4b400; font-size: 1.15rem; }
+.area-grid + .google-reviews h3 { margin-bottom: 4px; }
+.google-reviews .testimonial-grid { margin-top: 24px; }
+@media (min-width: 1100px) { .testimonial-grid-4 { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+@media (min-width: 640px) and (max-width: 1099px) { .testimonial-grid-4 { grid-template-columns: repeat(2, 1fr); } }
