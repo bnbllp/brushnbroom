@@ -76,18 +76,16 @@ class BrushBroomComponents {
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="container nav-wrap">
         <a href="/" class="brand"><img src="/assets/images/logo-dark-bg-header.png" alt="Brush & Broom LLP Logo" width="71" height="50" /></a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-toggle-label">Menu</span></button>
         <nav id="site-nav" class="nav" aria-label="Primary">
-          <a href="/">Home</a>
-          <a href="/#cleaning">Cleaning</a>
-          <a href="/#painting">Painting</a>
-          <a href="/handyman-mount-vernon.html">Handyman</a>
-          <a href="/flooring-mount-vernon.html">Flooring</a>
-          <a href="/about.html">About</a>
-          <a href="/areas-we-serve.html">Areas</a>
-          <a href="/community-care.html">Community</a>
-          <a href="/reviews.html">Reviews</a>
-          <a href="/#quote" class="btn btn-amber">Get a Quote</a>
+          <a href="/routine-house-cleaning-mount-vernon.html" data-sec="cleaning">Cleaning</a>
+          <a href="/residential-painting-mount-vernon.html" data-sec="painting">Painting</a>
+          <a href="/flooring-mount-vernon.html" data-sec="flooring">Flooring</a>
+          <a href="/areas-we-serve.html" data-sec="areas">Areas</a>
+          <a href="/about.html" data-sec="about">About</a>
+          <a href="/reviews.html" class="nav-secondary" data-sec="reviews">Reviews</a>
+          <a href="tel:206-571-5568" class="nav-phone">206-571-5568</a>
+          <a href="/#quote" class="btn btn-amber">Free Quote</a>
         </nav>
       </div>
     `;
@@ -107,7 +105,7 @@ class BrushBroomComponents {
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Brush <span>&</span> Broom LLP</div>
-          <p>Dustin and Brittany clean, paint, repair, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
+          <p>Dustin and Brittany clean, paint, and install floors for homes and small businesses in Mount Vernon, Burlington, Sedro-Woolley, Anacortes, La Conner, and Stanwood. Clear quotes, and the same people for both.</p>
           ${BNB_GOOGLE_REVIEW_URL ? `<p style="margin-top:18px;"><a class="btn btn-review" href="${BNB_GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Review us on Google</a></p>` : ''}
           <div class="footer-social">
             <div class="footer-title">Find us on</div>
@@ -173,7 +171,10 @@ class BrushBroomComponents {
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         Call
       </a>
-      <a href="sms:${BNB_PHONE_E164}" class="mobile-cta-text" aria-label="Text photos to Brush and Broom at ${BNB_PHONE}">Text us photos</a>
+      <a href="sms:${BNB_PHONE_E164}" class="mobile-cta-text" aria-label="Text photos to Brush and Broom at ${BNB_PHONE}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Text
+      </a>
       <a href="/#quote" class="mobile-cta-quote">Free Quote</a>
     `;
     document.body.appendChild(bar);
@@ -192,14 +193,16 @@ class BrushBroomComponents {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.textContent = open ? 'Close' : 'Menu';
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('nav-open', open);
     });
 
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
+        toggle.setAttribute('aria-label', 'Open menu');
+        document.body.classList.remove('nav-open');
       });
     });
   }
@@ -224,7 +227,32 @@ class BrushBroomComponents {
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up, .reveal').forEach(el => observer.observe(el));
+
+    // Highlight current section in the nav
+    const p = location.pathname;
+    const sec = /clean/.test(p) ? 'cleaning' : /paint/.test(p) ? 'painting' : /floor/.test(p) ? 'flooring'
+      : /area/.test(p) ? 'areas' : /about|our-story/.test(p) ? 'about' : /review/.test(p) ? 'reviews' : '';
+    if (sec) document.querySelectorAll(`#site-nav [data-sec="${sec}"]`).forEach(a => a.setAttribute('aria-current', 'page'));
+
+    // Count-up for real, fixed facts only (e.g. Google rating/review count). Skipped for reduced motion.
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const co = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          co.unobserve(e.target);
+          const el = e.target, to = parseFloat(el.dataset.to), dec = +(el.dataset.dec || 0), t0 = performance.now();
+          const step = (t) => {
+            const k = Math.min(1, (t - t0) / 1200), v = to * (1 - Math.pow(1 - k, 3));
+            el.textContent = v.toFixed(dec);
+            if (k < 1) requestAnimationFrame(step); else el.textContent = to.toFixed(dec);
+          };
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.6 });
+      document.querySelectorAll('.rd-count[data-to]').forEach(el => co.observe(el));
+    }
   }
 }
 
@@ -296,7 +324,7 @@ if (document.readyState === 'loading') {
     if (!form || !form.matches || !form.matches('form.quote-form, form[action*="formspree.io"]')) return;
     var hp = form.querySelector('[name="_gotcha"]');
     if (hp && hp.value) return;
-    var need = form.querySelector('[name="need"]');
+    var need = form.querySelector('[name="need"]:checked') || form.querySelector('select[name="need"]');
     var service = form.querySelector('[name="service"]');
     bnbTrack('generate_lead', {
       form_id: form.id || 'quote-form',
