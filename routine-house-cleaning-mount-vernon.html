@@ -52,10 +52,11 @@
   <script>
   </script>
 </head>
-<body>
+<body class="rd-inner">
 
     <main id="main-content">
-    <section class="page-hero">
+    <section class="page-hero rd-page-hero">
+      <span class="rd-blob rd-blob-1" aria-hidden="true"></span><span class="rd-blob rd-blob-2" aria-hidden="true"></span>
       <div class="hero-bg">
         <img src="/assets/images/living-room.webp" alt="Professional home cleaning service in Mount Vernon" />
       </div>
@@ -69,18 +70,22 @@
           <a href="/?need=Cleaning#quote" class="btn btn-amber">Get a Free Quote</a>
           <a href="tel:206-571-5568" class="btn btn-outline">Call 206-571-5568</a>
         </div>
-        <p class="trust-line trust-line-hero"><strong>Licensed, Bonded &amp; Insured</strong> · WA Contractor Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></p>
+        <ul class="rd-trust" aria-label="Why neighbors hire us">
+          <li><span class="rd-ic" aria-hidden="true">&#10003;</span> Licensed, Bonded &amp; Insured</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9733;</span> 4.8 stars · 19 Google reviews</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9998;</span> WA Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></li>
+        </ul>
       </div>
     </section>
 
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
-          <div class="service-card" style="overflow: hidden;">
+          <div class="service-card reveal" style="overflow: hidden;">
             <img src="/assets/images/living-room.webp" alt="Routine house cleaning in progress" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;"/>
-            <div class="service-card-body">
+            <div class="service-card-body reveal d1">
               <span class="eyebrow eyebrow-green">Maintenance</span>
-              <h2 style="margin-bottom: 12px;">Routine Cleaning</h2>
+              <h2 class="reveal" style="margin-bottom: 12px;">Routine Cleaning</h2>
               <p>Keep your home consistently clean and comfortable with our regular maintenance service. We aim to make your life easier, so you can focus on what matters most.</p>
               <ul style="margin-top: 16px; padding-left: 20px; color: var(--charcoal-light);">
                 <li>Dusting all surfaces and fixtures</li>
@@ -91,11 +96,11 @@
               </ul>
             </div>
           </div>
-          <div class="service-card" style="overflow: hidden;">
+          <div class="service-card reveal d2" style="overflow: hidden;">
             <img src="/assets/images/hero-home.webp" alt="A cared-for home exterior" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;"/>
-            <div class="service-card-body">
+            <div class="service-card-body reveal d3">
               <span class="eyebrow eyebrow-green">Deep Clean</span>
-              <h2 style="margin-bottom: 12px;">Deep Cleaning</h2>
+              <h2 class="reveal" style="margin-bottom: 12px;">Deep Cleaning</h2>
               <p>A comprehensive top-to-bottom clean for homes that need a serious reset or seasonal refresh. We get into every nook and cranny, ensuring a truly deep clean.</p>
               <ul style="margin-top: 16px; padding-left: 20px; color: var(--charcoal-light);">
                 <li>Everything in routine cleaning</li>
@@ -110,20 +115,20 @@
       </div>
     </section>
 
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container" style="text-align: center;">
         <span class="eyebrow eyebrow-green">Our Commitment</span>
-        <h2 style="margin-bottom: 40px;">Why neighbors trust us</h2>
+        <h2 class="reveal" style="margin-bottom: 40px;">Why neighbors trust us</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal" style="padding: 28px;">
             <h3>No Rotating Crews</h3>
             <p>You will always know who is in your home. We keep our teams consistent because we believe in building trust and delivering the best quality service.</p>
           </div>
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal d1" style="padding: 28px;">
             <h3>Eco-Friendly Options</h3>
             <p>We use effective, safe cleaning products that are better for your family, pets, and the environment, because we care about your well-being.</p>
           </div>
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal d2" style="padding: 28px;">
             <h3>Personal Touch</h3>
             <p>As a husband-and-wife team, we genuinely care about the details that larger companies often overlook. It is that personal touch that makes all the difference.</p>
           </div>
@@ -131,23 +136,23 @@
       </div>
     </section>
     <!-- Google reviews: real reviews from our Google Business Profile, quoted verbatim (ellipses mark trims only). Do not reword or add review schema. -->
-    <section class="google-reviews" style="padding: 80px 0; background: var(--cream);">
+    <section class="google-reviews rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
           <span class="eyebrow eyebrow-green">Google reviews</span>
-          <h2>What customers say</h2>
+          <h2 class="reveal">What customers say</h2>
           <p class="review-rating"><span class="review-stars" aria-hidden="true">&#9733;</span> <strong>4.8 stars from 19 Google reviews</strong> · <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/data=!4m7!3m6!1s0x8c98118868a85b31:0x778c3c02a68eebcc!8m2!3d48.4008945!4d-121.7252504!16s%2Fg%2F11mdtyk63n!19sChIJMVuoaIgRmIwRzOuOpgI8jHc" target="_blank" rel="noopener">Read all reviews on Google</a></p>
         </div>
         <div class="testimonial-grid">
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal d3">
             <blockquote class="testimonial-text">&ldquo;My house looks absolutely amazing!! Brittany is incredible! I really can't say enough good things. My husband keeps wandering around the house saying WOW in every room!!&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Michele B.</span> <span class="testimonial-role">Google review · Cleaning</span></figcaption>
           </figure>
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal">
             <blockquote class="testimonial-text">&ldquo;Dustin and Brittany, husband and wife, cleaned from ceilings (including skylights!) to floors, dusted, polished, vacuumed, and mopped better than I would have done myself. Reasonable, easy to work with, and nice people.&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">JK B.</span> <span class="testimonial-role">Google review · Cleaning</span></figcaption>
           </figure>
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal d1">
             <blockquote class="testimonial-text">&ldquo;They were very polite, professional, was there when we were told... just an all around great experience. Definitely would have them back!&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Andrea K.</span> <span class="testimonial-role">Google review</span></figcaption>
           </figure>
@@ -155,10 +160,25 @@
       </div>
     </section>
 
+        <!-- Redesign CTA band -->
+    <section class="rd-cta-band" aria-label="Get a free quote">
+      <div class="container rd-cta-inner reveal">
+        <div>
+          <span class="eyebrow eyebrow-amber">Free, flat-price quotes</span>
+          <h2>Ready when you are</h2>
+          <p>Tell us about the job and we&rsquo;ll send one flat price. No hourly surprises. Serving Mount Vernon and all of Skagit County.</p>
+        </div>
+        <div class="rd-cta-actions">
+          <a href="/#quote" class="btn btn-amber rd-btn-lg">Get a Free Quote</a>
+          <a href="tel:206-571-5568" class="btn btn-outline">Call (206) 571-5568</a>
+          <a href="sms:+12065715568" class="btn btn-outline">Text us</a>
+        </div>
+      </div>
+    </section>
     <!-- Static service links (plain HTML so search engines can always find every page) -->
     <nav class="service-links" aria-label="Our services in Skagit County" style="padding: 40px 0; background: var(--cream);">
       <div class="container">
-        <h2 style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
+        <h2 class="reveal" style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
         <ul style="display:flex; flex-wrap:wrap; gap:10px 24px; list-style:none; padding:0; margin:0;">
           <li><a href="/deep-cleaning-mount-vernon.html">Deep cleaning</a></li>
           <li><a href="/move-in-move-out-mount-vernon.html">Move-in and move-out cleaning</a></li>

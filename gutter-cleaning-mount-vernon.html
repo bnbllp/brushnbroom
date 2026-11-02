@@ -128,11 +128,12 @@
   }
   </script>
 </head>
-<body>
+<body class="rd-inner">
 
   <main id="main-content">
     <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-hero rd-page-hero">
+      <span class="rd-blob rd-blob-1" aria-hidden="true"></span><span class="rd-blob rd-blob-2" aria-hidden="true"></span>
       <div class="hero-bg">
         <img src="/assets/images/exterior-paint.webp" alt="Skagit County home exterior with clean gutters and trim" />
       </div>
@@ -146,16 +147,20 @@
           <a href="/?need=Gutters#quote" class="btn btn-amber">Get a Free Quote</a>
           <a href="tel:206-571-5568" class="btn btn-outline">Call 206-571-5568</a>
         </div>
-        <p class="trust-line trust-line-hero"><strong>Licensed, Bonded &amp; Insured</strong> · WA Contractor Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></p>
+        <ul class="rd-trust" aria-label="Why neighbors hire us">
+          <li><span class="rd-ic" aria-hidden="true">&#10003;</span> Licensed, Bonded &amp; Insured</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9733;</span> 4.8 stars · 19 Google reviews</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9998;</span> WA Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></li>
+        </ul>
       </div>
     </section>
 
     <!-- What's included -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div class="fade-up" style="text-align:center; max-width:760px; margin:0 auto 42px;">
           <span class="eyebrow eyebrow-amber">What's Included</span>
-          <h2 style="margin-bottom:16px;">Gutter and downspout cleaning, start to finish</h2>
+          <h2 class="reveal" style="margin-bottom:16px;">Gutter and downspout cleaning, start to finish</h2>
           <p class="section-intro" style="margin-left:auto; margin-right:auto;">Most one- and two-story homes in the valley are a single visit. Send a photo of the house and we'll quote it.</p>
         </div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:28px;">
@@ -180,11 +185,11 @@
     </section>
 
     <!-- FAQ -->
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container">
         <div class="fade-up" style="text-align:center; max-width:720px; margin:0 auto 38px;">
           <span class="eyebrow eyebrow-green">Questions</span>
-          <h2 style="margin-bottom:16px;">Gutter cleaning FAQs</h2>
+          <h2 class="reveal" style="margin-bottom:16px;">Gutter cleaning FAQs</h2>
         </div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
           <div class="service-card fade-up" style="padding:28px;">
@@ -204,19 +209,19 @@
     </section>
 
     <!-- Google reviews: real reviews from our Google Business Profile, quoted verbatim (ellipses mark trims only). Do not reword or add review schema. -->
-    <section class="google-reviews" style="padding: 80px 0; background: var(--cream);">
+    <section class="google-reviews rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
           <span class="eyebrow eyebrow-green">Google reviews</span>
-          <h2>What customers say</h2>
+          <h2 class="reveal">What customers say</h2>
           <p class="review-rating"><span class="review-stars" aria-hidden="true">&#9733;</span> <strong>4.8 stars from 19 Google reviews</strong> · <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/data=!4m7!3m6!1s0x8c98118868a85b31:0x778c3c02a68eebcc!8m2!3d48.4008945!4d-121.7252504!16s%2Fg%2F11mdtyk63n!19sChIJMVuoaIgRmIwRzOuOpgI8jHc" target="_blank" rel="noopener">Read all reviews on Google</a></p>
         </div>
         <div class="testimonial-grid">
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal">
             <blockquote class="testimonial-text">&ldquo;10/10 Brush and Broom has been amazing to work with. They always answered any questions I had and made me feel comfortable with all work being done. I highly recommend giving this company a chance to exceed your expectations.&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Alisha S.</span> <span class="testimonial-role">Google review</span></figcaption>
           </figure>
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal d1">
             <blockquote class="testimonial-text">&ldquo;They were very polite, professional, was there when we were told... just an all around great experience. Definitely would have them back!&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Andrea K.</span> <span class="testimonial-role">Google review</span></figcaption>
           </figure>
@@ -225,10 +230,10 @@
     </section>
 
     <!-- CTA -->
-    <section style="padding: 80px 0; background: var(--forest);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--forest);">
       <div class="container" style="text-align: center;">
         <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: var(--white);">Get a Quote</span>
-        <h2 style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Get your gutters ready for the rain</h2>
+        <h2 class="reveal" style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Get your gutters ready for the rain</h2>
         <p style="color: rgba(255,255,255,0.8); font-size: 1.08rem; max-width: 640px; margin: 0 auto 32px; line-height: 1.75;">
           Tell us where the home is, how many stories, and send a photo if you can. We'll reply with a clear quote, usually within one business day.
         </p>
@@ -238,10 +243,25 @@
         </div>
       </div>
     </section>
+        <!-- Redesign CTA band -->
+    <section class="rd-cta-band" aria-label="Get a free quote">
+      <div class="container rd-cta-inner reveal">
+        <div>
+          <span class="eyebrow eyebrow-amber">Free, flat-price quotes</span>
+          <h2>Ready when you are</h2>
+          <p>Tell us about the job and we&rsquo;ll send one flat price. No hourly surprises. Serving Mount Vernon and all of Skagit County.</p>
+        </div>
+        <div class="rd-cta-actions">
+          <a href="/#quote" class="btn btn-amber rd-btn-lg">Get a Free Quote</a>
+          <a href="tel:206-571-5568" class="btn btn-outline">Call (206) 571-5568</a>
+          <a href="sms:+12065715568" class="btn btn-outline">Text us</a>
+        </div>
+      </div>
+    </section>
     <!-- Static service links (plain HTML so search engines can always find every page) -->
     <nav class="service-links" aria-label="Our services in Skagit County" style="padding: 40px 0; background: var(--cream);">
       <div class="container">
-        <h2 style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
+        <h2 class="reveal" style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
         <ul style="display:flex; flex-wrap:wrap; gap:10px 24px; list-style:none; padding:0; margin:0;">
           <li><a href="/routine-house-cleaning-mount-vernon.html">House cleaning</a></li>
           <li><a href="/deep-cleaning-mount-vernon.html">Deep cleaning</a></li>

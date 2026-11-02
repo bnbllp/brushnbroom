@@ -186,3 +186,39 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   *, *::before, *::after { animation:none !important; transition:none !important; }
   .reveal { opacity:1 !important; transform:none !important; }
 }
+
+/* ── Inner pages (Nov 2026 rebuild) ── */
+.rd-inner .rd-page-hero { position:relative; overflow:hidden; padding:150px 0 90px; }
+.rd-inner .rd-page-hero .hero-bg img { animation: rdKen 24s ease-in-out infinite alternate; }
+.rd-inner .rd-page-hero .container { position:relative; z-index:2; }
+.rd-inner .rd-page-hero .container > * { animation: rdIn .7s var(--rd-ease) both; }
+.rd-inner .rd-page-hero .container > *:nth-child(2){animation-delay:.08s}
+.rd-inner .rd-page-hero .container > *:nth-child(3){animation-delay:.16s}
+.rd-inner .rd-page-hero .container > *:nth-child(4){animation-delay:.24s}
+.rd-inner .rd-page-hero .container > *:nth-child(n+5){animation-delay:.32s}
+.rd-inner .rd-page-hero h1 { max-width:18ch; }
+.rd-inner main > section.rd-sec { padding-top:clamp(56px,8vw,96px) !important; padding-bottom:clamp(56px,8vw,96px) !important; }
+.rd-inner .rd-sec h2 { max-width:24ch; }
+.rd-inner .service-card, .rd-inner .area-card, .rd-inner .founder-card, .rd-inner .community-card, .rd-inner .eligibility-card, .rd-inner .testimonial-card {
+  border-radius:18px; border:1px solid rgba(1,22,65,.08); box-shadow:0 10px 30px rgba(1,22,65,.06);
+  transition: transform .35s var(--rd-ease), box-shadow .35s var(--rd-ease), opacity .7s var(--rd-ease); }
+.rd-inner .service-card:hover, .rd-inner .area-card:hover, .rd-inner .community-card:hover, .rd-inner .testimonial-card:hover {
+  transform:translateY(-6px); box-shadow:0 18px 40px rgba(1,22,65,.14); }
+.rd-inner .service-icon { transition: transform .4s var(--rd-ease); }
+.rd-inner .service-card:hover .service-icon { transform: rotate(-6deg) scale(1.08); }
+.rd-inner .cta-section, .rd-inner .cta-section-alt { position:relative; overflow:hidden; }
+.rd-cta-band { padding:clamp(56px,8vw,90px) 0; background:linear-gradient(135deg,var(--forest) 0%,#0a2a6b 100%); color:#fff; position:relative; overflow:hidden; }
+.rd-cta-band::before { content:""; position:absolute; width:380px; height:380px; border-radius:50%; background:var(--amber); filter:blur(80px); opacity:.25; right:-100px; top:-140px; animation: rdFloat 14s ease-in-out infinite alternate; }
+.rd-cta-inner { position:relative; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px; }
+.rd-cta-inner h2 { color:#fff; margin:8px 0; }
+.rd-cta-inner p { color:rgba(255,255,255,.85); max-width:52ch; margin:0; }
+.rd-cta-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.rd-cta-band .btn-outline { color:#fff; border-color:rgba(255,255,255,.6); }
+.rd-inner .service-links { border-top:1px solid rgba(1,22,65,.08); }
+.rd-inner .service-links a { transition:color .2s; }
+@media (max-width: 900px) { .rd-inner .rd-page-hero { padding:120px 0 70px; } .rd-cta-actions { width:100%; } .rd-cta-actions .btn { flex:1 1 auto; justify-content:center; } }
+@media (prefers-reduced-motion: reduce) {
+  .rd-inner .rd-page-hero .hero-bg img, .rd-inner .rd-page-hero .container > *, .rd-cta-band::before { animation:none !important; }
+  .rd-inner .service-card, .rd-inner .area-card, .rd-inner .community-card, .rd-inner .testimonial-card { transition:none; }
+  .rd-inner .service-card:hover, .rd-inner .area-card:hover, .rd-inner .community-card:hover, .rd-inner .testimonial-card:hover { transform:none; }
+}

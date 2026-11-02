@@ -52,11 +52,12 @@
   }
   </script>
 </head>
-<body>
+<body class="rd-inner">
 
     <main id="main-content">
     <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-hero rd-page-hero">
+      <span class="rd-blob rd-blob-1" aria-hidden="true"></span><span class="rd-blob rd-blob-2" aria-hidden="true"></span>
       <div class="hero-bg">
         <img src="/assets/images/hero-home.webp" alt="Freshly renovated Mount Vernon home ready for cleaning" />
       </div>
@@ -70,19 +71,23 @@
           <a href="/?need=Cleaning#quote" class="btn btn-amber">Get a Free Quote</a>
           <a href="tel:206-571-5568" class="btn btn-outline">Call 206-571-5568</a>
         </div>
-        <p class="trust-line trust-line-hero"><strong>Licensed, Bonded &amp; Insured</strong> · WA Contractor Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></p>
+        <ul class="rd-trust" aria-label="Why neighbors hire us">
+          <li><span class="rd-ic" aria-hidden="true">&#10003;</span> Licensed, Bonded &amp; Insured</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9733;</span> 4.8 stars · 19 Google reviews</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9998;</span> WA Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></li>
+        </ul>
       </div>
     </section>
 
     <!-- What's Included -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
 
-          <div class="service-card" style="overflow: hidden;">
-            <div class="service-card-body">
+          <div class="service-card reveal" style="overflow: hidden;">
+            <div class="service-card-body reveal d1">
               <span class="eyebrow eyebrow-green">Remodels &amp; Renovations</span>
-              <h2 style="margin-bottom: 12px;">After a Remodel</h2>
+              <h2 class="reveal" style="margin-bottom: 12px;">After a Remodel</h2>
               <p>Kitchen gut, bathroom remodel, addition, or full-home renovation — whatever the scope, construction leaves behind a layer of fine dust and debris that regular cleaning won't touch. We go room by room and do it right.</p>
               <ul style="margin-top: 16px; padding-left: 20px; color: var(--charcoal-light);">
                 <li>Dust removal from all surfaces, walls, and ceilings</li>
@@ -94,11 +99,11 @@
             </div>
           </div>
 
-          <div class="service-card" style="overflow: hidden;">
+          <div class="service-card reveal d2" style="overflow: hidden;">
             <img src="/assets/images/hero-home.webp" alt="New build home in Mount Vernon ready for move-in" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;" />
-            <div class="service-card-body">
+            <div class="service-card-body reveal d3">
               <span class="eyebrow eyebrow-green">New Builds</span>
-              <h2 style="margin-bottom: 12px;">New Construction Cleanup</h2>
+              <h2 class="reveal" style="margin-bottom: 12px;">New Construction Cleanup</h2>
               <p>Brand new doesn't mean clean. New builds come with drywall dust, sticker residue, sawdust, and construction debris in places you won't find until you move in. We handle the full initial clean so the space feels finished — not just built.</p>
               <ul style="margin-top: 16px; padding-left: 20px; color: var(--charcoal-light);">
                 <li>Removing stickers and labels from windows and fixtures</li>
@@ -115,11 +120,11 @@
     </section>
 
     <!-- Why It Matters -->
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container">
         <div style="max-width: 760px;">
           <span class="eyebrow eyebrow-amber">Why It Matters</span>
-          <h2 style="margin-bottom: 20px;">Construction dust isn't just messy — it's a problem.</h2>
+          <h2 class="reveal" style="margin-bottom: 20px;">Construction dust isn't just messy — it's a problem.</h2>
           <p style="color: var(--charcoal-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
             Fine drywall and concrete dust circulates through your HVAC, settles into new flooring, and coats every surface it can reach. If it's not properly removed before you move in, it keeps spreading. A standard cleaning won't cut it — post-construction cleanup requires the right approach, the right products, and attention to areas that most people miss.
           </p>
@@ -131,20 +136,20 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container" style="text-align: center;">
         <span class="eyebrow eyebrow-green">Why Choose Us</span>
-        <h2 style="margin-bottom: 40px;">The Brush &amp; Broom Difference</h2>
+        <h2 class="reveal" style="margin-bottom: 40px;">The Brush &amp; Broom Difference</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal" style="padding: 28px;">
             <h3>Construction Background</h3>
             <p>Dustin has worked in construction and knows where post-build mess hides — behind baseboards, in vents, under new flooring. We clean the places others skip.</p>
           </div>
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal d1" style="padding: 28px;">
             <h3>All Supplies Included</h3>
             <p>We bring professional-grade equipment and the right products for construction residue. No shortcuts, no skimping — just the tools the job actually calls for.</p>
           </div>
-          <div class="service-card" style="padding: 28px;">
+          <div class="service-card reveal d2" style="padding: 28px;">
             <h3>Coordinated With Your Timeline</h3>
             <p>We work with contractors, property managers, and homeowners to schedule the cleanup at the right moment — after the crew leaves but before you move in.</p>
           </div>
@@ -153,19 +158,19 @@
     </section>
 
     <!-- Google reviews: real reviews from our Google Business Profile, quoted verbatim (ellipses mark trims only). Do not reword or add review schema. -->
-    <section class="google-reviews" style="padding: 80px 0; background: var(--cream);">
+    <section class="google-reviews rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
           <span class="eyebrow eyebrow-green">Google reviews</span>
-          <h2>What customers say</h2>
+          <h2 class="reveal">What customers say</h2>
           <p class="review-rating"><span class="review-stars" aria-hidden="true">&#9733;</span> <strong>4.8 stars from 19 Google reviews</strong> · <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/data=!4m7!3m6!1s0x8c98118868a85b31:0x778c3c02a68eebcc!8m2!3d48.4008945!4d-121.7252504!16s%2Fg%2F11mdtyk63n!19sChIJMVuoaIgRmIwRzOuOpgI8jHc" target="_blank" rel="noopener">Read all reviews on Google</a></p>
         </div>
         <div class="testimonial-grid">
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal d3">
             <blockquote class="testimonial-text">&ldquo;Everything went smoothly and every possible hangup was seen too promptly by the owner himself. ... I will definitely call Brush and Broom whenever I'm up against a wall with a remodel again!&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Daryl B.</span> <span class="testimonial-role">Google review · Remodel</span></figcaption>
           </figure>
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal">
             <blockquote class="testimonial-text">&ldquo;Dustin and Brittany, husband and wife, cleaned from ceilings (including skylights!) to floors, dusted, polished, vacuumed, and mopped better than I would have done myself. Reasonable, easy to work with, and nice people.&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">JK B.</span> <span class="testimonial-role">Google review · Cleaning</span></figcaption>
           </figure>
@@ -174,10 +179,10 @@
     </section>
 
     <!-- CTA -->
-    <section style="padding: 80px 0; background: var(--forest);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--forest);">
       <div class="container" style="text-align: center;">
         <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: var(--white);">Get a Quote</span>
-        <h2 style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Ready to hand the keys over with confidence?</h2>
+        <h2 class="reveal" style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Ready to hand the keys over with confidence?</h2>
         <p style="color: rgba(255,255,255,0.8); font-size: 1.08rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.75;">
           Tell us about your project and we'll get back to you with a clear, honest quote. No runaround, no upsells — just straight talk about what it'll take.
         </p>
@@ -187,10 +192,25 @@
         </div>
       </div>
     </section>
+        <!-- Redesign CTA band -->
+    <section class="rd-cta-band" aria-label="Get a free quote">
+      <div class="container rd-cta-inner reveal">
+        <div>
+          <span class="eyebrow eyebrow-amber">Free, flat-price quotes</span>
+          <h2>Ready when you are</h2>
+          <p>Tell us about the job and we&rsquo;ll send one flat price. No hourly surprises. Serving Mount Vernon and all of Skagit County.</p>
+        </div>
+        <div class="rd-cta-actions">
+          <a href="/#quote" class="btn btn-amber rd-btn-lg">Get a Free Quote</a>
+          <a href="tel:206-571-5568" class="btn btn-outline">Call (206) 571-5568</a>
+          <a href="sms:+12065715568" class="btn btn-outline">Text us</a>
+        </div>
+      </div>
+    </section>
     <!-- Static service links (plain HTML so search engines can always find every page) -->
     <nav class="service-links" aria-label="Our services in Skagit County" style="padding: 40px 0; background: var(--cream);">
       <div class="container">
-        <h2 style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
+        <h2 class="reveal" style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
         <ul style="display:flex; flex-wrap:wrap; gap:10px 24px; list-style:none; padding:0; margin:0;">
           <li><a href="/routine-house-cleaning-mount-vernon.html">House cleaning</a></li>
           <li><a href="/deep-cleaning-mount-vernon.html">Deep cleaning</a></li>

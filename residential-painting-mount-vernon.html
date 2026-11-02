@@ -62,11 +62,12 @@
   }
   </script>
 </head>
-<body>
+<body class="rd-inner">
 
   <main id="main-content">
     <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-hero rd-page-hero">
+      <span class="rd-blob rd-blob-1" aria-hidden="true"></span><span class="rd-blob rd-blob-2" aria-hidden="true"></span>
       <div class="hero-bg">
         <img src="/assets/images/exterior-paint.webp" alt="Painter refreshing a home exterior" />
       </div>
@@ -80,17 +81,21 @@
           <a href="/#quote" class="btn btn-amber">Get a Free Quote</a>
           <a href="tel:206-571-5568" class="btn btn-outline">Call 206-571-5568</a>
         </div>
-        <p class="trust-line trust-line-hero"><strong>Licensed, Bonded &amp; Insured</strong> · WA Contractor Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></p>
+        <ul class="rd-trust" aria-label="Why neighbors hire us">
+          <li><span class="rd-ic" aria-hidden="true">&#10003;</span> Licensed, Bonded &amp; Insured</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9733;</span> 4.8 stars · 19 Google reviews</li>
+          <li><span class="rd-ic" aria-hidden="true">&#9998;</span> WA Reg. #CC BRUSHBL742OP · <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener">Verify</a></li>
+        </ul>
       </div>
     </section>
 
     <!-- Intro -->
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container">
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:42px; align-items:center;">
           <div class="fade-up">
             <span class="eyebrow eyebrow-green">Home Painting Services</span>
-            <h2 style="margin-bottom:20px;">A fresh finish without the rushed feeling.</h2>
+            <h2 class="reveal" style="margin-bottom:20px;">A fresh finish without the rushed feeling.</h2>
             <p style="color: var(--charcoal-light); font-size:1.05rem; line-height:1.8; margin-bottom:18px;">
               Paint can change the entire feel of a home, but the difference between a quick coat and a polished result usually comes down to preparation. We take the time to protect the work area, clean and prep surfaces, handle small patches where needed, and keep the project moving with clear expectations.
             </p>
@@ -107,11 +112,11 @@
     </section>
 
     <!-- Recent Room Photos -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div class="fade-up" style="text-align:center; max-width:760px; margin:0 auto 42px;">
           <span class="eyebrow eyebrow-green">Recent Work</span>
-          <h2 style="margin-bottom:16px;">Interior room refresh</h2>
+          <h2 class="reveal" style="margin-bottom:16px;">Interior room refresh</h2>
           <p class="section-intro" style="margin-left:auto; margin-right:auto;">A clean, even finish on walls, trim, and doors. Same careful prep and tidy close-out we bring to every residential job in Mount Vernon.</p>
         </div>
         <figure class="fade-up" style="margin:0 0 20px;">
@@ -136,11 +141,11 @@
     </section>
 
     <!-- Services -->
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container">
         <div class="fade-up" style="text-align:center; max-width:760px; margin:0 auto 42px;">
           <span class="eyebrow eyebrow-amber">What We Paint</span>
-          <h2 style="margin-bottom:16px;">Interior and exterior painting for real homes.</h2>
+          <h2 class="reveal" style="margin-bottom:16px;">Interior and exterior painting for real homes.</h2>
           <p class="section-intro" style="margin-left:auto; margin-right:auto;">We help homeowners, renters, landlords, and property managers with practical painting projects that make a home feel clean, finished, and ready for everyday life.</p>
         </div>
 
@@ -166,12 +171,12 @@
     </section>
 
     <!-- Process -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:42px; align-items:start;">
           <div class="fade-up">
             <span class="eyebrow eyebrow-green">Our Process</span>
-            <h2 style="margin-bottom:18px;">Good painting starts before the first coat.</h2>
+            <h2 class="reveal" style="margin-bottom:18px;">Good painting starts before the first coat.</h2>
             <p style="color: var(--charcoal-light); font-size:1.05rem; line-height:1.8;">
               We keep the process simple and honest. After learning about your project, we review the surfaces, talk through prep needs, protect the surrounding space, paint carefully, and leave the area tidy when the work is complete.
             </p>
@@ -212,7 +217,7 @@
     </section>
 
     <!-- Why Choose -->
-    <section style="padding: 80px 0; background: var(--warm-white);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--warm-white);">
       <div class="container">
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:42px; align-items:center;">
           <div class="service-card fade-up" style="overflow:hidden;">
@@ -220,7 +225,7 @@
           </div>
           <div class="fade-up delay-1">
             <span class="eyebrow eyebrow-amber">Why Brush & Broom</span>
-            <h2 style="margin-bottom:18px;">Respectful work inside the place you live.</h2>
+            <h2 class="reveal" style="margin-bottom:18px;">Respectful work inside the place you live.</h2>
             <p style="color: var(--charcoal-light); font-size:1.05rem; line-height:1.8; margin-bottom:18px;">
               Residential painting is personal because the work happens where your family lives, relaxes, cooks, and sleeps. We communicate clearly, protect the space, and treat the home with the same care we would want in our own.
             </p>
@@ -237,11 +242,11 @@
     </section>
 
     <!-- FAQ -->
-    <section style="padding: 80px 0; background: var(--cream);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div class="fade-up" style="text-align:center; max-width:720px; margin:0 auto 38px;">
           <span class="eyebrow eyebrow-green">Questions</span>
-          <h2 style="margin-bottom:16px;">Residential painting FAQs</h2>
+          <h2 class="reveal" style="margin-bottom:16px;">Residential painting FAQs</h2>
           <p class="section-intro" style="margin-left:auto; margin-right:auto;">Every home is different, but these are the questions homeowners often ask before requesting a quote.</p>
         </div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
@@ -262,19 +267,19 @@
     </section>
 
     <!-- Google reviews: real reviews from our Google Business Profile, quoted verbatim (ellipses mark trims only). Do not reword or add review schema. -->
-    <section class="google-reviews" style="padding: 80px 0; background: var(--cream);">
+    <section class="google-reviews rd-sec" style="padding: 80px 0; background: var(--cream);">
       <div class="container">
         <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
           <span class="eyebrow eyebrow-green">Google reviews</span>
-          <h2>What customers say</h2>
+          <h2 class="reveal">What customers say</h2>
           <p class="review-rating"><span class="review-stars" aria-hidden="true">&#9733;</span> <strong>4.8 stars from 19 Google reviews</strong> · <a href="https://www.google.com/maps/place/Brush+and+Broom+LLP/data=!4m7!3m6!1s0x8c98118868a85b31:0x778c3c02a68eebcc!8m2!3d48.4008945!4d-121.7252504!16s%2Fg%2F11mdtyk63n!19sChIJMVuoaIgRmIwRzOuOpgI8jHc" target="_blank" rel="noopener">Read all reviews on Google</a></p>
         </div>
         <div class="testimonial-grid">
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal">
             <blockquote class="testimonial-text">&ldquo;I asked for two fairly small painting jobs at our home. My report: responsive, polite, timely, excellent work, helpful. ... Quality of work was excellent.&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Jerry C.</span> <span class="testimonial-role">Google review · Painting</span></figcaption>
           </figure>
-          <figure class="testimonial-card review-card">
+          <figure class="testimonial-card review-card reveal d1">
             <blockquote class="testimonial-text">&ldquo;Brush and Broom helped me with a total clean and refresh of a vacant house. Dustin did a great refresh with paint. They are a husband and wife team that work together. ... They were prompt, efficient, and expert.&rdquo;</blockquote>
             <figcaption><span class="testimonial-author">Pamela M.</span> <span class="testimonial-role">Google review · Vacant house clean and paint refresh</span></figcaption>
           </figure>
@@ -283,10 +288,10 @@
     </section>
 
     <!-- CTA -->
-    <section style="padding: 80px 0; background: var(--forest);">
+    <section class="rd-sec" style="padding: 80px 0; background: var(--forest);">
       <div class="container" style="text-align: center;">
         <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: var(--white);">Get a Quote</span>
-        <h2 style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Ready to refresh your home?</h2>
+        <h2 class="reveal" style="color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px;">Ready to refresh your home?</h2>
         <p style="color: rgba(255,255,255,0.8); font-size: 1.08rem; max-width: 640px; margin: 0 auto 32px; line-height: 1.75;">
           Tell us what you would like painted, where the home is located, and whether you have photos to share. We will follow up with clear next steps and an honest quote.
         </p>
@@ -296,10 +301,25 @@
         </div>
       </div>
     </section>
+        <!-- Redesign CTA band -->
+    <section class="rd-cta-band" aria-label="Get a free quote">
+      <div class="container rd-cta-inner reveal">
+        <div>
+          <span class="eyebrow eyebrow-amber">Free, flat-price quotes</span>
+          <h2>Ready when you are</h2>
+          <p>Tell us about the job and we&rsquo;ll send one flat price. No hourly surprises. Serving Mount Vernon and all of Skagit County.</p>
+        </div>
+        <div class="rd-cta-actions">
+          <a href="/#quote" class="btn btn-amber rd-btn-lg">Get a Free Quote</a>
+          <a href="tel:206-571-5568" class="btn btn-outline">Call (206) 571-5568</a>
+          <a href="sms:+12065715568" class="btn btn-outline">Text us</a>
+        </div>
+      </div>
+    </section>
     <!-- Static service links (plain HTML so search engines can always find every page) -->
     <nav class="service-links" aria-label="Our services in Skagit County" style="padding: 40px 0; background: var(--cream);">
       <div class="container">
-        <h2 style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
+        <h2 class="reveal" style="font-size:1.25rem; margin-bottom:14px;">Our services in Mount Vernon and Skagit County</h2>
         <ul style="display:flex; flex-wrap:wrap; gap:10px 24px; list-style:none; padding:0; margin:0;">
           <li><a href="/routine-house-cleaning-mount-vernon.html">House cleaning</a></li>
           <li><a href="/deep-cleaning-mount-vernon.html">Deep cleaning</a></li>
